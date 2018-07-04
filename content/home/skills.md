@@ -11,7 +11,7 @@ title = "Coding Skills"
 subtitle = ""
 
 # Order that this section will appear in.
-weight = 8
+weight = 6
 
 +++
 <body>

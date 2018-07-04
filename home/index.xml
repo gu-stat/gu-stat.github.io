@@ -51,6 +51,15 @@ Currently developing a new method for time series forecasting (theory, R package
     </item>
     
     <item>
+      <title>Shiny Apps</title>
+      <link>/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/teaching/</guid>
+      <description>For a list of my Shiny Apps, go to app.gustavo.mat.br</description>
+    </item>
+    
+    <item>
       <title>Awards</title>
       <link>/home/awards/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
@@ -165,17 +174,6 @@ Used SQL procedures in SAS (PROC SQL) for data extraction and manipulation due t
       <guid>/home/data_visualization/</guid>
       <description>Some of the R packages that I have used for data visualization:
  ggplot2 plotly highcharter dygraph googlevis ggiraph shiny  </description>
-    </item>
-    
-    <item>
-      <title>Teaching</title>
-      <link>/home/teaching/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>/home/teaching/</guid>
-      <description>This is an example of using the custom widget to create your own homepage section.
-I am a teaching instructor for the following courses at University X:
- CS101: An intro to computer science CS102: An intro to computer science CS103: An intro to computer science CS104: An intro to computer science CS105: An intro to computer science CS106: An intro to computer science CS107: An intro to computer science  </description>
     </item>
     
     <item>
