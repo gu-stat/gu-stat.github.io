@@ -71,7 +71,7 @@ enableGitInfo = false
   skype = ""
   telegram = ""
   twitter = "Gu-Stat"
-  resume_file = "/CV"
+  resume_file = "CV_Varela_Alvarenga.pdf"
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
