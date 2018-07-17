@@ -1,1 +1,0 @@
-# gu-stat.github.io
