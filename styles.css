@@ -46,7 +46,7 @@ body {
   padding-top: 0;
   counter-reset: captions;
 }
-@media screen and (max-width: 768px) { /* Match max-width of .nav-bar query. */
+@media screen and (min-width: 768px) { /* Match max-width of .nav-bar query. */
   body {
     margin-top: 51px; /* Offset body content by navbar height. */
   }

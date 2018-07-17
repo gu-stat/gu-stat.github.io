@@ -26,6 +26,53 @@
   {{ end }}
 {{ end }}
 
+  {{ if .Site.Params.sharing }}
+  <div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left:0px; top:150px;">
+      <a class="a2a_button_whatsapp"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_linkedin"></a>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_telegram"></a>
+        <a class="a2a_button_google_gmail"></a>
+        <a class="a2a_button_email"></a>
+        <a class="a2a_button_copy_link"></a>
+      <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+  </div>
+    <script>
+      var a2a_config = a2a_config || {};
+      a2a_config.linkname = "\"{{ .Title | html }}\"";
+      a2a_config.linkurl = "https://gustavo.mat.br{{ .Permalink | html }}";
+    </script>
+    <style>
+    /* Hide AddToAny vertical share bar when screen is less than 980 pixels wide */
+    @media screen and (max-width: 980px) {
+        .a2a_floating_style.a2a_vertical_style { display: none; }
+    }
+    </style>
+    
+    <div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_default_style" style="bottom:0px; right:0px;">
+    <a class="a2a_button_whatsapp"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_linkedin"></a>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_telegram"></a>
+        <a class="a2a_button_google_gmail"></a>
+        <a class="a2a_button_email"></a>
+        <a class="a2a_button_copy_link"></a>
+      <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+    <style>
+      /* Hide AddToAny vertical share bar when screen is less than 980 pixels wide */
+      @media screen and (min-width: 980px) {
+          .a2a_floating_style.a2a_default_style { display: none; }
+      }
+    </style>
+
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+{{ end }}
+
 <!-- Page Footer -->
 {{ partial "footer_container.html" . }}
 {{ partial "footer.html" . }}
