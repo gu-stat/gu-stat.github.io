@@ -1,5 +1,5 @@
 +++
-title = "CVV"
+title = "Posts"
 date = 2017-01-01T00:00:00
 math = false
 highlight = false
@@ -14,5 +14,4 @@ list_format = 1
 image = ""
 caption = ""
 +++
-<br>
-<iframe src="https://gustavo.mat.br/files/CV_Varela_Alvarenga.pdf" style="width: 100%;height: 2200px;border: none;"></iframe>
+

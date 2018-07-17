@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gustavo Varela-Alvarenga</title>
+    <title>CVV on Gustavo Varela-Alvarenga</title>
     <link>/cv/</link>
-    <description>Recent content on Gustavo Varela-Alvarenga</description>
+    <description>Recent content in CVV on Gustavo Varela-Alvarenga</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="/cv/index.xml" rel="self" type="application/rss+xml" />
     
