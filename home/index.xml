@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Gustavo Varela-Alvarenga</title>
+    <link>/home/</link>
+    <description>Recent content in Homes on Gustavo Varela-Alvarenga</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Academic</title>
+      <link>/home/hero/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 -0400</pubDate>
+      
+      <guid>/home/hero/</guid>
+      <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release  
+(function defer() { if (window.jQuery) { jQuery(document).ready(function(){ GetLatestReleaseInfo(); }); } else { setTimeout(function() { defer() }, 50); } })(); function GetLatestReleaseInfo() { $.getJSON(&#39;https://api.github.com/repos/gcushen/hugo-academic/tags&#39;).done(function (json) { let release = json[0]; // let downloadURL = release.zipball_url; $(&#39;#academic-release&#39;).text(&#39;Latest release &#39; + release.name); }); }  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/about/</guid>
+      <description>About me Statistician with 5 years of experience with econometric research and over 9 years of experience with quantitative and qualitative data analysis. Won an award for a paper in which I evaluated the impact of a public policy in Brazil.
+Currently developing a new method for time series forecasting (theory, R package and Shiny app).</description>
+    </item>
+    
+    <item>
+      <title>Experience</title>
+      <link>/home/work/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/work/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coding Skills</title>
+      <link>/home/skills/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/skills/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shiny Apps</title>
+      <link>/home/shinyapps/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/shinyapps/</guid>
+      <description>For a list of my Shiny Apps, go to app.gustavo.mat.br</description>
+    </item>
+    
+    <item>
+      <title>Awards</title>
+      <link>/home/awards/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/awards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>/home/publications_selected/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Short Courses</title>
+      <link>/home/shortcourses/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/shortcourses/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selected Answers on Stack Exchange</title>
+      <link>/home/stack_exchange/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/stack_exchange/</guid>
+      <description>What is a contrast matrix (a term, pertaining to an analysis with categorical predictors)?
+Hitting times for Brownian Motion (2)
+How to define a rejection region?
+Why a sufficient statistic contains all the information needed to compute any estimate of the parameter?
+If rank(A)=k, can we say something about rank(AAt)?
+R package for motion capture data analysis and visualisation
+Transposing time series (mutate with lags) with dplyr</description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analytical Skills</title>
+      <link>/home/analytical_skills/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/analytical_skills/</guid>
+      <description> Impact Evaluation Dataset cleaning Dataset Manipulation Research Econometric Analysis Quantitative and Qualitative Analysis Data Modeling Data Visualization Problem Solving Critical thinking  </description>
+    </item>
+    
+    <item>
+      <title>Statistical Skills</title>
+      <link>/home/statistical_skills/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/statistical_skills/</guid>
+      <description> Time Series Analysis Generalized Linear and Mixed Models ANOVA/MANOVA/ANCOVA Instrumental Variables Models Selection Models Matching Algorithms Hypothesis Testing Monte Carlo Simulations Bootstrap Methods Descriptive Statistics Survey design  </description>
+    </item>
+    
+    <item>
+      <title>Dataset Skills</title>
+      <link>/home/datasets/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/datasets/</guid>
+      <description>Experience with large datasets, including data from household surveys.
+Had to combine several datasets - with around 50 million lines each and 15 GB each - by an unique identification number.
+Used SQL procedures in SAS (PROC SQL) for data extraction and manipulation due to the size and complexity of the datasets.</description>
+    </item>
+    
+    <item>
+      <title>Data Visualization</title>
+      <link>/home/data_visualization/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/data_visualization/</guid>
+      <description>Some of the R packages that I have used for data visualization:
+ ggplot2 plotly highcharter dygraph googlevis ggiraph shiny  </description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/teaching/</guid>
+      <description>This is an example of using the custom widget to create your own homepage section.
+I am a teaching instructor for the following courses at University X:
+ CS101: An intro to computer science CS102: An intro to computer science CS103: An intro to computer science CS104: An intro to computer science CS105: An intro to computer science CS106: An intro to computer science CS107: An intro to computer science  </description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0400</pubDate>
+      
+      <guid>/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>/home/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

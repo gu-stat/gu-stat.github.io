@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experience on Gustavo Varela-Alvarenga</title>
+    <link>/work.pt/</link>
+    <description>Recent content in Experience on Gustavo Varela-Alvarenga</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="/work.pt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lead Statistician</title>
+      <link>/work.pt/abdi/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>/work.pt/abdi/</guid>
+      <description>Worked with a multidisciplinary team in the development of studies and research papers/whitepapers to assess the impact of public policies towards Brazilian industrial development by gathering data from different sources and surveys, and analyzing it.</description>
+    </item>
+    
+    <item>
+      <title>Lecturer - Applied Statistics</title>
+      <link>/work.pt/unb/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>/work.pt/unb/</guid>
+      <description>Taught applied statistics to undergrad students from areas outside STEM (e.g. social sciences, psychology &amp;amp; others);
+Found ways to convey complex concepts to a non-technical audience.</description>
+    </item>
+    
+    <item>
+      <title>Researcher / Statistical Consultant</title>
+      <link>/work.pt/ipea/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>/work.pt/ipea/</guid>
+      <description>Evaluated the impact of public policies towards Industrial Innovation using a wide range of statistical methods and recommended actions for policy improvement based on results of simulations;
+Handled, processed and analyzed large datasets from multiple sources.</description>
+    </item>
+    
+  </channel>
+</rss>
