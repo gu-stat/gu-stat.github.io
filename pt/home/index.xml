@@ -18,7 +18,7 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>/pt/home/about/</guid>
-      <description>Sobre Estatístico com 5 anos de experiência em pesquisa econométrica e mais de 9 anos de experiência com análise quantitativa e qualitativa de dados. Ganhei um prêmio por um artigo no qual avaliei o impacto dos Fundos Setoriais na capacidade inovativa das empresas brasileiras.
+      <description>Sobre Estatístico com 5 anos de experiência em pesquisa econométrica e mais de 9 anos de experiência com análise quantitativa e qualitativa de dados. Ganhador de prêmio por um artigo no qual avaliou o impacto dos Fundos Setoriais na capacidade inovativa das empresas brasileiras.
 Atualmente trabalho em um novo método para previsão de séries temporais (teoria, pacote no R e aplicativo Shiny).</description>
     </item>
     
@@ -116,7 +116,7 @@ Transposing time series (mutate with lags) with dplyr</description>
       
       <guid>/pt/home/datasets/</guid>
       <description>Experiência com grandes conjuntos de dados, incluindo dados de pesquisas domiciliares.
-Teve que combinar vários conjuntos de dados - com cerca de 50 milhões de linhas cada e 15 GB cada - por um número de identificação único.
+Combinou vários conjuntos de dados - com cerca de 50 milhões de linhas cada e 15 GB cada - por um número de identificação único.
 Utilizou procedimentos SQL no SAS (PROC SQL) para extração e manipulação de dados devido ao tamanho e complexidade dos conjuntos de dados.</description>
     </item>
     
@@ -126,7 +126,7 @@ Utilizou procedimentos SQL no SAS (PROC SQL) para extração e manipulação de 
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>/pt/home/data_visualization/</guid>
-      <description>Alguns dos pacotes em R que usei para visualização de dados:
+      <description>Alguns dos pacotes em R utilizados para visualização de dados:
  ggplot2 plotly highcharter dygraph googlevis ggiraph shiny  </description>
     </item>
     
