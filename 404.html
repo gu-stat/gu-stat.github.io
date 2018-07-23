@@ -13,7 +13,7 @@
   
   
   
-  <meta name="description" content="Statistician">
+  <meta name="description" content="">
 
   
   <link rel="alternate" hreflang="en-us" href="">
@@ -74,7 +74,7 @@
   <meta property="og:site_name" content="Gustavo Varela-Alvarenga">
   <meta property="og:url" content="">
   <meta property="og:title" content="404 Page not found | Gustavo Varela-Alvarenga">
-  <meta property="og:description" content="Statistician">
+  <meta property="og:description" content="">
   <meta property="og:locale" content="en-us">
   
   
@@ -90,45 +90,6 @@ svg g:first-of-type rect:not(:last-child) {
     fill: #ffffff;
 }
 </style>
-
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-google.charts.load("current", {packages:["timeline"]});
-google.charts.setOnLoadCallback(drawChart);
-function drawChart() {
-var container = document.getElementById('timeline.skills');
-var chart = new google.visualization.Timeline(container);
-var dataTable = new google.visualization.DataTable();
-
-    dataTable.addColumn({ type: 'string', id: 'Language' });
-    dataTable.addColumn({ type: 'date', id: 'Start' });
-    dataTable.addColumn({ type: 'date', id: 'End' });
-    dataTable.addRows([
-    	['R', 						new Date(2009, 6),  new Date() ],
-      ['Shiny',      	new Date(2017, 3),  new Date() ],
-      ['SAS',  				new Date(2004, 10), new Date(2014, 7) ],
-      ['SQL',  				new Date(2008, 6),  new Date(2014, 7) ],
-      ['LaTeX',  			new Date(2010, 9),  new Date() ],
-      ['STATA',  			new Date(2010, 4),  new Date(2012, 8) ],
-      ['MATLAB',  			new Date(2004, 2),  new Date(2005, 5) ],
-      ['MATLAB',  			new Date(2014, 8),  new Date(2015, 5)],
-      ['Python',  			new Date(2018, 3),  new Date() ],
-      ['HTML',  				new Date(2018, 4),  new Date() ],
-      ['CSS',  				new Date(2018, 4),  new Date() ],
-      ["JavaScript",  	new Date(2018, 4),  new Date() ],
-      ]);
-var options = {
-  timeline: { singleColor: '#7CB5EC' },
-  hAxis: {
-    minValue: new Date(2014, 0, 0),
-    maxValue: new Date(2020, 1, 0)
-  }
-};
-
-chart.draw(dataTable, options);
-}
-</script>
   
 
   <title>404 Page not found | Gustavo Varela-Alvarenga</title>
@@ -170,28 +131,9 @@ chart.draw(dataTable, options);
         
 
         <li class="nav-item">
-          <a href="/#about">
+          <a href="/#shinyapps">
             
-            <span>Home</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-        
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a href="/#work">
-            
-            <span>Experience</span>
+            <span>Apps Home</span>
             
           </a>
         </li>
@@ -210,28 +152,9 @@ chart.draw(dataTable, options);
         
 
         <li class="nav-item">
-          <a href="https://shiny.ogustavo.com/" target="_blank" rel="noopener">
+          <a href="https://ogustavo.com" target="_blank" rel="noopener">
             
-            <span>Shiny Apps</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-        
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a href="/#publications">
-            
-            <span>Publications</span>
+            <span>Resume</span>
             
           </a>
         </li>
@@ -263,11 +186,13 @@ chart.draw(dataTable, options);
         
         
         
+          
+        
 
         <li class="nav-item">
-          <a href="/cv/">
+          <a href="/files/CV_Varela_Alvarenga.pdf">
             
-            <span>CV</span>
+            <span>Download my CV</span>
             
           </a>
         </li>
@@ -293,11 +218,11 @@ chart.draw(dataTable, options);
   <h2>Shiny Apps</h2>
   
   <ul>
-    <li><a href="https://shiny.ogustavo.com/add_remove_module/">Module to Add and Remove variables</a></li>
+      <li><a href="https://shiny.ogustavo.com/add_remove_module/">Module to Add and Remove variables</a></li>
   </ul>
   
   
-
+  
   
   
 
@@ -306,15 +231,12 @@ chart.draw(dataTable, options);
   <h2>Publications</h2>
   
   <ul>
-    <li><a href="/publication/airticket/">Demand for air ticket in the Brazilian economy: a co-integration analysis (original title: Demanda por ticket aéreo na economia brasileira: uma análise de co-integração)</a></li>
+    <li><a href="https://ogustavo.com/publication/airticket/">Demand for air ticket in the Brazilian economy: a co-integration analysis (original title: Demanda por ticket aéreo na economia brasileira: uma análise de co-integração)</a></li>
   </ul>
   
   <ul>
-    <li><a href="/publication/vehicle_sales/">Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos)</a></li>
+    <li><a href="https://ogustavo.com/publication/vehicle_sales/">Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos)</a></li>
   </ul>
-  
-  
-
   
   
 
@@ -333,7 +255,7 @@ chart.draw(dataTable, options);
 
     <p class="powered-by">
 
-      &copy; 2018 &middot; 
+      &copy; 2018 Gustavo Varela-Alvarenga &middot; 
 
       Powered by the
       <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

@@ -6,9 +6,30 @@
     <description>Recent content in Gustavo Varela-Alvarenga on Gustavo Varela-Alvarenga</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0400</lastBuildDate>
+    <copyright>&amp;copy; 2018 Gustavo Varela-Alvarenga</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
     <atom:link href="/pt/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Módulo Shiny para adicionar e remover variáveis</title>
+      <link>/add_remove_module/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/add_remove_module/</guid>
+      <description>&lt;div class=&#34;custom-shiny-container&#34;&gt;
+    &lt;p&gt;&lt;iframe class=&#34;custom-shiny&#34; src=&#34;./add_remove_module/&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+ &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Módulo para adicionar e remover variáveis</title>
+      <link>/pt/project/add-remove-module/</link>
+      <pubDate>Sun, 16 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>/pt/project/add-remove-module/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Especialista - Estatístico</title>

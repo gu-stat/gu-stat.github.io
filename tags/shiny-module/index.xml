@@ -6,11 +6,20 @@
     <description>Recent content in Shiny-module on Gustavo Varela-Alvarenga</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2018 Gustavo Varela-Alvarenga</copyright>
     <lastBuildDate>Sun, 16 Jul 2017 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="/tags/shiny-module/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Module to Add and Remove variables</title>
+      <link>/project/add-remove-module/</link>
+      <pubDate>Sun, 16 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>/project/add-remove-module/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Module to Add and Remove variables</title>

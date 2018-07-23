@@ -6,9 +6,19 @@
     <description>Recent content in Gustavo Varela-Alvarenga on Gustavo Varela-Alvarenga</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2018 Gustavo Varela-Alvarenga</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Currículo</title>
+      <link>/cv-pt/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/cv-pt/</guid>
+      <description>&lt;p&gt;&lt;embed src=&#34;/files/CV_Varela_Alvarenga.pdf&#34; width=&#34;720px&#34; height=&#34;1900px&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Privacy Policy</title>
@@ -28,6 +38,27 @@
       <guid>/cv/</guid>
       <description>&lt;p&gt;&lt;embed src=&#34;/files/CV_Varela_Alvarenga.pdf&#34; width=&#34;720px&#34; height=&#34;1900px&#34; /&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Shiny Module to Add and Remove Variables</title>
+      <link>/add_remove_module/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/add_remove_module/</guid>
+      <description>&lt;div class=&#34;custom-shiny-container&#34;&gt;
+    &lt;p&gt;&lt;iframe class=&#34;custom-shiny&#34; src=&#34;./add_remove_module/&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+ &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Module to Add and Remove variables</title>
+      <link>/project/add-remove-module/</link>
+      <pubDate>Sun, 16 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>/project/add-remove-module/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -124,34 +155,11 @@
     </item>
     
     <item>
-      <title>CNI National Economy Award (Prêmio CNI de Economia)</title>
-      <link>/awards/award/</link>
-      <pubDate>Wed, 12 Dec 2012 00:00:00 -0500</pubDate>
+      <title>Shiny App Sample</title>
+      <link>/shinyapps/shiny-app-sample/</link>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>/awards/award/</guid>
-      <description>&lt;p&gt;Issued by the Brazilian National Confederation of Industry with the support from the Brazilian Association of Graduate Centers in Economics.&lt;/p&gt;
-
-&lt;p&gt;Award granted to the paper: ``Impacts of the Brazilian science and technology sector funds on industrial firms’ R&amp;amp;D inputs and outputs: new perspectives using a dose-response function&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Click &lt;a href=&#34;https://goo.gl/lnuSpe&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; for the full paper in English and &lt;a href=&#34;http://admin.cni.org.br/portal/data/pages/FF80808121B629230121B62A73BB04BC.htm&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; for more information about the award.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Demand for air ticket in the Brazilian economy: a co-integration analysis (original title: Demanda por ticket aéreo na economia brasileira: uma análise de co-integração)</title>
-      <link>/publication/airticket/</link>
-      <pubDate>Fri, 01 Jul 2011 00:00:00 -0400</pubDate>
-      
-      <guid>/publication/airticket/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos)</title>
-      <link>/publication/vehicle_sales/</link>
-      <pubDate>Wed, 01 Dec 2010 00:00:00 -0500</pubDate>
-      
-      <guid>/publication/vehicle_sales/</guid>
+      <guid>/shinyapps/shiny-app-sample/</guid>
       <description></description>
     </item>
     

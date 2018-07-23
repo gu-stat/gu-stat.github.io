@@ -18,6 +18,8 @@
   <meta name="description" content="">
 
   
+  <link rel="alternate" hreflang="pt" href="/pt/project/">
+  
   <link rel="alternate" hreflang="en-us" href="/project/">
 
   
@@ -79,36 +81,10 @@
   <meta property="og:description" content="">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2016-04-27T00:00:00-04:00">
+  <meta property="og:updated_time" content="2017-07-16T00:00:00-04:00">
   
 
   
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-<script>
-  window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#0095eb",
-          "text": "#fff"
-        },
-        "button": {
-          "background": "#fff",
-          "text": "#0095eb"
-        }
-      },
-      "theme": "classic",
-      "content": {
-        "message": "This website uses cookies to ensure you get the best experience on our website.",
-        "dismiss": "Got it!",
-        "link": "Learn more",
-        "href": "/privacy/"
-      }
-    })});
-</script>
-
 
   <style>
   svg g:first-of-type path {
@@ -118,44 +94,6 @@ svg g:first-of-type rect:not(:last-child) {
     fill: #ffffff;
 }
 </style>
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-google.charts.load("current", {packages:["timeline"]});
-google.charts.setOnLoadCallback(drawChart);
-function drawChart() {
-var container = document.getElementById('timeline.skills');
-var chart = new google.visualization.Timeline(container);
-var dataTable = new google.visualization.DataTable();
-
-    dataTable.addColumn({ type: 'string', id: 'Language' });
-    dataTable.addColumn({ type: 'date', id: 'Start' });
-    dataTable.addColumn({ type: 'date', id: 'End' });
-    dataTable.addRows([
-    	['R', 						new Date(2009, 6),  new Date() ],
-      ['Shiny',      	new Date(2017, 3),  new Date() ],
-      ['SAS',  				new Date(2004, 10), new Date(2014, 7) ],
-      ['SQL',  				new Date(2008, 6),  new Date(2014, 7) ],
-      ['LaTeX',  			new Date(2010, 9),  new Date() ],
-      ['STATA',  			new Date(2010, 4),  new Date(2012, 8) ],
-      ['MATLAB',  			new Date(2004, 2),  new Date(2005, 5) ],
-      ['MATLAB',  			new Date(2014, 8),  new Date(2015, 5)],
-      ['Python',  			new Date(2018, 3),  new Date() ],
-      ['HTML',  				new Date(2018, 4),  new Date() ],
-      ['CSS',  				new Date(2018, 4),  new Date() ],
-      ["JavaScript",  	new Date(2018, 4),  new Date() ],
-      ]);
-var options = {
-  timeline: { singleColor: '#7CB5EC' },
-  hAxis: {
-    minValue: new Date(2014, 0, 0),
-    maxValue: new Date(2020, 1, 0)
-  }
-};
-
-chart.draw(dataTable, options);
-}
-</script>
   
 
   <title>Projects | Gustavo Varela-Alvarenga</title>
@@ -197,47 +135,9 @@ chart.draw(dataTable, options);
         
 
         <li class="nav-item">
-          <a href="/#about">
-            
-            <span>Home</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-        
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a href="/#work">
-            
-            <span>Experience</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-        
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
           <a href="/#shinyapps">
             
-            <span>Shiny Apps</span>
+            <span>Apps Home</span>
             
           </a>
         </li>
@@ -251,12 +151,14 @@ chart.draw(dataTable, options);
         
         
           
+            
+          
         
 
         <li class="nav-item">
-          <a href="/#publications">
+          <a href="https://ogustavo.com" target="_blank" rel="noopener">
             
-            <span>Publications</span>
+            <span>Resume</span>
             
           </a>
         </li>
@@ -294,7 +196,7 @@ chart.draw(dataTable, options);
         <li class="nav-item">
           <a href="/files/CV_Varela_Alvarenga.pdf">
             
-            <span>CV</span>
+            <span>Download my CV</span>
             
           </a>
         </li>
@@ -304,6 +206,16 @@ chart.draw(dataTable, options);
       
 
       
+      
+        <li class="nav-item">
+          
+          <a href="/pt/project/">
+            <i class="fas fa-globe-americas" aria-hidden="true"></i>
+            <span>Português</span>
+          </a>
+        </li>
+        
+        
       </ul>
 
     </div>
@@ -323,19 +235,10 @@ chart.draw(dataTable, options);
   
   
   <div>
-    <h2><a href="/project/deep-learning/">Deep Learning</a></h2>
+    <h2><a href="/project/add-remove-module/">Module to Add and Remove variables</a></h2>
     <div class="article-style">
       
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/project/example-external-project/">External Project</a></h2>
-    <div class="article-style">
-      
-      An example of linking directly to an external project website using <code>external_link</code>.
+      Reactive Shiny app that uses callModule to add and remove variables
       
     </div>
   </div>
@@ -356,7 +259,7 @@ chart.draw(dataTable, options);
 
     <p class="powered-by">
 
-      &copy; 2018 &middot; 
+      &copy; 2018 Gustavo Varela-Alvarenga &middot; 
 
       Powered by the
       <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
