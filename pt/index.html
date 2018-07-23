@@ -14,7 +14,7 @@
   
   
   
-  <meta name="description" content="">
+  <meta name="description" content="Statistician">
 
   
   <link rel="alternate" hreflang="en" href="/">
@@ -77,10 +77,10 @@
   <meta property="og:site_name" content="Gustavo Varela-Alvarenga">
   <meta property="og:url" content="/pt/">
   <meta property="og:title" content="Gustavo Varela-Alvarenga">
-  <meta property="og:description" content="">
+  <meta property="og:description" content="Statistician">
   <meta property="og:locale" content="pt">
   
-  <meta property="og:updated_time" content="2017-10-15T00:00:00-04:00">
+  <meta property="og:updated_time" content="2016-04-20T00:00:00-04:00">
   
 
   
@@ -93,6 +93,45 @@ svg g:first-of-type rect:not(:last-child) {
     fill: #ffffff;
 }
 </style>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["timeline"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+var container = document.getElementById('timeline.skills');
+var chart = new google.visualization.Timeline(container);
+var dataTable = new google.visualization.DataTable();
+
+    dataTable.addColumn({ type: 'string', id: 'Language' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+    	['R', 						new Date(2009, 6),  new Date() ],
+      ['Shiny',      	new Date(2017, 3),  new Date() ],
+      ['SAS',  				new Date(2004, 10), new Date(2014, 7) ],
+      ['SQL',  				new Date(2008, 6),  new Date(2014, 7) ],
+      ['LaTeX',  			new Date(2010, 9),  new Date() ],
+      ['STATA',  			new Date(2010, 4),  new Date(2012, 8) ],
+      ['MATLAB',  			new Date(2004, 2),  new Date(2005, 5) ],
+      ['MATLAB',  			new Date(2014, 8),  new Date(2015, 5)],
+      ['Python',  			new Date(2018, 3),  new Date() ],
+      ['HTML',  				new Date(2018, 4),  new Date() ],
+      ['CSS',  				new Date(2018, 4),  new Date() ],
+      ["JavaScript",  	new Date(2018, 4),  new Date() ],
+      ]);
+var options = {
+  timeline: { singleColor: '#7CB5EC' },
+  hAxis: {
+    minValue: new Date(2014, 0, 0),
+    maxValue: new Date(2020, 1, 0)
+  }
+};
+
+chart.draw(dataTable, options);
+}
+</script>
   
 
   <title>Gustavo Varela-Alvarenga</title>
@@ -134,9 +173,28 @@ svg g:first-of-type rect:not(:last-child) {
         
 
         <li class="nav-item">
-          <a href="/pt/#shinyapps" data-target="#shinyapps">
+          <a href="/pt/#about" data-target="#about">
             
-            <span>Início - Aplicativos</span>
+            <span>Início</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/pt/#work" data-target="#work">
+            
+            <span>Experiência</span>
             
           </a>
         </li>
@@ -155,9 +213,28 @@ svg g:first-of-type rect:not(:last-child) {
         
 
         <li class="nav-item">
-          <a href="https://ogustavo.com" data-target="https://ogustavo.com" target="_blank" rel="noopener">
+          <a href="https://shiny.ogustavo.com/pt/" data-target="https://shiny.ogustavo.com/pt/" target="_blank" rel="noopener">
             
-            <span>Currículo</span>
+            <span>Aplicativos Shiny</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/pt/#publications" data-target="#publications">
+            
+            <span>Publicações</span>
             
           </a>
         </li>
@@ -216,116 +293,726 @@ svg g:first-of-type rect:not(:last-child) {
   
   
   
-    
-
-
-
-<section id="hero" class="hero-overlay" style="
-
-background-color: #a7afb7;
-
-
-background-image:
-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-url('/img/headers/shiny-background.jpg');
-
-;">
-
-  <div class="container">
-
-    <h1 class="hero-title" itemprop="headline">
-      Aplicativos Shiny
-    </h1>
-
-    
-    <p class="hero-lead">Uma coleção dos meus aplicativos disponíveis publicamente.
-<br><br>
-<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=gu-stat&amp;repo=my-shiny-apps&amp;type=star&amp;count=true&amp;size=large" scrolling="0" width="160px" height="30px" frameborder="0"></iframe>
-<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=gu-stat&amp;repo=my-shiny-apps&amp;type=fork&amp;count=true&amp;size=large" scrolling="0" width="158px" height="30px" frameborder="0"></iframe></p>
-    
-
-    
-
-  </div>
-
-</section>
-
-  
-
-  
-  
-  
-  <section id="projects" class="home-section">
+  <section id="about" class="home-section">
     <div class="container">
       
 
 
 
+<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="person-email">
+  <div class="col-xs-12 col-md-4">
+    <div id="profile">
+
+      
+      <div class="portrait" style="background-image: url('/img/portrait.jpg');"></div>
+      <meta itemprop="image" content="/img/portrait.jpg">
+      
+
+      <div class="portrait-title">
+        <h2 itemprop="name">Gustavo Varela Alvarenga</h2>
+        <h3 itemprop="jobTitle">Estatístico</h3>
+
+        
+        
+
+        
+        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+          <a href="https://www-math.umd.edu/" target="_blank" itemprop="url" rel="noopener">
+          <span itemprop="name">University of Maryland</span>
+          </a>
+        </h3>
+        
+      </div>
+
+      <link itemprop="url" href="/">
+
+      <ul class="network-icon" aria-hidden="true">
+        
+        
+        <li>
+          <a itemprop="sameAs" href="mailto:contact@ogustavo.com" target="_blank" rel="noopener">
+            <i class="fas fa-envelope big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="//twitter.com/Gu_Stat" target="_blank" rel="noopener">
+            <i class="fab fa-twitter big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="https://scholar.google.com/citations?user=-0xpQ54AAAAJ" target="_blank" rel="noopener">
+            <i class="ai ai-google-scholar big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="//github.com/Gu-Stat" target="_blank" rel="noopener">
+            <i class="fab fa-github big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="https://www.researchgate.net/profile/Gustavo_Varela_Alvarenga" target="_blank" rel="noopener">
+            <i class="ai ai-researchgate big-icon"></i>
+          </a>
+        </li>
+        
+      </ul>
+
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8" itemprop="description">
+
+    
+
+<h1 id="sobre">Sobre</h1>
+
+<p>Estatístico com 5 anos de experiência em pesquisa econométrica e mais de 9 anos de experiência com análise quantitativa e qualitativa de dados. Ganhador de prêmio por um artigo no qual avaliou o impacto dos Fundos Setoriais na capacidade inovativa das empresas brasileiras.</p>
+
+<p>Atualmente trabalha em um novo método para previsão de séries temporais (teoria, pacote no R e aplicativo Shiny).</p>
+
+
+    <div class="row">
+
+      
+      <div class="col-sm-5">
+        <h3>Interesses</h3>
+        <ul class="ul-interests">
+          
+          <li>Séries Temporais</li>
+          
+          <li>Estatística Aplicada</li>
+          
+          <li>Programação</li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="col-sm-7">
+        <h3>Formação</h3>
+        <ul class="ul-edu fa-ul">
+          
+          <li>
+            <i class="fa-li fa fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Candidato a PhD em Estatística, 2019</p>
+              <p class="institution">University of Maryland, Estados Unidos</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fa fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Mestre em Economia do Setor Público, 2011</p>
+              <p class="institution">Universidade de Brasília</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fa fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Bacharel em Estatística, 2008</p>
+              <p class="institution">Universidade de Brasília</p>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="work" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="container-work">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 section-heading">
+            <h1>Experiência</h1>
+      
+        </div>
+        <div class="col-xs-12 col-md-8">
+          
+          
+            <div class="work-metadata" style="margin-bottom: 1rem">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-8">
+                    <span itemprop="name"><a href="/pt/work/abdi/">Especialista - Estatístico</a></span>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 work-date">
+                    
+                    Aug, 2013
+                    &mdash;
+                     
+                    Jul, 2014
+                  </div>
+                  <div class="col-xs-12 col-sm-8">
+                    ABDI - Agência Brasileira de Desenvolvimento Industrial
+                  </div>
+                  <div class="col-xs-12 col-sm-4 work-location">
+                    Brasília
+                  </div>
+              </div>
+            </div>
+          
+            <div class="work-metadata" style="margin-bottom: 1rem">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-8">
+                    <span itemprop="name"><a href="/pt/work/unb/">Professor Substituto - Estatística Aplicada</a></span>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 work-date">
+                    
+                    Aug, 2012
+                    &mdash;
+                     
+                    Jul, 2014
+                  </div>
+                  <div class="col-xs-12 col-sm-8">
+                    Universidade de Brasília, UnB
+                  </div>
+                  <div class="col-xs-12 col-sm-4 work-location">
+                    Brasília
+                  </div>
+              </div>
+            </div>
+          
+            <div class="work-metadata" style="margin-bottom: 1rem">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-8">
+                    <span itemprop="name"><a href="/pt/work/ipea/">Pesquisador / Consultor Estatístico</a></span>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 work-date">
+                    
+                    Jan, 2009
+                    &mdash;
+                     
+                    Aug, 2013
+                  </div>
+                  <div class="col-xs-12 col-sm-8">
+                    IPEA - Instituto de Pesquisa Econômica Aplicada
+                  </div>
+                  <div class="col-xs-12 col-sm-4 work-location">
+                    Brasília
+                  </div>
+              </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="skills" class="home-section">
+    <div class="container">
+      
+
+
 <div class="row">
+  
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Habilidades de Programação</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <p><body>
+<div id="timeline.skills" style="height: 600px;"></div>
+</body></p>
+
+  </div>
+  
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="shinyapps" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Aplicativos Shiny</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <p>Para uma lista dos meus aplicativos Shiny, visite <a href="https://shiny.ogustavo.com/pt/" target="_blank">shiny.ogustavo.com</a></p>
+
+  </div>
+  
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="awards" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="container-award">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 section-heading">
+            <h1>Prêmios</h1>
+      
+        </div>
+        <div class="col-xs-12 col-md-8">
+          
+          
+            <div class="awards-metadata" style="margin-bottom: 1rem">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-12">
+                    <span itemprop="name"><a href="/pt/awards/award/">Prêmio CNI de Economia</a></span>
+                  </div>
+                  <div class="col-xs-12">
+                    2º Melhor Artigo
+                  </div>
+                  <div class="col-xs-12">
+                    Categoria: Avaliação da Produtividade e Inovação na Indústria Brasileira
+                </div>
+                <div class="col-xs-12">
+                    Pernambuco
+                  </div>
+                  <div class="col-xs-12">
+                    
+                    Dezembro, 2012
+                  </div>
+                </div>
+              </div>
+            
+        </div>
+    </div>
+</div>
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="publications" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Publicações selecionadas</h1>
+    
+    
+  </div>
   <div class="col-xs-12 col-md-8">
     
 
     
-    
-    <span class="hidden default-project-filter">*</span>
-    
-
-    
-    
-    <div class="project-toolbar">
-      <div class="project-filters">
-        <div class="btn-toolbar">
-          <div class="btn-group">
-            
-              <a href="#" data-filter="*" class="btn btn-primary btn-large active">All</a>
-            
-              <a href="#" data-filter=".shiny-module" class="btn btn-primary btn-large">Módulo no Shiny</a>
-            
-              <a href="#" data-filter=".shiny-app" class="btn btn-primary btn-large">Aplicativo Shiny</a>
-            
-              <a href="#" data-filter=".rmarkdown" class="btn btn-primary btn-large">R Markdown</a>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-    
+      
     
 
     
 
-    <div class="row isotope projects-container js-layout-masonry">
+    
+    
+      
+        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="author">
+    PF Alves, G Varela-Alvarenga, CH Rocha</span>.
+  <a href="/pt/publication/airticket/" itemprop="name">Demanda por ticket aéreo na economia brasileira: uma análise de co-integração</a>.
+  In <em>Journal of Transport Literature</em>,
+  2011.
+  <p>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="/files/airticket.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+</div>
 
       
+    
       
-      
-      
-      
-      
-      
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 project-item isotope-item shiny-module shiny-app">
-        <div class="card">
-          
-          <a href="add_remove_module/" title="" class="card-image hover-overlay"
-             target="_blank">
-            <img src="/img/apps/add_remove_module.jpg" alt="" class="img-responsive">
-          </a>
-          
-          <div class="card-text">
-            <h4><a href="add_remove_module/" target="_blank">Módulo para adicionar e remover variáveis</a></h4>
-            <div class="card-desription">
-              <p>Aplicativo Shiny reativo que utiliza callModule para adicionar e remover variáveis</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="author">
+    G Varela-Alvarenga, et. al.</span>.
+  <a href="/pt/publication/vehicle_sales/" itemprop="name">Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos</a>.
+  In <em>ANPEC</em>,
+  2010.
+  <p>
 
-    </div>
 
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="/files/anpec_2010.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+</div>
+
+      
     
 
   </div>
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="shortcourses" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="container-shortcourses">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 section-heading">
+            <h1>Minicursos</h1>
+      
+        </div>
+        <div class="col-xs-12 col-md-8">
+          
+          
+            <div class="shortcourses-metadata" style="margin-bottom: 1rem">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <span itemprop="name"><a href="/pt/shortcourses/javascript/">Introduction To JavaScript</a></span>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 shortcourses-date">
+                   
+                   2018
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    Codecademy
+                  </div>
+                  <div class="col-xs-12 col-sm-6 shortcourses-type">
+                    Curso Online
+                  </div>
+              </div>
+            </div>
+          
+            <div class="shortcourses-metadata" style="margin-bottom: 1rem">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <span itemprop="name"><a href="/pt/shortcourses/python/">Learn Python</a></span>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 shortcourses-date">
+                   
+                   2018
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    Codecademy
+                  </div>
+                  <div class="col-xs-12 col-sm-6 shortcourses-type">
+                    Curso Online
+                  </div>
+              </div>
+            </div>
+          
+            <div class="shortcourses-metadata" style="margin-bottom: 1rem">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <span itemprop="name"><a href="/pt/shortcourses/game_theory/">Game Theory</a></span>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 shortcourses-date">
+                   
+                   2012
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    Stanford University
+                  </div>
+                  <div class="col-xs-12 col-sm-6 shortcourses-type">
+                    Curso Online - Coursera
+                  </div>
+              </div>
+            </div>
+          
+            <div class="shortcourses-metadata" style="margin-bottom: 1rem">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <span itemprop="name"><a href="/pt/shortcourses/model_thinking/">Model Thinking</a></span>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 shortcourses-date">
+                   
+                   2012
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    University of Michigan
+                  </div>
+                  <div class="col-xs-12 col-sm-6 shortcourses-type">
+                    Curso Online - Coursera
+                  </div>
+              </div>
+            </div>
+          
+            <div class="shortcourses-metadata" style="margin-bottom: 1rem">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <span itemprop="name"><a href="/pt/shortcourses/real_analysis/">Tópicos em Análise Real</a></span>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 shortcourses-date">
+                   
+                   2012
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    Universidade de Brasília, UnB
+                  </div>
+                  <div class="col-xs-12 col-sm-6 shortcourses-type">
+                    Curso de Verão
+                  </div>
+              </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="stack_exchange" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Respostas no Stack Exchange</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <p><a href="https://stats.stackexchange.com/questions/78354/what-is-a-contrast-matrix-a-term-pertaining-to-an-analysis-with-categorical-pr/221861#221861" target="_blank">What is a contrast matrix (a term, pertaining to an analysis with categorical predictors)?</a></p>
+
+<p><a href="https://math.stackexchange.com/questions/1708587/hitting-times-for-brownian-motion-2/1793520#1793520" target="_blank">Hitting times for Brownian Motion (2)</a></p>
+
+<p><a href="https://stats.stackexchange.com/questions/223059/how-to-define-a-rejection-region/223069#223069" target="_blank">How to define a rejection region?</a></p>
+
+<p><a href="https://stats.stackexchange.com/questions/133977/why-a-sufficient-statistic-contains-all-the-information-needed-to-compute-any-es/221604#221604" target="_blank">Why a sufficient statistic contains all the information needed to compute any estimate of the parameter?</a></p>
+
+<p><a href="https://math.stackexchange.com/questions/328460/if-operatornameranka-k-can-we-say-something-about-operatornameranka/1821366#1821366" target="_blank">If rank(A)=k, can we say something about rank(AAt)?</a></p>
+
+<p><a href="https://stackoverflow.com/questions/8156925/r-package-for-motion-capture-data-analysis-and-visualisation/46187763#46187763" target="_blank">R package for motion capture data analysis and visualisation</a></p>
+
+<p><a href="https://stackoverflow.com/questions/37128099/transposing-time-series-mutate-with-lags-with-dplyr/49416789#49416789" target="_blank">Transposing time series (mutate with lags) with dplyr</a></p>
+
+  </div>
+  
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="analytical_skills" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Habilidades Analíticas</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <ul>
+<li>Avaliação de Impacto</li>
+<li>Limpeza de conjunto de dados</li>
+<li>Manipulação de conjuntos de dados</li>
+<li>Pesquisa</li>
+<li>Análise Econométrica</li>
+<li>Análise Quantitativa e Qualitativa</li>
+<li>Modelagem de Dados</li>
+<li>Visualização de Dados</li>
+<li>Resolução de Problemas</li>
+<li>Pensamento Crítico</li>
+</ul>
+
+  </div>
+  
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="statistical_skills" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Competências em Estatística</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <ul>
+<li>Análise de Séries Temporais</li>
+<li>Modelos Generalizados Lineares e Mistos</li>
+<li>ANOVA/MANOVA/ANCOVA</li>
+<li>Modelos de Variáveis Instrumentais</li>
+<li>Modelos de Seleção</li>
+<li>Algoritmos de Pareamento</li>
+<li>Teste de Hipóteses</li>
+<li>Simulações de Monte Carlo</li>
+<li>Métodos de Bootstrap</li>
+<li>Estatísticas Descritivas</li>
+<li>Projeto de Pesquisa</li>
+</ul>
+
+  </div>
+  
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="datasets" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Habilidades em Conjuntos de Dados</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <p>Experiência com grandes conjuntos de dados, incluindo dados de pesquisas domiciliares.</p>
+
+<p>Combinou vários conjuntos de dados - com cerca de 50 milhões de linhas cada e 15 GB cada - por um número de identificação único.</p>
+
+<p>Utilizou procedimentos SQL no SAS (PROC SQL) para extração e manipulação de dados devido ao tamanho e complexidade dos conjuntos de dados.</p>
+
+  </div>
+  
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="data_visualization" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Visualização de Dados</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <p>Alguns dos pacotes em R utilizados para visualização de dados:</p>
+
+<ul>
+<li>ggplot2</li>
+<li>plotly</li>
+<li>highcharter</li>
+<li>dygraph</li>
+<li>googlevis</li>
+<li>ggiraph</li>
+<li>shiny</li>
+</ul>
+
+  </div>
+  
 </div>
 
     </div>
@@ -421,7 +1108,7 @@ url('/img/headers/shiny-background.jpg');
 
     <p class="powered-by">
 
-      &copy; 2018 Gustavo Varela-Alvarenga &middot; 
+      &copy; 2018 &middot; 
 
       Powered by the
       <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

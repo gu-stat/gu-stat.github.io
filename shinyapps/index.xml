@@ -6,7 +6,7 @@
     <description>Recent content in Shinyapps on Gustavo Varela-Alvarenga</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018 Gustavo Varela-Alvarenga</copyright>
+    <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 16 Jul 2017 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="/shinyapps/index.xml" rel="self" type="application/rss+xml" />
@@ -18,24 +18,6 @@
       <pubDate>Sun, 16 Jul 2017 00:00:00 -0400</pubDate>
       
       <guid>/shinyapps/add-remove-module/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shiny App Sample</title>
-      <link>/shinyapps/shiny-app-sample/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>/shinyapps/shiny-app-sample/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>/shinyapps/r-markdown-sample/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>/shinyapps/r-markdown-sample/</guid>
       <description></description>
     </item>
     

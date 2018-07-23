@@ -6,20 +6,11 @@
     <description>Recent content in Homes on Gustavo Varela-Alvarenga</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt</language>
-    <copyright>&amp;copy; 2018 Gustavo Varela-Alvarenga</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="/pt/home/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Aplicativos Shiny</title>
-      <link>/pt/home/hero/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 -0400</pubDate>
-      
-      <guid>/pt/home/hero/</guid>
-      <description>Uma coleção dos meus aplicativos disponíveis publicamente.</description>
-    </item>
     
     <item>
       <title></title>
@@ -27,8 +18,8 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>/pt/home/about/</guid>
-      <description>Sobre Estatístico com 5 anos de experiência em pesquisa econométrica e mais de 9 anos de experiência com análise quantitativa e qualitativa de dados. Ganhei um prêmio por um artigo no qual avaliei o impacto dos Fundos Setoriais na capacidade inovativa das empresas brasileiras.
-Atualmente trabalho em um novo método para previsão de séries temporais (teoria, pacote no R e aplicativo Shiny).</description>
+      <description>Sobre Estatístico com 5 anos de experiência em pesquisa econométrica e mais de 9 anos de experiência com análise quantitativa e qualitativa de dados. Ganhador de prêmio por um artigo no qual avaliou o impacto dos Fundos Setoriais na capacidade inovativa das empresas brasileiras.
+Atualmente trabalha em um novo método para previsão de séries temporais (teoria, pacote no R e aplicativo Shiny).</description>
     </item>
     
     <item>
@@ -55,7 +46,7 @@ Atualmente trabalho em um novo método para previsão de séries temporais (teor
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>/pt/home/shinyapps/</guid>
-      <description>Para uma lista dos meus aplicativos Shiny visite app.gustavo.mat.br</description>
+      <description>Para uma lista dos meus aplicativos Shiny, visite shiny.ogustavo.com</description>
     </item>
     
     <item>
@@ -101,15 +92,6 @@ Transposing time series (mutate with lags) with dplyr</description>
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>/pt/home/projects/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>/pt/home/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Habilidades Analíticas</title>
       <link>/pt/home/analytical_skills/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
@@ -134,7 +116,7 @@ Transposing time series (mutate with lags) with dplyr</description>
       
       <guid>/pt/home/datasets/</guid>
       <description>Experiência com grandes conjuntos de dados, incluindo dados de pesquisas domiciliares.
-Teve que combinar vários conjuntos de dados - com cerca de 50 milhões de linhas cada e 15 GB cada - por um número de identificação único.
+Combinou vários conjuntos de dados - com cerca de 50 milhões de linhas cada e 15 GB cada - por um número de identificação único.
 Utilizou procedimentos SQL no SAS (PROC SQL) para extração e manipulação de dados devido ao tamanho e complexidade dos conjuntos de dados.</description>
     </item>
     
@@ -144,7 +126,7 @@ Utilizou procedimentos SQL no SAS (PROC SQL) para extração e manipulação de 
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>/pt/home/data_visualization/</guid>
-      <description>Alguns dos pacotes em R que usei para visualização de dados:
+      <description>Alguns dos pacotes em R utilizados para visualização de dados:
  ggplot2 plotly highcharter dygraph googlevis ggiraph shiny  </description>
     </item>
     

@@ -5,15 +5,6 @@
     
     <url>
     
-      <loc>/cv-pt/</loc>
-      <lastmod>2018-06-28T00:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/privacy/</loc>
       <lastmod>2018-06-28T00:00:00-04:00</lastmod>
     </url>
@@ -25,30 +16,6 @@
     
       <loc>/cv/</loc>
       <lastmod>2018-06-28T00:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/add_remove_module/" hreflang="en"/>
-      <xhtml:link rel="alternate" href="/pt/add_remove_module/" hreflang="pt"/>
-    
-      <loc>/add_remove_module/</loc>
-      <lastmod>2018-06-28T00:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/project/add-remove-module/" hreflang="en"/>
-      <xhtml:link rel="alternate" href="/pt/project/add-remove-module/" hreflang="pt"/>
-    
-      <loc>/project/add-remove-module/</loc>
-      <lastmod>2017-07-16T00:00:00-04:00</lastmod>
     </url>
     
   
@@ -227,24 +194,6 @@
     
     <url>
     
-      <loc>/shinyapps/shiny-app-sample/</loc>
-      <lastmod>2016-04-28T00:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/shinyapps/r-markdown-sample/</loc>
-      <lastmod>2016-04-27T00:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="/awards/award/" hreflang="en"/>
       <xhtml:link rel="alternate" href="/pt/awards/award/" hreflang="pt"/>
     
@@ -332,19 +281,6 @@
     
     <url>
     
-      <xhtml:link rel="alternate" href="/project/" hreflang="en"/>
-      <xhtml:link rel="alternate" href="/pt/project/" hreflang="pt"/>
-    
-      <loc>/project/</loc>
-      <lastmod>2017-07-16T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="/publication_types/" hreflang="en"/>
       <xhtml:link rel="alternate" href="/pt/publication_types/" hreflang="pt"/>
     
@@ -358,19 +294,6 @@
     
     <url>
     
-      <loc>/tags/rmarkdown/</loc>
-      <lastmod>2016-04-27T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/tags/shiny-app/" hreflang="en"/>
-      <xhtml:link rel="alternate" href="/pt/tags/shiny-app/" hreflang="pt"/>
-    
       <loc>/tags/shiny-app/</loc>
       <lastmod>2017-07-16T00:00:00-04:00</lastmod>
       <priority>0</priority>
@@ -380,9 +303,6 @@
     
     
     <url>
-    
-      <xhtml:link rel="alternate" href="/tags/shiny-module/" hreflang="en"/>
-      <xhtml:link rel="alternate" href="/pt/tags/shiny-module/" hreflang="pt"/>
     
       <loc>/tags/shiny-module/</loc>
       <lastmod>2017-07-16T00:00:00-04:00</lastmod>
@@ -408,7 +328,7 @@
       <xhtml:link rel="alternate" href="/pt/tags/" hreflang="pt"/>
     
       <loc>/tags/</loc>
-      <lastmod>2016-04-27T00:00:00-04:00</lastmod>
+      <lastmod>2017-07-16T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     

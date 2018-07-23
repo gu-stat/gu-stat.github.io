@@ -5,30 +5,6 @@
     
     <url>
     
-      <xhtml:link rel="alternate" href="/pt/add_remove_module/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/add_remove_module/" hreflang="en"/>
-    
-      <loc>/pt/add_remove_module/</loc>
-      <lastmod>2018-06-28T00:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/project/add-remove-module/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/project/add-remove-module/" hreflang="en"/>
-    
-      <loc>/pt/project/add-remove-module/</loc>
-      <lastmod>2017-07-16T00:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="/pt/work/abdi/" hreflang="pt"/>
       <xhtml:link rel="alternate" href="/work/abdi/" hreflang="en"/>
     
@@ -216,20 +192,7 @@
       <xhtml:link rel="alternate" href="/" hreflang="en"/>
     
       <loc>/pt/</loc>
-      <lastmod>2017-10-15T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/project/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/project/" hreflang="en"/>
-    
-      <loc>/pt/project/</loc>
-      <lastmod>2017-07-16T00:00:00-04:00</lastmod>
+      <lastmod>2016-04-20T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -264,32 +227,6 @@
     
     <url>
     
-      <xhtml:link rel="alternate" href="/pt/tags/shiny-app/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/tags/shiny-app/" hreflang="en"/>
-    
-      <loc>/pt/tags/shiny-app/</loc>
-      <lastmod>2017-07-16T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/tags/shiny-module/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/tags/shiny-module/" hreflang="en"/>
-    
-      <loc>/pt/tags/shiny-module/</loc>
-      <lastmod>2017-07-16T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="/pt/shortcourses/" hreflang="pt"/>
       <xhtml:link rel="alternate" href="/shortcourses/" hreflang="en"/>
     
@@ -307,7 +244,6 @@
       <xhtml:link rel="alternate" href="/tags/" hreflang="en"/>
     
       <loc>/pt/tags/</loc>
-      <lastmod>2017-07-16T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     

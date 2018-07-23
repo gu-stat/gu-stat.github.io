@@ -96,6 +96,45 @@ svg g:first-of-type rect:not(:last-child) {
     fill: #ffffff;
 }
 </style>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load("current", {packages:["timeline"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+var container = document.getElementById('timeline.skills');
+var chart = new google.visualization.Timeline(container);
+var dataTable = new google.visualization.DataTable();
+
+    dataTable.addColumn({ type: 'string', id: 'Language' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+    	['R', 						new Date(2009, 6),  new Date() ],
+      ['Shiny',      	new Date(2017, 3),  new Date() ],
+      ['SAS',  				new Date(2004, 10), new Date(2014, 7) ],
+      ['SQL',  				new Date(2008, 6),  new Date(2014, 7) ],
+      ['LaTeX',  			new Date(2010, 9),  new Date() ],
+      ['STATA',  			new Date(2010, 4),  new Date(2012, 8) ],
+      ['MATLAB',  			new Date(2004, 2),  new Date(2005, 5) ],
+      ['MATLAB',  			new Date(2014, 8),  new Date(2015, 5)],
+      ['Python',  			new Date(2018, 3),  new Date() ],
+      ['HTML',  				new Date(2018, 4),  new Date() ],
+      ['CSS',  				new Date(2018, 4),  new Date() ],
+      ["JavaScript",  	new Date(2018, 4),  new Date() ],
+      ]);
+var options = {
+  timeline: { singleColor: '#7CB5EC' },
+  hAxis: {
+    minValue: new Date(2014, 0, 0),
+    maxValue: new Date(2020, 1, 0)
+  }
+};
+
+chart.draw(dataTable, options);
+}
+</script>
   
 
   <title>Module to Add and Remove variables | Gustavo Varela-Alvarenga</title>
@@ -137,9 +176,28 @@ svg g:first-of-type rect:not(:last-child) {
         
 
         <li class="nav-item">
-          <a href="/#shinyapps">
+          <a href="/#about">
             
-            <span>Apps Home</span>
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#work">
+            
+            <span>Experience</span>
             
           </a>
         </li>
@@ -158,9 +216,28 @@ svg g:first-of-type rect:not(:last-child) {
         
 
         <li class="nav-item">
-          <a href="https://ogustavo.com" target="_blank" rel="noopener">
+          <a href="https://shiny.ogustavo.com/" target="_blank" rel="noopener">
             
-            <span>Resume</span>
+            <span>Shiny Apps</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
             
           </a>
         </li>
@@ -192,13 +269,11 @@ svg g:first-of-type rect:not(:last-child) {
         
         
         
-          
-        
 
         <li class="nav-item">
-          <a href="/files/CV_Varela_Alvarenga.pdf">
+          <a href="/cv/">
             
-            <span>Download my CV</span>
+            <span>CV</span>
             
           </a>
         </li>
@@ -249,6 +324,7 @@ svg g:first-of-type rect:not(:last-child) {
     
   </ul>
 </div>
+
 
       </span>
     </div>
@@ -307,7 +383,7 @@ svg g:first-of-type rect:not(:last-child) {
 
     <p class="powered-by">
 
-      &copy; 2018 Gustavo Varela-Alvarenga &middot; 
+      &copy; 2018 &middot; 
 
       Powered by the
       <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
