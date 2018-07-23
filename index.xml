@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>Resume</title>
+      <link>/cv/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/cv/</guid>
+      <description>&lt;p&gt;&lt;embed src=&#34;/files/CV_Varela_Alvarenga.pdf&#34; width=&#34;720px&#34; height=&#34;1900px&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Module to Add and Remove variables</title>
       <link>/shinyapps/add-remove-module/</link>
       <pubDate>Sun, 16 Jul 2017 00:00:00 -0400</pubDate>
@@ -151,15 +161,6 @@
       <pubDate>Fri, 01 Jul 2011 00:00:00 -0400</pubDate>
       
       <guid>/publication/airticket/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos)</title>
-      <link>/publication/vehicle_sales/</link>
-      <pubDate>Wed, 01 Dec 2010 00:00:00 -0500</pubDate>
-      
-      <guid>/publication/vehicle_sales/</guid>
       <description></description>
     </item>
     
