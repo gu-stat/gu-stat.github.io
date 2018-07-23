@@ -124,24 +124,6 @@
     </item>
     
     <item>
-      <title>Shiny App Sample</title>
-      <link>/shinyapps/shiny-app-sample/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>/shinyapps/shiny-app-sample/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>/shinyapps/r-markdown-sample/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>/shinyapps/r-markdown-sample/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>CNI National Economy Award (Prêmio CNI de Economia)</title>
       <link>/awards/award/</link>
       <pubDate>Wed, 12 Dec 2012 00:00:00 -0500</pubDate>
@@ -161,6 +143,15 @@
       <pubDate>Fri, 01 Jul 2011 00:00:00 -0400</pubDate>
       
       <guid>/publication/airticket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos)</title>
+      <link>/publication/vehicle_sales/</link>
+      <pubDate>Wed, 01 Dec 2010 00:00:00 -0500</pubDate>
+      
+      <guid>/publication/vehicle_sales/</guid>
       <description></description>
     </item>
     
