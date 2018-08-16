@@ -5,6 +5,9 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="/privacy/" hreflang="en"/>
+      <xhtml:link rel="alternate" href="/pt/privacy/" hreflang="pt"/>
+    
       <loc>/privacy/</loc>
       <lastmod>2018-06-28T00:00:00-04:00</lastmod>
     </url>

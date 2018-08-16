@@ -11,6 +11,16 @@
     <atom:link href="/pt/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Política de Privacidade</title>
+      <link>/pt/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/pt/privacy/</guid>
+      <description>&lt;p&gt;Eu valorizo a sua privacidade, por isso não coleto seus dados do usuário. Eu também não uso nenhum software que faça isso (até onde eu saiba).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Especialista - Estatístico</title>
       <link>/pt/work/abdi/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
@@ -26,8 +36,7 @@
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
       
       <guid>/pt/shortcourses/game_theory/</guid>
-      <description>&lt;p&gt;Descrição.&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
@@ -36,8 +45,7 @@
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
       
       <guid>/pt/shortcourses/javascript/</guid>
-      <description>&lt;p&gt;Descrição.&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
@@ -56,8 +64,7 @@
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
       
       <guid>/pt/shortcourses/model_thinking/</guid>
-      <description>&lt;p&gt;Descrição.&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
@@ -90,14 +97,13 @@
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
       
       <guid>/pt/shortcourses/real_analysis/</guid>
-      <description>&lt;p&gt;Descrição.&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
       <title>Prêmio CNI de Economia</title>
       <link>/pt/awards/award/</link>
-      <pubDate>Wed, 12 Dez 2012 00:00:00 -0500</pubDate>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 -0500</pubDate>
       
       <guid>/pt/awards/award/</guid>
       <description>&lt;p&gt;Emitido pela Confederação Nacional da Indústria (CNI) com o apoio da Associação Brasileira de Centros de Pós-Graduação em Economia (ANPEC).&lt;/p&gt;
@@ -120,7 +126,7 @@
     <item>
       <title>Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos</title>
       <link>/pt/publication/vehicle_sales/</link>
-      <pubDate>Wed, 01 Dez 2010 00:00:00 -0500</pubDate>
+      <pubDate>Wed, 01 Dec 2010 00:00:00 -0500</pubDate>
       
       <guid>/pt/publication/vehicle_sales/</guid>
       <description></description>

@@ -5,6 +5,18 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="/pt/privacy/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/privacy/" hreflang="en"/>
+    
+      <loc>/pt/privacy/</loc>
+      <lastmod>2018-06-28T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <xhtml:link rel="alternate" href="/pt/work/abdi/" hreflang="pt"/>
       <xhtml:link rel="alternate" href="/work/abdi/" hreflang="en"/>
     
