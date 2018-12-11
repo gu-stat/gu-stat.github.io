@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on Gustavo Varela-Alvarenga</title>
+    <link>/tags/javascript/</link>
+    <description>Recent content in JavaScript on Gustavo Varela-Alvarenga</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 24 Jul 2018 12:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shiny App with Modal, Modules and jQuery</title>
+      <link>/project/shiny-modal-modules-jquery/</link>
+      <pubDate>Tue, 24 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>/project/shiny-modal-modules-jquery/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

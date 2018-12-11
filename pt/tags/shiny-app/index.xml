@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shiny App on Gustavo Varela Alvarenga</title>
+    <link>/pt/tags/shiny-app/</link>
+    <description>Recent content in Shiny App on Gustavo Varela Alvarenga</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 24 Jul 2018 12:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="/pt/tags/shiny-app/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aplicativo Shiny com Modal, Módulos e jQuery</title>
+      <link>/pt/project/shiny-modal-modules-jquery/</link>
+      <pubDate>Tue, 24 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>/pt/project/shiny-modal-modules-jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aplicativo Shiny para comparar imagens</title>
+      <link>/pt/project/shiny-compare-images/</link>
+      <pubDate>Tue, 24 Jul 2018 10:00:00 -0400</pubDate>
+      
+      <guid>/pt/project/shiny-compare-images/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

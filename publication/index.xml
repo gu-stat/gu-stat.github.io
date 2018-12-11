@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Gustavo Varela-Alvarenga</title>
+    <link>/publication/</link>
+    <description>Recent content in Publications on Gustavo Varela-Alvarenga</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Impacts of the Brazilian Science and Technology Sector Funds on industrial firms’ R&amp;D inputs and outputs: New perspectives using a dose-response function</title>
+      <link>/publication/dose-response-function/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 -0500</pubDate>
+      
+      <guid>/publication/dose-response-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Demand for air ticket in the Brazilian economy: a co-integration analysis (original title: Demanda por ticket aéreo na economia brasileira: uma análise de co-integração).</title>
+      <link>/publication/airticket/</link>
+      <pubDate>Fri, 01 Jul 2011 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/airticket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos).</title>
+      <link>/publication/vehicle-sales/</link>
+      <pubDate>Fri, 01 Oct 2010 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/vehicle-sales/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

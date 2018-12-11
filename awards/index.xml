@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Awards on Gustavo Varela-Alvarenga</title>
+    <link>/awards/</link>
+    <description>Recent content in Awards on Gustavo Varela-Alvarenga</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="/awards/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CNI National Economy Award (Prêmio CNI de Economia)</title>
+      <link>/awards/premio-cni/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 -0500</pubDate>
+      
+      <guid>/awards/premio-cni/</guid>
+      <description>Issued by the Brazilian National Confederation of Industry with the support from the Brazilian Association of Graduate Centers in Economics.
+Award granted to the paper: ``Impacts of the Brazilian Sector Funds on industrial firms’ R&amp;amp;D inputs and outputs: New erspectives using a dose-response function&amp;rdquo; (original title: Impactos dos Fundos Setoriais nas Empresas: Novas Perspectivas a partir da Função Dose-Resposta).
+Click here for the full paper in English and here for more information about the award.</description>
+    </item>
+    
+  </channel>
+</rss>

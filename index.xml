@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gustavo Varela-Alvarenga on Gustavo Varela-Alvarenga</title>
+    <link>/</link>
+    <description>Recent content in Gustavo Varela-Alvarenga on Gustavo Varela-Alvarenga</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Create a Dumbbell Plot using ggplot</title>
+      <link>/post/dotplot-ggplot/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>/post/dotplot-ggplot/</guid>
+      <description>&lt;p&gt;A friend of mine asked if I could replicate the following plot:
+&lt;img src=&#34;dotplot_original.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;First, we load the packages and set the colors to be the same ones from the original plot (or at least, as close as possible).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# ************************************************************************* ----
+# Packages                                                                  ----
+# ************************************************************************* ----
+
+#install.packages(&amp;quot;tidyverse&amp;quot;)
+
+library(&amp;quot;tidyverse&amp;quot;)
+
+# ************************************************************************* ----
+# Cores - A partir do Original                                              ----
+# ************************************************************************* ----
+
+orange &amp;lt;- &amp;quot;#e8ab5f&amp;quot;
+green &amp;lt;- &amp;quot;#a1ad62&amp;quot;
+
+background_diff &amp;lt;- &amp;quot;#eef0e2&amp;quot;
+
+gray &amp;lt;- &amp;quot;#bbbbbb&amp;quot;
+light_gray &amp;lt;- &amp;quot;#f4f4f4&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, we need to recreate the data. I did that as if the data were organized as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;#        Country Ages_35_plus Ages_18_34
+# 1      Germany         0.39       0.81
+# 2       France         0.42       0.83
+# 3      Vietnam         0.49       0.86
+# 4        Japan         0.43       0.78
+# 5       Poland         0.51       0.86
+# 6      Lebanon         0.57       0.90
+# 7    Australia         0.60       0.91
+# 8  South Korea         0.45       0.75
+# 9       Canada         0.65       0.93
+# 10       Spain         0.57       0.85
+# 11       Italy         0.57       0.83
+# 12        Peru         0.65       0.91
+# 13        U.S.         0.63       0.89
+# 14          UK         0.59       0.84
+# 15      Mexico         0.67       0.90
+# 16       Chile         0.75       0.96
+# 17       China         0.52       0.73
+# 18       India         0.48       0.69
+# 19      Pais A         0.60       0.40
+# 20      Pais B         0.50       0.50
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I&amp;rsquo;ve included &lt;code&gt;Pais A&lt;/code&gt; and &lt;code&gt;Pais B&lt;/code&gt; so that I have one country with a negative difference, and another one
+with a difference of zero.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# ************************************************************************* ----
+# Data for Dotplot                                                          ----
+# ************************************************************************* ----
+
+original_df &amp;lt;- 
+  data.frame(
+    Country = c(&amp;quot;Germany&amp;quot;, &amp;quot;France&amp;quot;, &amp;quot;Vietnam&amp;quot;, &amp;quot;Japan&amp;quot;,
+                &amp;quot;Poland&amp;quot;, &amp;quot;Lebanon&amp;quot;, &amp;quot;Australia&amp;quot;, 
+                &amp;quot;South Korea&amp;quot;, &amp;quot;Canada&amp;quot;, &amp;quot;Spain&amp;quot;, &amp;quot;Italy&amp;quot;, &amp;quot;Peru&amp;quot;, &amp;quot;U.S.&amp;quot;,
+                &amp;quot;UK&amp;quot;, &amp;quot;Mexico&amp;quot;, &amp;quot;Chile&amp;quot;, &amp;quot;China&amp;quot;, &amp;quot;India&amp;quot;, 
+                &amp;quot;Pais A&amp;quot;, &amp;quot;Pais B&amp;quot;
+                ),
+    Ages_35_plus = c(0.39, 0.42, 0.49, 0.43, 
+                     0.51, 0.57, 0.60,
+                     0.45, 0.65, 0.57, 0.57, 0.65, 0.63,
+                     0.59, 0.67, 0.75, 0.52, 0.48,
+                     0.6, 0.5
+                     ),
+    Ages_18_34 = c(0.81, 0.83, 0.86, 0.78, 0.86, 0.90, 0.91,
+                   0.75, 0.93, 0.85, 0.83, 0.91, 0.89,
+                   0.84, 0.90, 0.96, 0.73, 0.69,
+                   0.4, 0.5 
+                   )
+  )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Given that, I needed to do 5 things before I started:&lt;/p&gt;
+
+&lt;p&gt;1) Insert a line break in &lt;code&gt;South Korea&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;2) Calculate the age differences&lt;/p&gt;
+
+&lt;p&gt;3) Sort countries by their age differences&lt;/p&gt;
+
+&lt;p&gt;4) Set country names as factors so that we can plot it in the correct order.&lt;/p&gt;
+
+&lt;p&gt;5) Gather columns into key-value pairs (age groups).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## \__Line Break
+
+original_df_v2 &amp;lt;- 
+  original_df %&amp;gt;%
+  mutate(
+    Country = ifelse(
+      Country == &amp;quot;South Korea&amp;quot;, 
+      # Value_if_True:
+      &amp;quot;South \n Korea&amp;quot;, 
+      # Value_if_False:
+      as.character(Country))
+  )
+
+# _________________________________________________________________________ ====
+
+## \__Calculate the age differences
+
+base_diff &amp;lt;- 
+  original_df_v2 %&amp;gt;%
+  mutate(
+    Diferenca = Ages_18_34-Ages_35_plus
+  ) %&amp;gt;%
+  Sort (descending), but that&#39;s OK as ggplot inverts the order
+  arrange(Diferenca, desc(Country)) %&amp;gt;%
+  # Create factors from the names of the ordered countries
+  mutate(
+    Country.fact = factor(Country, levels = unique(Country))
+  )
+
+# _________________________________________________________________________ ====
+
+## \__Gather columns
+
+df_diff_gather_age &amp;lt;- 
+  base_diff %&amp;gt;%
+  gather(
+    # Group Name 
+    key = Age_Group,
+    # Name of the Variable to input the percentages of Age
+    value = Age_Percent,
+    # Age variables 
+    Ages_35_plus, Ages_18_34
+  ) %&amp;gt;%
+  # Reorder the variables in the database
+  select(Country, Country.fact, Age_Group, Age_Percent, Diferenca) 
+
+#___________________________________________________________________________####
+
+# ************************************************************************* ----
+# Dot Plot                                                                  ----
+# ************************************************************************* ----
+p&amp;lt;-
+ggplot(
+  data = df_diff_gather_age,
+  mapping = aes(
+    # Y Axis
+    y=Country.fact, 
+    # X Axis
+    x=Age_Percent, 
+    # Groups with different colors
+    # If difference is zero, put it into a third group
+    color = ifelse(Diferenca == 0, &amp;quot;zero&amp;quot;, Age_Group))
+) + 
+  # Plot lines between points, by Country
+  geom_line(
+    mapping = aes(group = Country),
+    color = gray,
+    size = 2.5
+  ) +
+  geom_point(
+    # Dot size
+    size=4,
+    # dot type. Important to be number 19, otherwise we cannot plot the dots 
+    # with the colors for different groups
+    pch = 19
+  ) + 
+  # Add % for each point
+  geom_text(
+    # Font size
+    size = 4,
+    # Set text a little below the dots
+    nudge_y = -0.35,
+    mapping = 
+      aes(
+        label = 
+          # If country is Germany (the first one), plot numbers with %
+          ifelse(Country == &amp;quot;Germany&amp;quot;,
+                 # Value_if_True:
+                 paste0(as.character(round(Age_Percent*100,0)),&amp;quot;%&amp;quot;),
+                 # Value_if_False
+                 paste0(as.character(round(Age_Percent*100,0)))
+                 ),
+        color = ifelse(Diferenca == 0, &amp;quot;zero&amp;quot;, Age_Group)
+
+      )
+  ) + 
+  # Add &amp;quot;Legend&amp;quot; above Germany (the first one)
+  geom_text(
+    # Font size
+    size = 4,
+    # Bold face
+    fontface = &amp;quot;bold&amp;quot;,
+    # Set text a little above the dots
+    nudge_y = 0.6,
+    mapping = 
+      aes(
+        label = 
+          # If Country is Germany, plot legend
+          ifelse(Country == &amp;quot;Germany&amp;quot;,
+                 # Value_if_True:
+                 ifelse(Age_Group == &amp;quot;Ages_35_plus&amp;quot;,
+                        # Value_if_True:
+                        &amp;quot;Ages 35+&amp;quot;,
+                        # Value_if_False:
+                        &amp;quot;Ages 18-34&amp;quot;
+                        ),
+                 # Value_if_False
+                 &amp;quot;&amp;quot;
+          ),
+        color = ifelse(Diferenca == 0, &amp;quot;zero&amp;quot;, Age_Group)
+      )
+  ) +
+  # Change dot colors
+  scale_color_manual(
+    values = c(orange, green, &amp;quot;gray&amp;quot;)
+  ) +
+  # Change scale x axis
+  scale_x_continuous(
+    # Set limits to 0 and 1.2 (we won&#39;t set it to 1 because we neeed some space
+    # after 1 to place the values of the differences)
+    limits = c(0,1.2),
+    # Show tick marks at every 25%
+    breaks = seq(0,1,.25),
+    # Change scale to percent
+    labels = scales::percent
+  ) +
+  # Expand y axis scale so that the legend can fit
+  scale_y_discrete(
+    expand = expand_scale(add=c(0.65,1))
+  ) +
+  # Add white rectangle to set the area where the values of the differences will
+  # be
+  geom_rect(
+    mapping = aes(xmin = 1.01, xmax = Inf , ymin = -Inf, ymax = Inf),
+    fill = &amp;quot;white&amp;quot;,
+    color = &amp;quot;white&amp;quot;
+  ) +
+  # Add rectangle with correct banground color for the differences
+  geom_rect(
+    mapping = aes(xmin = 1.05, xmax = 1.15 , ymin = -Inf, ymax = Inf),
+    fill = background_diff,
+    color = background_diff
+  ) +
+  # Add Differences values
+  geom_text(
+    # Bold face
+    fontface = &amp;quot;bold&amp;quot;,
+    # Font size
+    size = 4,
+    # Font Color
+    colour = &amp;quot;black&amp;quot;,
+    # Position
+    mapping = 
+      aes(
+        x = 1.1,
+        y = Country,
+        label = 
+          # To avoid duplicate values, plot empty text for the first group and
+          # plot the difference only for the Ages_18_34 group.
+          ifelse(Age_Group == &amp;quot;Ages_35_plus&amp;quot;,
+                 # Value_if_True
+                 &amp;quot;&amp;quot;,
+                 #Value_if_False
+                 # If the difference is equal to zero, do not put any signal. 
+                 # Otherwise, if Positive, put the + sign on the front.
+                 ifelse(Diferenca == 0,
+                        # Value_if_True:
+                        paste0(as.character(round(Diferenca*100,0))),
+                        # Value_if_False
+                        ifelse(Diferenca &amp;gt; 0, 
+                               # Value_if_True
+                               paste0(&amp;quot;+&amp;quot;,as.character(round(Diferenca*100,0))),
+                               # Value_if_False
+                               paste0(as.character(round(Diferenca*100,0)))
+                        )
+                 )
+              )
+      )
+  ) +
+  # Insert Title of Differences
+  geom_text(
+    # Bold face
+    fontface = &amp;quot;bold&amp;quot;,
+    # Font size
+    size = 4,
+    # Cor
+    colour = &amp;quot;gray&amp;quot;,
+    # Set text a little above the dots
+    nudge_y = 0.6,
+    # Position
+    mapping = 
+      aes(
+        x = 1.1,
+        y = Country,
+        label = 
+          # If Country is Germany, plot values
+          ifelse(Country == &amp;quot;Germany&amp;quot;,
+                 # Value_if_True
+                 &amp;quot;DIFF&amp;quot;,
+                 #Value_if_False
+                 &amp;quot;&amp;quot;
+          )
+      )
+  ) +
+  # Plot Title and Axis Labels
+  labs(
+    title = &amp;quot;The social media age gap&amp;quot;,
+    subtitle = paste0(
+      &amp;quot;Adult internet users or reported smartphone owners who \n&amp;quot;,
+      &amp;quot;use social networking sites&amp;quot;
+      ),
+    x = &amp;quot;&amp;quot;,
+    y = &amp;quot;&amp;quot;
+    ) +
+  # Change background, General font size, and other things
+  theme(
+    # Change font color and text for all text outside geom_text
+    text = element_text(color = &amp;quot;#4e4d47&amp;quot;, size = 14),
+    
+    # Country names in bold face
+    axis.text.y = element_text(face = &amp;quot;bold&amp;quot;),
+    
+    # Add space between x axis text and plot 
+    axis.text.x = element_text(vjust = -0.75),
+    
+    # Do not show tick marks
+    axis.ticks = element_blank(),
+    
+    # Delete original legend (keep only the one we created)
+    legend.position = &amp;quot;none&amp;quot;,
+    
+    # White background
+    panel.background = element_blank(),
+    
+    # Country (y Axis) Lines
+    panel.grid.major.y = element_line(colour = light_gray, size = 1),
+    
+    # Change Title Font
+    plot.title = element_text(face = &amp;quot;bold&amp;quot;, size = 16),
+    
+    # Change Subtitle Font and add some margin
+    plot.subtitle = element_text(face = &amp;quot;italic&amp;quot;, size = 12,
+                                 margin = margin(b = 0.5, unit = &amp;quot;cm&amp;quot;))
+  ) 
+
+p
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And the final plot:
+&lt;img src=&#34;dotplot_final.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Create a Waterfall Chart using ggplot</title>
+      <link>/post/waterfall-ggplot/</link>
+      <pubDate>Sat, 29 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/post/waterfall-ggplot/</guid>
+      <description>&lt;p&gt;This plot was created in response to &lt;a href=&#34;https://stackoverflow.com/questions/48259930/how-to-create-a-stacked-waterfall-chart-in-r/52565089#52565089&#34; target=&#34;_blank&#34;&gt;this question on StackOverflow&lt;/a&gt;. The objective is to replicate the following plot:
+&lt;img src=&#34;waterfall_original.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The trick to plot waterfall charts with &lt;code&gt;ggplot2&lt;/code&gt; is to create a data set with the groups (x values - I&amp;rsquo;m calling this in my code as &lt;code&gt;x.axis.Var&lt;/code&gt;) in the exact order you want to plot. After that, you need to get the start and end points of the bars for each category (categories in your legend - &lt;code&gt;cat.Var&lt;/code&gt;) within the groups. Then, you create another group with the &lt;em&gt;totals by category&lt;/em&gt;. You&amp;rsquo;ll also need a numeric index for the groups to manipulate the bars. Finally, get a column with the &lt;em&gt;total by group&lt;/em&gt; for the numbers above the bars.&lt;/p&gt;
+
+&lt;p&gt;Suppose your dataframe looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;df &amp;lt;- 
+  data.frame(
+    x.axis.Var = rep(c(&amp;quot;Widgets&amp;quot;, &amp;quot;Gridgets&amp;quot;, &amp;quot;Groms&amp;quot;, &amp;quot;Wobs&amp;quot;), 3),
+    cat.Var = rep(c(&amp;quot;High End&amp;quot;, &amp;quot;Mid Range&amp;quot;, &amp;quot;Low End&amp;quot;), each = 4),
+    values = c(600, 500, 300, 200, # high end
+               300, 200, 300, 250, # mid range
+               100, 80, 200, 150   # low end
+               )
+  )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;   x.axis.Var   cat.Var values
+1     Widgets  High End    600
+2    Gridgets  High End    500
+3       Groms  High End    300
+4        Wobs  High End    200
+5     Widgets Mid Range    300
+6    Gridgets Mid Range    200
+7       Groms Mid Range    300
+8        Wobs Mid Range    250
+9     Widgets   Low End    100
+10   Gridgets   Low End     80
+11      Groms   Low End    200
+12       Wobs   Low End    150
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Follow the steps below to get a new data frame:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&#39;tidyverse&#39;)
+
+df.tmp &amp;lt;- df %&amp;gt;%
+  # \_Set the factor levels in the order you want ----
+  mutate(
+    x.axis.Var = factor(x.axis.Var,
+                        levels = c(&amp;quot;Widgets&amp;quot;, &amp;quot;Gridgets&amp;quot;, &amp;quot;Groms&amp;quot;, &amp;quot;Wobs&amp;quot;)),
+    cat.Var = factor(cat.Var,
+                        levels = c(&amp;quot;Low End&amp;quot;, &amp;quot;Mid Range&amp;quot;, &amp;quot;High End&amp;quot;))
+  ) %&amp;gt;%
+  # \_Sort by Group and Category ----
+  arrange(x.axis.Var, desc(cat.Var)) %&amp;gt;%
+  # \_Get the start and end points of the bars ----
+  mutate(end.Bar = cumsum(values),
+         start.Bar = c(0, head(end.Bar, -1))) %&amp;gt;%
+  # \_Add a new Group called &#39;Total&#39; with total by category ----
+  rbind(
+    df %&amp;gt;%
+      # \___Sum by Categories ----
+      group_by(cat.Var) %&amp;gt;% 
+      summarise(values = sum(values)) %&amp;gt;%
+      # \___Create new Group: &#39;Total&#39; ----
+      mutate(
+        x.axis.Var = &amp;quot;Total&amp;quot;,
+        cat.Var = factor(cat.Var,
+                         levels = c(&amp;quot;Low End&amp;quot;, &amp;quot;Mid Range&amp;quot;, &amp;quot;High End&amp;quot;))
+      ) %&amp;gt;%
+      # \___Sort by Group and Category ----
+      arrange(x.axis.Var, desc(cat.Var)) %&amp;gt;%
+      # \___Get the start and end points of the bars ----
+      mutate(end.Bar = cumsum(values),
+             start.Bar = c(0, head(end.Bar, -1))) %&amp;gt;%
+      # \___Put variables in the same order ----
+      select(names(df),end.Bar,start.Bar)
+  ) %&amp;gt;%
+  # \_Get numeric index for the groups ----
+  mutate(group.id = group_indices(., x.axis.Var)) %&amp;gt;%
+  # \_Create new variable with total by group ----
+  group_by(x.axis.Var) %&amp;gt;%
+  mutate(total.by.x = sum(values)) %&amp;gt;%
+  # \_Order the columns ----
+  select(x.axis.Var, cat.Var, group.id, start.Bar, values, end.Bar, total.by.x)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This yields:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;x.axis.Var cat.Var   group.id start.Bar values end.Bar total.by.x
+   &amp;lt;fct&amp;gt;      &amp;lt;fct&amp;gt;        &amp;lt;int&amp;gt;     &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;
+ 1 Widgets    High End         1         0    600     600       1000
+ 2 Widgets    Mid Range        1       600    300     900       1000
+ 3 Widgets    Low End          1       900    100    1000       1000
+ 4 Gridgets   High End         2      1000    500    1500        780
+ 5 Gridgets   Mid Range        2      1500    200    1700        780
+ 6 Gridgets   Low End          2      1700     80    1780        780
+ 7 Groms      High End         3      1780    300    2080        800
+ 8 Groms      Mid Range        3      2080    300    2380        800
+ 9 Groms      Low End          3      2380    200    2580        800
+10 Wobs       High End         4      2580    200    2780        600
+11 Wobs       Mid Range        4      2780    250    3030        600
+12 Wobs       Low End          4      3030    150    3180        600
+13 Total      High End         5         0   1600    1600       3180
+14 Total      Mid Range        5      1600   1050    2650       3180
+15 Total      Low End          5      2650    530    3180       3180
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, I can use the following code to get the plot that I want:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(df.tmp, aes(x = group.id, fill = cat.Var)) + 
+  # \_Simple Waterfall Chart ----
+  geom_rect(aes(x = group.id,
+                xmin = group.id - 0.25, # control bar gap width
+                xmax = group.id + 0.25, 
+                ymin = end.Bar,
+                ymax = start.Bar),
+            color=&amp;quot;black&amp;quot;, 
+            alpha=0.95) + 
+  # \_Lines Between Bars ----
+  geom_segment(aes(x=ifelse(group.id == last(group.id),
+                            last(group.id),
+                            group.id+0.25), 
+                   xend=ifelse(group.id == last(group.id),
+                               last(group.id),
+                               group.id+0.75), 
+                   y=ifelse(cat.Var == &amp;quot;Low End&amp;quot;,
+                            end.Bar,
+                            # these will be removed once we set the y limits
+                            max(end.Bar)*2), 
+                   yend=ifelse(cat.Var == &amp;quot;Low End&amp;quot;,
+                               end.Bar,
+                               # these will be removed once we set the y limits
+                               max(end.Bar)*2)), 
+               colour=&amp;quot;black&amp;quot;) +
+  # \_Numbers inside bars (each category) ----
+  geom_text(
+    mapping = 
+      aes(
+        label = ifelse(values &amp;lt; 150, 
+                       &amp;quot;&amp;quot;,
+                       ifelse(nchar(values) == 3,
+                              as.character(values),
+                              sub(&amp;quot;(.{1})(.*)&amp;quot;, &amp;quot;\\1.\\2&amp;quot;, 
+                                  as.character(values)
+                              )
+                            )
+                       ),
+        y = rowSums(cbind(start.Bar,values/2))
+        ),
+    color = &amp;quot;white&amp;quot;,
+    fontface = &amp;quot;bold&amp;quot;
+    ) + 
+  # \_Total for each category above bars ----
+  geom_text(
+    mapping = 
+      aes(
+        label = ifelse(cat.Var != &amp;quot;Low End&amp;quot;, 
+                       &amp;quot;&amp;quot;,
+                       ifelse(nchar(total.by.x) == 3,
+                              as.character(total.by.x),
+                              sub(&amp;quot;(.{1})(.*)&amp;quot;, &amp;quot;\\1.\\2&amp;quot;, 
+                                  as.character(total.by.x)
+                                )
+                            )
+                      ),
+        y = end.Bar+200
+      ),
+    color = &amp;quot;#4e4d47&amp;quot;,
+    fontface = &amp;quot;bold&amp;quot;
+  ) + 
+  # \_Change colors ----
+  scale_fill_manual(values=c(&#39;#c8f464&#39;,&#39;#ff6969&#39;,&#39;#55646e&#39;)) +
+  # \_Change y axis to same scale as original ----
+  scale_y_continuous(
+    expand=c(0,0),
+    limits = c(0, 3500),
+    breaks = seq(0, 3500, 500),
+    labels = ifelse(nchar(seq(0, 3500, 500)) &amp;lt; 4,
+                    as.character(seq(0, 3500, 500)),
+                    sub(&amp;quot;(.{1})(.*)&amp;quot;, &amp;quot;\\1.\\2&amp;quot;, 
+                        as.character(seq(0, 3500, 500))
+                    )
+    )
+  ) +
+  # \_Add tick marks on x axis to look like the original plot ----
+  scale_x_continuous(
+    expand=c(0,0),
+    limits = c(min(df.tmp$group.id)-0.5,max(df.tmp$group.id)+0.5),
+    breaks = c(min(df.tmp$group.id)-0.5,
+               unique(df.tmp$group.id), 
+               unique(df.tmp$group.id) + 0.5
+               ),
+    labels = 
+      c(&amp;quot;&amp;quot;, 
+        as.character(unique(df.tmp$x.axis.Var)), 
+        rep(c(&amp;quot;&amp;quot;), length(unique(df.tmp$x.axis.Var)))
+      )
+  ) +
+  # \_Theme options to make it look like the original plot ----
+  theme(
+    text = element_text(size = 14, color = &amp;quot;#4e4d47&amp;quot;),
+    axis.text = element_text(size = 10, color = &amp;quot;#4e4d47&amp;quot;, face = &amp;quot;bold&amp;quot;),
+    axis.text.y = element_text(margin = margin(r = 0.3, unit = &amp;quot;cm&amp;quot;)),
+    axis.ticks.x =
+      element_line(color =
+                     c(&amp;quot;black&amp;quot;,
+                       rep(NA, length(unique(df.tmp$x.axis.Var))),
+                       rep(&amp;quot;black&amp;quot;, length(unique(df.tmp$x.axis.Var))-1)
+                     )
+                   ),
+    axis.line = element_line(colour = &amp;quot;#4e4d47&amp;quot;, size = 0.5),
+    axis.ticks.length = unit(.15, &amp;quot;cm&amp;quot;),
+    axis.title.x =       element_blank(),
+    axis.title.y =       element_blank(),
+    panel.background =   element_blank(),
+    plot.margin =        unit(c(1, 1, 1, 1), &amp;quot;lines&amp;quot;),
+    legend.text =        element_text(size = 10, 
+                                      color = &amp;quot;#4e4d47&amp;quot;,
+                                      face = &amp;quot;bold&amp;quot;,
+                                      margin = margin(l = 0.25, unit = &amp;quot;cm&amp;quot;)
+                                      ),
+    legend.title =       element_blank()
+  )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And the final plot:
+&lt;img src=&#34;waterfall_ggplot.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Page</title>
+      <link>/tutorial/example/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/tutorial/example/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Shiny App with Modal, Modules and jQuery</title>
+      <link>/project/shiny-modal-modules-jquery/</link>
+      <pubDate>Tue, 24 Jul 2018 12:00:00 -0400</pubDate>
+      
+      <guid>/project/shiny-modal-modules-jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shiny App to Compare Images</title>
+      <link>/project/shiny-compare-images/</link>
+      <pubDate>Tue, 24 Jul 2018 10:00:00 -0400</pubDate>
+      
+      <guid>/project/shiny-compare-images/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;I value your privacy, so I do not track your user data. I also do not use any piece of software that does that (to the best of my knowledge).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>/talk/example/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/example/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s &lt;em&gt;Slides&lt;/em&gt; feature and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CNI National Economy Award (Prêmio CNI de Economia)</title>
+      <link>/awards/premio-cni/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 -0500</pubDate>
+      
+      <guid>/awards/premio-cni/</guid>
+      <description>&lt;p&gt;Issued by the Brazilian National Confederation of Industry with the support from the Brazilian Association of Graduate Centers in Economics.&lt;/p&gt;
+
+&lt;p&gt;Award granted to the paper: ``Impacts of the Brazilian Sector Funds on industrial firms’ R&amp;amp;D inputs and outputs: New erspectives using a dose-response function&amp;rdquo; (original title: Impactos dos Fundos Setoriais nas Empresas: Novas Perspectivas a partir da Função Dose-Resposta).&lt;/p&gt;
+
+&lt;p&gt;Click &lt;a href=&#34;https://goo.gl/lnuSpe&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; for the full paper in English and &lt;a href=&#34;http://admin.cni.org.br/portal/data/pages/FF80808121B629230121B62A73BB04BC.htm&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; for more information about the award.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Impacts of the Brazilian Science and Technology Sector Funds on industrial firms’ R&amp;D inputs and outputs: New perspectives using a dose-response function</title>
+      <link>/publication/dose-response-function/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 -0500</pubDate>
+      
+      <guid>/publication/dose-response-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Demand for air ticket in the Brazilian economy: a co-integration analysis (original title: Demanda por ticket aéreo na economia brasileira: uma análise de co-integração).</title>
+      <link>/publication/airticket/</link>
+      <pubDate>Fri, 01 Jul 2011 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/airticket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos).</title>
+      <link>/publication/vehicle-sales/</link>
+      <pubDate>Fri, 01 Oct 2010 00:00:00 -0400</pubDate>
+      
+      <guid>/publication/vehicle-sales/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>/slides/example-slides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/slides/example-slides/</guid>
+      <description>
+
+&lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34;&gt;Academic&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
+
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Code block:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
+if porridge == &amp;quot;blueberry&amp;quot;:
+    print(&amp;quot;Eating...&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+
+&lt;p&gt;Block math:&lt;/p&gt;
+
+&lt;p&gt;$$
+f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+  One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+  &lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+  Three
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
+
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/aside&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;/img/boards.jpg&#34;
+  &gt;
+
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/img/boards.jpg&amp;quot; &amp;gt;}}
+{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
+{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
