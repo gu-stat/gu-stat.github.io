@@ -30,7 +30,7 @@
 library(&amp;quot;tidyverse&amp;quot;)
 
 # ************************************************************************* ----
-# Cores - A partir do Original                                              ----
+# Colors - From the original plot                                           ----
 # ************************************************************************* ----
 
 orange &amp;lt;- &amp;quot;#e8ab5f&amp;quot;
