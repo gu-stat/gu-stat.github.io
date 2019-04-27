@@ -1,5 +1,99 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/post/forest-map/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/post/forest-map/" hreflang="en"/>
+    
+      <loc>/pt/post/forest-map/</loc>
+      <lastmod>2019-04-27T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/" hreflang="en"/>
+    
+      <loc>/pt/</loc>
+      <lastmod>2019-04-27T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/post/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/post/" hreflang="en"/>
+    
+      <loc>/pt/post/</loc>
+      <lastmod>2019-04-27T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/tags/r/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/tags/r/" hreflang="en"/>
+    
+      <loc>/pt/tags/r/</loc>
+      <lastmod>2019-04-27T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/tags/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/tags/" hreflang="en"/>
+    
+      <loc>/pt/tags/</loc>
+      <lastmod>2019-04-27T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/tags/ggplot2/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/tags/ggplot2/" hreflang="en"/>
+    
+      <loc>/pt/tags/ggplot2/</loc>
+      <lastmod>2019-04-27T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/tags/gif/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/tags/gif/" hreflang="en"/>
+    
+      <loc>/pt/tags/gif/</loc>
+      <lastmod>2019-04-27T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/tags/map/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/tags/map/" hreflang="en"/>
+    
+      <loc>/pt/tags/map/</loc>
+      <lastmod>2019-04-27T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
   
     
     <url>
@@ -9,6 +103,18 @@
     
       <loc>/pt/post/dotplot-ggplot/</loc>
       <lastmod>2018-11-28T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/tags/ggplot/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/tags/ggplot/" hreflang="en"/>
+    
+      <loc>/pt/tags/ggplot/</loc>
+      <lastmod>2018-11-28T00:00:00-05:00</lastmod>
+      <priority>0</priority>
     </url>
     
   
@@ -37,143 +143,6 @@
     
     <url>
     
-      <xhtml:link rel="alternate" href="/pt/project/shiny-compare-images/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/project/shiny-compare-images/" hreflang="en"/>
-    
-      <loc>/pt/project/shiny-compare-images/</loc>
-      <lastmod>2018-07-24T10:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/privacy/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/privacy/" hreflang="en"/>
-    
-      <loc>/pt/privacy/</loc>
-      <lastmod>2018-06-28T00:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/publication/dose-response-function/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/publication/dose-response-function/" hreflang="en"/>
-    
-      <loc>/pt/publication/dose-response-function/</loc>
-      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/awards/premio-cni/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/awards/premio-cni/" hreflang="en"/>
-    
-      <loc>/pt/awards/premio-cni/</loc>
-      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/publication/airticket/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/publication/airticket/" hreflang="en"/>
-    
-      <loc>/pt/publication/airticket/</loc>
-      <lastmod>2011-07-01T00:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/publication/vehicle-sales/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/publication/vehicle-sales/" hreflang="en"/>
-    
-      <loc>/pt/publication/vehicle-sales/</loc>
-      <lastmod>2010-10-01T00:00:00-04:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/publication_types/1/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/publication_types/1/" hreflang="en"/>
-    
-      <loc>/pt/publication_types/1/</loc>
-      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/publication_types/2/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/publication_types/2/" hreflang="en"/>
-    
-      <loc>/pt/publication_types/2/</loc>
-      <lastmod>2011-07-01T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/publication_types/3/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/publication_types/3/" hreflang="en"/>
-    
-      <loc>/pt/publication_types/3/</loc>
-      <lastmod>2010-10-01T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/awards/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/awards/" hreflang="en"/>
-    
-      <loc>/pt/awards/</loc>
-      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/categories/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/categories/" hreflang="en"/>
-    
-      <loc>/pt/categories/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/" hreflang="en"/>
-    
-      <loc>/pt/</loc>
-      <lastmod>2017-10-15T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="/pt/tags/javascript/" hreflang="pt"/>
       <xhtml:link rel="alternate" href="/tags/javascript/" hreflang="en"/>
     
@@ -186,47 +155,11 @@
     
     <url>
     
-      <xhtml:link rel="alternate" href="/pt/post/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/post/" hreflang="en"/>
-    
-      <loc>/pt/post/</loc>
-      <lastmod>2018-11-28T00:00:00-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="/pt/project/" hreflang="pt"/>
       <xhtml:link rel="alternate" href="/project/" hreflang="en"/>
     
       <loc>/pt/project/</loc>
       <lastmod>2018-07-24T12:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/publication_types/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/publication_types/" hreflang="en"/>
-    
-      <loc>/pt/publication_types/</loc>
-      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/publication/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/publication/" hreflang="en"/>
-    
-      <loc>/pt/publication/</loc>
-      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -258,35 +191,160 @@
     
     <url>
     
-      <xhtml:link rel="alternate" href="/pt/tags/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/tags/" hreflang="en"/>
-    
-      <loc>/pt/tags/</loc>
-      <lastmod>2018-07-24T12:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="/pt/tags/ggplot/" hreflang="pt"/>
-      <xhtml:link rel="alternate" href="/tags/ggplot/" hreflang="en"/>
-    
-      <loc>/pt/tags/ggplot/</loc>
-      <lastmod>2018-11-28T00:00:00-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="/pt/tags/jquery/" hreflang="pt"/>
       <xhtml:link rel="alternate" href="/tags/jquery/" hreflang="en"/>
     
       <loc>/pt/tags/jquery/</loc>
       <lastmod>2018-07-24T12:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/project/shiny-compare-images/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/project/shiny-compare-images/" hreflang="en"/>
+    
+      <loc>/pt/project/shiny-compare-images/</loc>
+      <lastmod>2018-07-24T10:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/privacy/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/privacy/" hreflang="en"/>
+    
+      <loc>/pt/privacy/</loc>
+      <lastmod>2018-06-28T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/publication_types/1/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/publication_types/1/" hreflang="en"/>
+    
+      <loc>/pt/publication_types/1/</loc>
+      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/awards/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/awards/" hreflang="en"/>
+    
+      <loc>/pt/awards/</loc>
+      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/publication/dose-response-function/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/publication/dose-response-function/" hreflang="en"/>
+    
+      <loc>/pt/publication/dose-response-function/</loc>
+      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/awards/premio-cni/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/awards/premio-cni/" hreflang="en"/>
+    
+      <loc>/pt/awards/premio-cni/</loc>
+      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/publication_types/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/publication_types/" hreflang="en"/>
+    
+      <loc>/pt/publication_types/</loc>
+      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/publication/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/publication/" hreflang="en"/>
+    
+      <loc>/pt/publication/</loc>
+      <lastmod>2012-12-12T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/publication_types/2/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/publication_types/2/" hreflang="en"/>
+    
+      <loc>/pt/publication_types/2/</loc>
+      <lastmod>2011-07-01T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/publication/airticket/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/publication/airticket/" hreflang="en"/>
+    
+      <loc>/pt/publication/airticket/</loc>
+      <lastmod>2011-07-01T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/publication_types/3/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/publication_types/3/" hreflang="en"/>
+    
+      <loc>/pt/publication_types/3/</loc>
+      <lastmod>2010-10-01T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/publication/vehicle-sales/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/publication/vehicle-sales/" hreflang="en"/>
+    
+      <loc>/pt/publication/vehicle-sales/</loc>
+      <lastmod>2010-10-01T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="/pt/categories/" hreflang="pt"/>
+      <xhtml:link rel="alternate" href="/categories/" hreflang="en"/>
+    
+      <loc>/pt/categories/</loc>
       <priority>0</priority>
     </url>
     

@@ -18,7 +18,7 @@
       <pubDate>Tue, 24 Jul 2018 12:00:00 -0400</pubDate>
       
       <guid>/project/shiny-modal-modules-jquery/</guid>
-      <description></description>
+      <description>Use this modal to add/remove sets of variables (and their values) to a dataset.</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Tue, 24 Jul 2018 10:00:00 -0400</pubDate>
       
       <guid>/project/shiny-compare-images/</guid>
-      <description></description>
+      <description>Choose between two randomly generated images.</description>
     </item>
     
   </channel>

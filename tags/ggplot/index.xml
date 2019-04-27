@@ -18,8 +18,7 @@
       <pubDate>Wed, 28 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>/post/dotplot-ggplot/</guid>
-      <description>A friend of mine asked if I could replicate the following plot: First, we load the packages and set the colors to be the same ones from the original plot (or at least, as close as possible).
-# ************************************************************************* ---- # Packages ---- # ************************************************************************* ---- #install.packages(&amp;quot;tidyverse&amp;quot;) library(&amp;quot;tidyverse&amp;quot;) # ************************************************************************* ---- # Colors - From the original plot ---- # ************************************************************************* ---- orange &amp;lt;- &amp;quot;#e8ab5f&amp;quot; green &amp;lt;- &amp;quot;#a1ad62&amp;quot; background_diff &amp;lt;- &amp;quot;#eef0e2&amp;quot; gray &amp;lt;- &amp;quot;#bbbbbb&amp;quot; light_gray &amp;lt;- &amp;quot;#f4f4f4&amp;quot;  Now, we need to recreate the data.</description>
+      <description>Create a Dumbbell Plot using geom_point</description>
     </item>
     
     <item>
@@ -28,7 +27,7 @@
       <pubDate>Sat, 29 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>/post/waterfall-ggplot/</guid>
-      <description>This plot was created in response to this question on StackOverflow. The objective is to replicate the following plot: The trick to plot waterfall charts with ggplot2 is to create a data set with the groups (x values - I&amp;rsquo;m calling this in my code as x.axis.Var) in the exact order you want to plot. After that, you need to get the start and end points of the bars for each category (categories in your legend - cat.</description>
+      <description>Create a create a &amp;lsquo;stacked waterfall&amp;rsquo; chart in R</description>
     </item>
     
   </channel>

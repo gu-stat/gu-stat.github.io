@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic 3.2.0">
-  <meta name="generator" content="Hugo 0.52" />
+  <meta name="generator" content="Hugo 0.55.4" />
   <meta name="author" content="Gustavo Varela Alvarenga">
 
   
@@ -590,7 +590,7 @@ base_diff &lt;-
   mutate(
     Diferenca = Ages_18_34-Ages_35_plus
   ) %&gt;%
-  # Sort (descending), but that's OK as ggplot inverts the order
+  Sort (descending), but that's OK as ggplot inverts the order
   arrange(Diferenca, desc(Country)) %&gt;%
   # Create factors from the names of the ordered countries
   mutate(

@@ -7,10 +7,55 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 24 Jul 2018 12:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2019 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="/pt/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R</title>
+      <link>/pt/tags/r/</link>
+      <pubDate>Fri, 26 Apr 2019 00:00:00 -0400</pubDate>
+      
+      <guid>/pt/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot2</title>
+      <link>/pt/tags/ggplot2/</link>
+      <pubDate>Fri, 26 Apr 2019 00:00:00 -0400</pubDate>
+      
+      <guid>/pt/tags/ggplot2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gif</title>
+      <link>/pt/tags/gif/</link>
+      <pubDate>Fri, 26 Apr 2019 00:00:00 -0400</pubDate>
+      
+      <guid>/pt/tags/gif/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>map</title>
+      <link>/pt/tags/map/</link>
+      <pubDate>Fri, 26 Apr 2019 00:00:00 -0400</pubDate>
+      
+      <guid>/pt/tags/map/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot</title>
+      <link>/pt/tags/ggplot/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 -0500</pubDate>
+      
+      <guid>/pt/tags/ggplot/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>JavaScript</title>
@@ -36,15 +81,6 @@
       <pubDate>Tue, 24 Jul 2018 12:00:00 -0400</pubDate>
       
       <guid>/pt/tags/shiny-module/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ggplot</title>
-      <link>/pt/tags/ggplot/</link>
-      <pubDate>Wed, 28 Nov 2018 00:00:00 -0500</pubDate>
-      
-      <guid>/pt/tags/ggplot/</guid>
       <description></description>
     </item>
     
