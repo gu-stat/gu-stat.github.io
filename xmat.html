@@ -15,12 +15,35 @@
   }
 </style>
 <iframe id="myIframe" src="https://gustav.shinyapps.io/xmat_v02/" scrolling="no" frameborder="no"></iframe>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
   iFrameResize({
     heightCalculationMethod: 'taggedElement'
   });
  
- 
+    let testForm = document.querySelector("#my-form form");
+      
+      testForm.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const formData = new FormData(testForm);
+        fetch("/", {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+          },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(res => {
+          if (res) {
+            M.toast({
+              html: 'Thank you for your submission!',
+              classes: 'pulse'
+            });
+          }
+        });
+      });
 
 </script>
 </body>
