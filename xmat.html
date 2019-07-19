@@ -16,15 +16,7 @@
   iFrameResize({
     heightCalculationMethod: 'taggedElement'
   });
- 
- $("#my-form").submit(function(e) {
-  e.preventDefault();
 
-  var $form = $(this);
-  $.post($form.attr("action"), $form.serialize()).then(function() {
-    alert("Thank you!");
-  });
-  
   let testForm = document.querySelector("#my-form form");
       
       testForm.addEventListener('submit', e => {
