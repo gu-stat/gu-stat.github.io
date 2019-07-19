@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
  <!-- Load jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
  <!-- A little help for the Netlify post-processing bots -->
@@ -19,13 +20,20 @@
     heightCalculationMethod: 'taggedElement'
   });
  
-   $("#my-form").submit(function(e) {
-  e.preventDefault();
+  $("#my-form").submit(function(e) {
+    var url = "/xmat"; // the url where you handle the form input.
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: {$("#my-form").serialize();
+                  recaptcha:grecaptcha.getResponse()}, // serializes the form's elements.
+           success: function(data)
+           {
+               alert("You did it hurray :D"); // do stuff
+           }
+         });
 
-  var $form = $(this);
-  $.post($form.attr("#"), $form.serialize()).then(function() {
-    alert("Thank you!");
-  });
+    e.preventDefault(); // avoid to execute the actual submit of the form.
 });
 
 </script>
