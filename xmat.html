@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
+ <!-- Load jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
  <!-- A little help for the Netlify post-processing bots -->
 <form name="contributors" netlify netlify-honeypot="bot-field" hidden>
   <input type="text" name="contributor_last_name" />
@@ -17,29 +19,14 @@
     heightCalculationMethod: 'taggedElement'
   });
  
-    let testForm = document.querySelector("#my-form form");
-      
-      testForm.addEventListener('submit', e => {
-        e.preventDefault();
+   $("#my-form").submit(function(e) {
+  e.preventDefault();
 
-        const formData = new FormData(testForm);
-        fetch(testForm.getAttribute('action'), {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-          },
-          body: new URLSearchParams(formData).toString()
-        })
-        .then(res => {
-          if (res) {
-            M.toast({
-              html: 'Thank you for your submission!',
-              classes: 'pulse'
-            });
-          }
-        });
-      });
+  var $form = $(this);
+  $.post($form.attr("action"), $form.serialize()).then(function() {
+    alert("Thank you!");
+  });
+});
 
 </script>
 </body>
