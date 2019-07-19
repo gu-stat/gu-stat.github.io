@@ -20,18 +20,7 @@
     heightCalculationMethod: 'taggedElement'
   });
  
- $('#my-form').submit(function(e){
-    e.preventDefault();
-    $.ajax({
-        type:'post',
-      recaptcha:grecaptcha.getResponse(),
-        data:$('#my-form').serialize(),
-        success:function(){
-          // Redirect to another success page
-          window.location = "http://google.com";
-        }
-    });
-});
+ 
 
 </script>
 </body>
