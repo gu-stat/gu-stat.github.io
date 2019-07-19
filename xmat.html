@@ -24,8 +24,8 @@
     e.preventDefault();
     $.ajax({
         type:'post',
-        data:{$('#my-form').serialize(),
-             g-recaptcha-response: grecaptcha.getResponse()},
+      recaptcha:grecaptcha.getResponse(),
+        data:$('#my-form').serialize(),
         success:function(){
           // Redirect to another success page
           window.location = "http://google.com";
