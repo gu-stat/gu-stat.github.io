@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <body>
+ <!-- A little help for the Netlify post-processing bots -->
+<form name="contributors" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="contributor_last_name" />
+</form>
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.min.js"></script>
 <style>
   iframe {
@@ -12,6 +16,15 @@
   iFrameResize({
     heightCalculationMethod: 'taggedElement'
   });
+ 
+ $("#my-form").submit(function(e) {
+  e.preventDefault();
+
+  var $form = $(this);
+  $.post($form.attr("action"), $form.serialize()).then(function() {
+    alert("Thank you!");
+  });
+});
 </script>
 </body>
 </html>
