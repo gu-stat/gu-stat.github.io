@@ -21,19 +21,12 @@
   });
  
   $("#my-form").submit(function(e) {
-    var url = "/xmat"; // the url where you handle the form input.
-    $.ajax({
-           type: "POST",
-           url: url,
-           data: {$("#my-form").serialize();
-                  recaptcha:grecaptcha.getResponse()}, // serializes the form's elements.
-           success: function(data)
-           {
-               alert("You did it hurray :D"); // do stuff
-           }
-         });
+  e.preventDefault();
 
-    e.preventDefault(); // avoid to execute the actual submit of the form.
+  var $form = $(this);
+  $.post($form.attr("action"), $form.serialize()).then(function() {
+    alert("Thank you!");
+  });
 });
 
 </script>
