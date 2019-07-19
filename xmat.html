@@ -20,14 +20,17 @@
     heightCalculationMethod: 'taggedElement'
   });
  
-  $("#my-form").submit(function(e) {
-  e.preventDefault();
-
-  var $form = $(this);
-  $.post($form.attr("action"), {$form.serialize()).then(function() {
-    alert("Thank you!"), captcha: grecaptcha.getResponse()
-                               };
-  });
+ $('#my-form').submit(function(e){
+    e.preventDefault();
+    $.ajax({
+        type:'post',
+        data:{$('#myForm').serialize();
+             g-recaptcha-response: grecaptcha.getResponse()},
+        success:function(){
+          // Redirect to another success page
+          window.location = "http://google.com";
+        }
+    });
 });
 
 </script>
