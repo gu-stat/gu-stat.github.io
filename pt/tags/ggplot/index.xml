@@ -18,8 +18,7 @@
       <pubDate>Wed, 28 Nov 2018 00:00:00 -0500</pubDate>
       
       <guid>/pt/post/dotplot-ggplot/</guid>
-      <description>Uma amiga perguntou se eu poderia replicar o seguinte gráfico: Para fazer isso, eu precisava recriar os dados primeiro. Eu fiz isso como se os dados estivessem organizados da seguinte forma:
-# Country Ages_35_plus Ages_18_34 # 1 Germany 0.39 0.81 # 2 France 0.42 0.83 # 3 Vietnam 0.49 0.86 # 4 Japan 0.43 0.78 # 5 Poland 0.51 0.86 # 6 Lebanon 0.57 0.90 # 7 Australia 0.60 0.91 # 8 South Korea 0.</description>
+      <description>Criar um gráfico de haltere usando o ponto geom_point</description>
     </item>
     
     <item>
@@ -28,8 +27,7 @@
       <pubDate>Sat, 29 Sep 2018 00:00:00 -0400</pubDate>
       
       <guid>/pt/post/waterfall-ggplot/</guid>
-      <description>Este gráfico foi criado em resposta a essa pergunta no StackOverflow. O objetivo é replicar o seguinte gráfico: ! [] (waterfall_original.png)
-O truque para plotar gráficos em cascata com ggplot2 é criar um conjunto de dados com os grupos (valores x - estou chamando isso no meu código como x.axis.Var) no ordem exata que você deseja plotar. Depois disso, você precisa obter os pontos inicial e final das barras para cada categoria (categorias em sua legenda - cat.</description>
+      <description>Criar um gráfico de &amp;lsquo;cascata empilhada&amp;rsquo; no R</description>
     </item>
     
   </channel>

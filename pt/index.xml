@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gustavo Varela Alvarenga on Gustavo Varela Alvarenga</title>
@@ -7,8 +6,747 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2019 00:00:00 -0400</lastBuildDate>
     <atom:link href="/pt/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Crie um Mapa no R com ggplot e transforme-o em um gif</title>
+      <link>/pt/post/forest-map/</link>
+      <pubDate>Fri, 26 Apr 2019 00:00:00 -0400</pubDate>
+      
+      <guid>/pt/post/forest-map/</guid>
+      <description>
+
+&lt;h2 id=&#34;seção-1-introdução&#34;&gt;Seção 1: Introdução&lt;/h2&gt;
+
+&lt;p&gt;Em março de 2019, o Projeto de Mapeamento Anual da Cobertura e Uso do Solo do Brasil  (MapBiomas) (&lt;a href=&#34;http://mapbiomas.org/&#34; target=&#34;_blank&#34;&gt;http://mapbiomas.org/&lt;/a&gt;) lançou o banco de dados Mapbiomas v.3.1 sobre uso e cobertura da terra para o período de 1985 a 2017.&lt;/p&gt;
+
+&lt;p&gt;Este conjunto de dados contém informações sobre a área total (em hectares) de formações florestais, formações naturais não-florestais, agricultura, áreas sem vegetação e corpos d&amp;rsquo;água - informações detalhadas sobre estas formações e suas subdivisões podem ser encontradas &lt;a href=&#34;https://storage.googleapis.com/mapbiomas/assets/colecao-3-0/mapas-dados/1%20-%20Legenda%20Cole%C3%A7%C3%A3o%203%20-%20Descricao%20Detalhada.pdf&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;E ainda que o site forneça ferramentas para qualquer um criar seus próprios mapas, decidi criar meu próprio mapa animado usando R e os pacotes &lt;code&gt;ggplot2&lt;/code&gt; e &lt;code&gt;gifski&lt;/code&gt; porque queria ver a porcentagem de uma área da cidade que é coberta por vegetação nativa.
+Eu também estou usando o pacote &lt;code&gt;brazilmaps&lt;/code&gt; para traçar o mapa do Brasil.&lt;/p&gt;
+
+&lt;p&gt;Eu queria me concentrar apenas nos dados da Formação Florestal Natural e ver como sua área total evoluiu desde 1985.&lt;/p&gt;
+
+&lt;p&gt;Este tutorial tem 3 seções, além desta introdução. A segunda seção é apenas sobre os pacotes e fontes que eu usei e como baixar essas fontes. Na Seção 3, examino o conjunto de dados e falo sobre suas variáveis e suas definições. Eu também passo por etapas de importar o conjunto de dados e fazer algumas manipulações de dados para obter as informações que desejo. A seção 4 fornece o código para o mapa final.&lt;/p&gt;
+
+&lt;p&gt;Você pode baixar o arquivo &lt;code&gt;.R&lt;/code&gt; com o código completo do meu &lt;a href=&#34;https://github.com/gu-stat/forest-area&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;seção-2-pacotes&#34;&gt;Seção 2: Pacotes&lt;/h2&gt;
+
+&lt;p&gt;Começarei examinando as fontes que usei e como instalá-las. Eu uso o Windows, então não sei se os mesmos passos se aplicam a outros sistemas (desculpe usuários Mac e Unix).&lt;/p&gt;
+
+&lt;p&gt;Estou usando Lato, uma família de fontes de código aberto. Então, certifique-se de baixar e instalar a fonte Lato antes de começar ou você pode deixar R usar a fonte padrão do sistema - você não terá que alterar o código, você receberá algumas mensagens de aviso, mas R ainda irá traçar o mapa .&lt;/p&gt;
+
+&lt;p&gt;Você pode baixá-la &lt;a href=&#34;http://www.latofonts.com/lato-free-fonts/&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A primeira coisa que faço é ter certeza de que R pode usar essa fonte, então vou usar o pacote &lt;code&gt;extrafont&lt;/code&gt; para isso. Se é a primeira vez que você usa essas fontes, você terá que executar o comando &lt;code&gt;font_import ()&lt;/code&gt; (isso pode demorar um pouco dependendo do número de fontes instaladas que você possui, o bom é que você terá que executar este comando apenas uma vez).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# ************************************************************************* ----
+# Pacote extrafont                                                          ----
+# ************************************************************************* ----
+
+#install.packages(&amp;quot;extrafont&amp;quot;)
+
+library(&amp;quot;extrafont&amp;quot;)
+
+# ************************************************************************* ----
+# Importar Fonte                                                            ----
+# ************************************************************************* ----
+
+# Instale a fonte Lato
+
+# Rode font_import apenas uma vez:
+
+# font_import()
+
+# Verifique se Lato foi incluida
+fonts()[grep(&amp;quot;Lato&amp;quot;, fonts())]
+
+# Registre as fontes no R
+
+loadfonts(device = &amp;quot;win&amp;quot;)
+
+# ************************************************************************* ----
+# Outros Pacotes                                                            ----
+# ************************************************************************* ----
+
+#install.packages(&amp;quot;openxlsx&amp;quot;)
+#install.packages(&amp;quot;tidyverse&amp;quot;)
+#install.packages(&amp;quot;brazilmaps&amp;quot;)
+#install.packages(&amp;quot;gifski&amp;quot;)
+
+library(&amp;quot;openxlsx&amp;quot;)
+library(&amp;quot;tidyverse&amp;quot;)
+library(&amp;quot;brazilmaps&amp;quot;)
+library(&amp;quot;gifski&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;section-3-os-dados&#34;&gt;Section 3: Os Dados&lt;/h2&gt;
+
+&lt;h3 id=&#34;dando-os-devidos-créditos&#34;&gt;Dando os devidos créditos&lt;/h3&gt;
+
+&lt;p&gt;Os dados do Projeto MapBiomas são públicos, abertos e gratuitos através da simples referência da fonte:&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Projeto MapBiomas – Coleção 3.1 da Série Anual de Mapas de Cobertura e Uso de Solo do Brasil, acessado em 24/04/2019 através do link:(&lt;a href=&#34;http://mapbiomas.org/pages/estatisticas)&amp;quot;&#34; target=&#34;_blank&#34;&gt;http://mapbiomas.org/pages/estatisticas)&amp;quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Projeto MapBiomas - é uma iniciativa multi-institucional para gerar mapas anuais de cobertura e uso do solo a partir de processos de classificação automática aplicada a imagens de satélite. A descrição completa do projeto encontra-se em &lt;a href=&#34;http://mapbiomas.org&#34; target=&#34;_blank&#34;&gt;http://mapbiomas.org&lt;/a&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;Também estou usando dados sobre a área das cidades no Brasil do IBGE (Instituto Brasileiro de Geografia e Estatística). Devido às mudanças no tamanho das cidades ao longo dos anos, decidi usar os dados de 2016. Eu estava obtendo alguns resultados incorretos usando dados de 2017 ou 2018, como cidades com mais de 100% de sua área coberta por vegetação nativa. Claramente, essas cidades foram divididas, mas isso não foi contabilizado no conjunto de dados do MapBiomas. Não foram observadas cidades com mais de 100% de sua área coberta por vegetação nativa ao utilizar dados de 2016.&lt;/p&gt;
+
+&lt;p&gt;O código abaixo importa os conjuntos de dados para R, mas se você quiser, pode baixar os arquivos xlsx dos sites oficiais clicando em
+ &lt;a href=&#34;https://storage.googleapis.com/mapbiomas/mapbiomas-br/v3-1/planilhas%20de%20estatisticas%203-1/Dados_Cobertura_MapBiomas_3.1_Biomas-UF-Municipios_%20SITE.xlsx&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt; para o banco de dados do MapBiomas e &lt;a href=&#34;ftp://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/areas_territoriais/2016/AR_BR_RG_UF_MUN_2016.xls&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt; para os dados do IBGE.&lt;/p&gt;
+
+&lt;p&gt;Para manter meu código, também estou fazendo o upload dos bancos de dados originais para o meu &lt;a href=&#34;https://github.com/gu-stat/forest-area&#34; target=&#34;_blank&#34;&gt;repositório GitHub&lt;/a&gt; e esses são os dados que vou usar no meu código abaixo.&lt;/p&gt;
+
+&lt;h3 id=&#34;dicionário-de-dados&#34;&gt;Dicionário de Dados&lt;/h3&gt;
+
+&lt;p&gt;O arquivo xlsx do MapBiomas possui as seguintes planilhas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;INSTRUCTIONS;&lt;/li&gt;
+&lt;li&gt;LAND COVER - BIOMAS e UF;&lt;/li&gt;
+&lt;li&gt;LAND COVER - MUN_UF;&lt;/li&gt;
+&lt;li&gt;CONSULTA BIOMA-UF; e&lt;/li&gt;
+&lt;li&gt;CONSULTA MUN-UF.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Usarei a planilha LAND COVER - MUN_UF. As variáveis dessa planilha são:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variável&lt;/th&gt;
+&lt;th&gt;Classe&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;COD_ESTADO&lt;/td&gt;
+&lt;td&gt;numeric&lt;/td&gt;
+&lt;td&gt;identificador do Estado&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;estado&lt;/td&gt;
+&lt;td&gt;character&lt;/td&gt;
+&lt;td&gt;nome do Estado&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;CODIBGE&lt;/td&gt;
+&lt;td&gt;numeric&lt;/td&gt;
+&lt;td&gt;identificador do municipio&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;municipio&lt;/td&gt;
+&lt;td&gt;character&lt;/td&gt;
+&lt;td&gt;nome do municipio&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cod.classe&lt;/td&gt;
+&lt;td&gt;numeric&lt;/td&gt;
+&lt;td&gt;identificador do tipo de classe de cobertura terrestre&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;nivel1&lt;/td&gt;
+&lt;td&gt;character&lt;/td&gt;
+&lt;td&gt;classe nível 1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;nivel2&lt;/td&gt;
+&lt;td&gt;character&lt;/td&gt;
+&lt;td&gt;classe nível 2&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;nivel3&lt;/td&gt;
+&lt;td&gt;character&lt;/td&gt;
+&lt;td&gt;classe nível 3&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1985&lt;/td&gt;
+&lt;td&gt;numeric&lt;/td&gt;
+&lt;td&gt;área coberta em hectares(ha) em 1985&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&amp;hellip;&lt;/td&gt;
+&lt;td&gt;&amp;hellip;&lt;/td&gt;
+&lt;td&gt;&amp;hellip;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;2017&lt;/td&gt;
+&lt;td&gt;numeric&lt;/td&gt;
+&lt;td&gt;área coberta em hectares(ha) em 2017&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;O arquivo xlsx do IBGE possui as seguintes planilhas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;AR_BR_MUN_2016;&lt;/li&gt;
+&lt;li&gt;AR_BR_UF_2016;&lt;/li&gt;
+&lt;li&gt;AR_BR_RG_2016; e&lt;/li&gt;
+&lt;li&gt;AR_BR_2016.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Usarei a planilha AR_BR_MUN_2016. As variáveis dessa planilha são:&lt;/p&gt;
+
+&lt;p&gt;The variables in IBGE&amp;rsquo;s AR_BR_MUN_2016 data set are:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variável&lt;/th&gt;
+&lt;th&gt;Classe&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ID&lt;/td&gt;
+&lt;td&gt;numeric&lt;/td&gt;
+&lt;td&gt;ID&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;CD_GCUF&lt;/td&gt;
+&lt;td&gt;character&lt;/td&gt;
+&lt;td&gt;identificador do Estado&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;NM_UF&lt;/td&gt;
+&lt;td&gt;character&lt;/td&gt;
+&lt;td&gt;nome do Estado&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;NM_UF_SIGLA&lt;/td&gt;
+&lt;td&gt;character&lt;/td&gt;
+&lt;td&gt;UF&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;CD_GCMUN&lt;/td&gt;
+&lt;td&gt;character&lt;/td&gt;
+&lt;td&gt;identificador do municipio&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;NM_MUN_2016&lt;/td&gt;
+&lt;td&gt;character&lt;/td&gt;
+&lt;td&gt;nome do municipio&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;AR_MUN_2016&lt;/td&gt;
+&lt;td&gt;numeric&lt;/td&gt;
+&lt;td&gt;área em km quadrados&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# ************************************************************************* ----
+# Importar os Dados                                                         ----
+# ************************************************************************* ----
+
+# Mudar formato dos numeros
+options(scipen=10)
+
+# Caminho para o Arquivo no GitHub
+file_path_forest_area = paste0(
+  &amp;quot;https://github.com/gu-stat/forest-area/blob/master/&amp;quot;,
+  &amp;quot;data/Dados_Cobertura_MapBiomas_3.1_Biomas-UF-Municipios_%20SITE_UNPROTECTED.xlsx&amp;quot;,
+  &amp;quot;?raw=true&amp;quot;)
+
+file_path_city_area = paste0(
+  &amp;quot;https://github.com/gu-stat/forest-area/blob/master/&amp;quot;,
+  &amp;quot;data/AR_BR_RG_UF_MUN_2016.xlsx&amp;quot;,
+  &amp;quot;?raw=true&amp;quot;)
+
+# Importacao
+df.original &amp;lt;- openxlsx::read.xlsx(file_path_forest_area, 
+                                   sheet = &amp;quot;LAND COVER - MUN_UF&amp;quot;)
+
+df.city.area &amp;lt;- openxlsx::read.xlsx(file_path_city_area, 
+                                    sheet = &amp;quot;AR_BR_MUN_2016&amp;quot;)
+
+## \__ Dados para Criar Mapa por Cidade ----
+
+brazil.map &amp;lt;- get_brmap(geo = &amp;quot;City&amp;quot;, class = &amp;quot;sf&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;manipulação-de-dados&#34;&gt;Manipulação de dados&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# ************************************************************************* ----
+# Manipulacao dos Dados                                                     ----
+# ************************************************************************* ----
+
+## \__ Transforma Codigo da Cidade em Numerico ----
+
+df.city.area2 &amp;lt;-
+  df.city.area %&amp;gt;% 
+  dplyr::mutate(CODIBGE = as.numeric(CD_GCMUN)) %&amp;gt;% 
+  dplyr::select(CODIBGE, AR_MUN_2016)
+
+
+## \__ Dados de Area de Cobertura de Florestas Natuais ----
+
+df.nat.forest &amp;lt;- 
+  df.original %&amp;gt;% 
+  filter(nivel2 == &amp;quot;Floresta Natural&amp;quot;) %&amp;gt;%
+  select(COD_ESTADO, estado, CODIBGE, nivel2, nivel3, 
+         paste0(seq(1985, 2017))
+  ) %&amp;gt;%
+  # SOMA OS DIFERENTES SUB-GRUPOS DE Floresta Natural
+  group_by(COD_ESTADO, estado, CODIBGE) %&amp;gt;%
+  summarize_at(vars(-nivel2,-nivel3),sum) %&amp;gt;%
+  ungroup()
+
+## \__ Juntar com Dados de Area da Cidade ----
+
+df.nat.forest.AREA &amp;lt;- 
+  df.nat.forest %&amp;gt;%
+  # ADICIONA AREA DE CADA CIDADE NA BASE COM DADOS DE VEGETACAO 
+  dplyr::left_join(x = ., y = df.city.area2, by = &amp;quot;CODIBGE&amp;quot;) %&amp;gt;%
+  # CRIA PERCENTUAIS
+  ## FAZ x/100 PARA TRANSFORMAR DE HECTARES PARA KM2
+  dplyr::mutate_at(.vars=vars(paste0(seq(1985,2017))), 
+                   .fun = function(x) round(100*((x/100)/.$AR_MUN_2016),3)
+  )
+
+
+# VERIFICA SE ALGUM MUNICIPIO TEM MAIS DE 100%
+greater.1 &amp;lt;- NULL 
+for (i in 1985:2017) {
+  greater.1 &amp;lt;- append(greater.1, which(df.nat.forest.AREA[,paste0(i)] &amp;gt;= 100))
+}
+
+greater.1 &amp;lt;- greater.1 %&amp;gt;% unlist() %&amp;gt;% unique()
+
+## \__ Cria os limites de percentuais ----
+
+df.nat.forest.AREA &amp;lt;- 
+  df.nat.forest.AREA %&amp;gt;%
+  dplyr::mutate_at(.vars=vars(paste0(seq(1985,2017))), 
+                   .fun = function(x) cut(x,breaks=c(-Inf, 0, 1, seq(0, 100, 10)[-1]))
+  )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;seção-4-o-mapa&#34;&gt;Seção 4: O Mapa&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# ************************************************************************* ----
+# Mapa                                                                      ----
+# ************************************************************************* ----
+
+## \__ Funcao que junta os dados de vegetacao com os de posicao das cidades ----
+
+create.map.df &amp;lt;- function(DATA){
+  
+  map &amp;lt;- join_data(map = brazil.map, data = DATA, by = c(&amp;quot;City&amp;quot; = &amp;quot;CODIBGE&amp;quot;))  
+  
+  map.ggplot &amp;lt;- as(map, &amp;quot;Spatial&amp;quot;)
+  
+  map.ggplot@data$id = row.names(map.ggplot@data)
+  
+  df.map.ggplot &amp;lt;- suppressMessages(ggplot2::fortify(map.ggplot))
+  
+  df.map.ggplot &amp;lt;- dplyr::left_join(df.map.ggplot, map.ggplot@data, by = &amp;quot;id&amp;quot;)
+  
+  return(df.map.ggplot)
+}
+
+## \____ Base de dados Para criar o Mapa ----
+
+df.map.ggplot &amp;lt;- create.map.df(df.nat.forest.AREA)
+
+## \__ Map Colors ----
+
+# USEI https://gka.github.io/palettes PARA OBTER UMA ESCALA DE CORES
+# COM 12 INTERVALOS (MESMO NUMERO DE INTERVALOS DE
+# cut(x,breaks=c(-Inf, 0, 1, seq(0, 100, 10)[-1])) )
+# QUE VAI DE white ATE darkgreen QUE EH APROPRIADA PARA PESSOAS COM
+# VARIOS TIPOS DE DALTONISMO 
+
+map.colors &amp;lt;- c(&#39;#ffffff&#39;,&#39;#eaf1e7&#39;,&#39;#d4e2cf&#39;,&#39;#bfd4b8&#39;,&#39;#abc5a1&#39;,&#39;#96b78a&#39;,
+                &#39;#81a974&#39;,&#39;#6c9b5f&#39;,&#39;#588d4a&#39;,&#39;#428034&#39;,&#39;#28711d&#39;,&#39;#006400&#39;)
+
+### \__ Rotulos para a Legenda ----
+
+map.labels &amp;lt;- c(&amp;quot;0&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;10%&amp;quot;, rep(&amp;quot;&amp;quot;,3), &amp;quot;50%&amp;quot;, rep(&amp;quot;&amp;quot;,3), &amp;quot;90%&amp;quot;, &amp;quot;&amp;quot;)
+
+## \__ Criar Tema para o Mapa ----
+
+map.theme &amp;lt;-
+  theme(
+    text = element_text(size = 12, family = &amp;quot;Lato&amp;quot;, color = &amp;quot;#f2efef&amp;quot;),
+    axis.text = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    plot.background = element_rect(fill = &amp;quot;#3a3935&amp;quot;, color = NA), 
+    panel.background = element_rect(fill = &amp;quot;#3a3935&amp;quot;, color = NA),
+    panel.grid = element_blank(),
+    plot.margin = margin(t = 0.25,r = 0.25,b = 0.25,l = 0.25,unit = &amp;quot;cm&amp;quot;),
+    plot.title = element_text(margin = margin(t = 0.25, unit = &amp;quot;cm&amp;quot;)),
+    plot.caption = element_text(size = 10),
+    legend.background = element_rect(fill = &amp;quot;#3a3935&amp;quot;, color = &amp;quot;#3a3935&amp;quot;),
+    legend.text = element_text(size = 11),
+    legend.title = element_text(size = 12),
+    legend.position = &amp;quot;left&amp;quot;,
+    legend.key = element_rect(color = &amp;quot;transparent&amp;quot;),
+    legend.key.size = unit(0, units = &amp;quot;mm&amp;quot;),
+    legend.key.width = unit(2, units = &amp;quot;mm&amp;quot;)
+  )
+
+## \__ Plotar Mapa ----
+
+### \____ Funcao para o GIF ----
+plot.map.forest &amp;lt;- function(){
+  for (i in 1985:2017) {
+    
+    lost.area.year.km2 &amp;lt;-
+      round(
+        sum(-(df.nat.forest %&amp;gt;% summarize_at(paste0(i),sum)/100),
+            df.nat.forest %&amp;gt;% summarize_at(paste0(1985),sum)/100)
+        ,2
+      )
+    
+    lost.area.year.mi2 &amp;lt;- round(lost.area.year.km2/2.59, 2)
+    
+    map.forest &amp;lt;-
+      # MAPA
+      ggplot(mapping = aes(x = long, y = lat, group = group)) +
+      # MAPA COM LINHAS DA CIDADE TRANSPARENTES
+      geom_polygon(
+        data = df.map.ggplot,
+        aes_string(fill = paste0(&amp;quot;X&amp;quot;,i)),
+        color = &amp;quot;transparent&amp;quot;
+      ) +
+      # LEGENDA
+      scale_fill_manual(
+        values = map.colors,
+        drop = FALSE,
+        na.value = &amp;quot;black&amp;quot;,
+        na.translate = FALSE,
+        name = &amp;quot;&amp;quot;,
+        label = map.labels,
+        guide = guide_legend(
+          direction = &amp;quot;vertical&amp;quot;,
+          ncol = 1,
+          reverse = TRUE,
+          label.vjust = 2.5
+        )
+      ) +
+      # LIMITES DO MAPA
+      xlim(range(df.map.ggplot$long)) +
+      ylim(range(df.map.ggplot$lat)) +
+      coord_map() +
+      # ADICIONAR TITULO E CAPTIONS
+      labs(
+        title = &amp;quot;Percentual da Área da Cidade coberta por Vegetação Nativa, Brasil.&amp;quot;,
+        caption = paste0(&amp;quot;Mapa: Gustavo Varela-Alvarenga - ogustavo.com/pt \n \n &amp;quot;,
+                         &amp;quot;Dados: MapBiomas v.3.1 - mapbiomas.org &amp;amp; &amp;quot;,
+                         &amp;quot;IBGE - www.ibge.gov.br &amp;quot;)
+      ) +
+      # ADICIONAR TEMA
+      map.theme +
+      # ADICIONAR ANNOTATIONS
+      ## PALAVRA ANO
+      annotate(
+        geom = &amp;quot;text&amp;quot;, x = -44.1, y = 2.4, size = 4, family = &amp;quot;Lato&amp;quot;,
+        color = &amp;quot;#f2efef&amp;quot;, label = &amp;quot;ano&amp;quot;, angle = 90
+      ) +
+      ## VALOR DO ANO
+      annotate(
+        geom = &amp;quot;text&amp;quot;, x = -40, y = 2.5, size = 10, family = &amp;quot;Lato&amp;quot;,
+        color = &amp;quot;#f2efef&amp;quot;, label = paste0(i)
+      ) +
+      ## TITULO - TABELA A ESQUERDA
+      annotate(
+        geom = &amp;quot;text&amp;quot;, x = -68.5, y = -26, size = 4, family = &amp;quot;Lato&amp;quot;,
+        color = &amp;quot;#f2efef&amp;quot;, hjust = 0.5,
+        label =
+          paste0(&amp;quot;Área Total de Vegetação \n&amp;quot;, &amp;quot;Nativa Perdida Desde 1985&amp;quot;)
+      ) +
+      ## LINHA ABAIXO TITULO
+      annotate(
+        geom = &amp;quot;segment&amp;quot;, x = -64.5, xend = -72.5, y = -28, yend = -28,
+        linetype = &amp;quot;solid&amp;quot;, color = &amp;quot;#f2efef&amp;quot;
+      ) +
+      ## VALORES EM KMs QUADRADOS COM . PARA MARCAR OS MILHARES
+      annotate(
+        geom = &amp;quot;text&amp;quot;, x = -68.5, y = -29, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+        color = &amp;quot;#f2efef&amp;quot;, hjust = 0.5,
+        label =
+          ifelse(lost.area.year.km2 == 0, &amp;quot;0&amp;quot;,
+                 paste0(prettyNum(round(lost.area.year.km2, 0),
+                                  big.mark=&amp;quot;.&amp;quot;, decimal.mark = &amp;quot;,&amp;quot;),
+                        &amp;quot; km2&amp;quot;)
+          )
+      ) +
+      ## VALORES EM MILHAS QUADRADAS COM , PARA MARCAR OS MILHARES
+      annotate(
+        geom = &amp;quot;text&amp;quot;, x = -68.5, y = -31, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+        color = &amp;quot;#f2efef&amp;quot;, hjust = 0.5,
+        label =
+          ifelse(lost.area.year.mi2 == 0, &amp;quot;0&amp;quot;,
+                 paste0(prettyNum(round(lost.area.year.mi2, 0), big.mark=&amp;quot;,&amp;quot;),
+                        &amp;quot; milhas2&amp;quot;)
+          )
+      ) +
+      ## LINHA ABAIXO TABELA
+      annotate(
+        geom = &amp;quot;segment&amp;quot;, x = -64.5, xend = -72.5, y = -32, yend = -32,
+        linetype = &amp;quot;solid&amp;quot;, color = &amp;quot;#f2efef&amp;quot;
+      ) +
+      ## TITULO - TABELA A DIREITA
+      annotate(
+        geom = &amp;quot;text&amp;quot;, x = -39, y = -26, size = 4, family = &amp;quot;Lato&amp;quot;,
+        color = &amp;quot;#f2efef&amp;quot;, hjust = 0.5,
+        label =  paste0(&amp;quot;Área Perdida em \n&amp;quot;, &amp;quot;% da Área do(a)&amp;quot;)
+      ) +
+      ## LINHA ABAIXO TITULO
+      annotate(
+        geom = &amp;quot;segment&amp;quot;, x = -35, xend = -43, y = -28, yend = -28,
+        linetype = &amp;quot;solid&amp;quot;, color = &amp;quot;#f2efef&amp;quot;
+      ) +
+      ## ADICIONAR PALAVRA TEXAS
+      annotate(
+        geom = &amp;quot;text&amp;quot;, x = -41, y = -29, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+        color = &amp;quot;#f2efef&amp;quot;, label =  &amp;quot;Texas        : &amp;quot;
+      ) +
+      ## ADICIONAR PERCENTUAL PARA TEXAS
+      annotate(
+        geom = &amp;quot;text&amp;quot;, x = -34, y = -29, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+        color = &amp;quot;#f2efef&amp;quot;, hjust = 1,
+        label =
+          ifelse(
+            lost.area.year.km2 == 0, &amp;quot;0%&amp;quot;,
+            paste0(round(lost.area.year.km2/696241, 2) * 100, &amp;quot;%&amp;quot;)
+          )
+      ) +
+      ## ADICIONAR PALAVRA ALEMANHA
+      annotate(
+        geom = &amp;quot;text&amp;quot;, x = -41, y = -31, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+        color = &amp;quot;#f2efef&amp;quot;, label =  &amp;quot;Alemanha : &amp;quot;
+      ) +
+      ## ADICIONAR PERCENTUAL PARA ALEMANHA
+      annotate(
+        geom = &amp;quot;text&amp;quot;, x = -34, y = -31, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+        color = &amp;quot;#f2efef&amp;quot;, hjust = 1,
+        label =
+          ifelse(
+            lost.area.year.km2 == 0, &amp;quot;0%&amp;quot;,
+            paste0(round(lost.area.year.km2/357386, 2) * 100, &amp;quot;%&amp;quot;)
+          )
+      ) +
+      ## LINHA ABAIXO DA TABELA
+      annotate(
+        geom = &amp;quot;segment&amp;quot;, x = -35, xend = -43, y = -32, yend = -32,
+        linetype = &amp;quot;solid&amp;quot;, color = &amp;quot;#f2efef&amp;quot;
+      )
+    
+    print(map.forest)
+    
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;### \____ Criar GIF ----
+### O comando abaixo salvara um arquivo gif de nome forest_animation_pt-br.gif 
+### no seu working directory
+
+gif_file &amp;lt;-
+  gifski::save_gif(
+    expr = plot.map.forest(),
+    gif_file = &amp;quot;forest_animation_pt-br.gif&amp;quot;,
+    delay = 0.75, width = 738, height = 788, res = 100
+  )
+
+utils::browseURL(gif_file)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/gu-stat/forest-area/master/gif/forest_animation_pt-br.gif&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Se você quiser, você pode usar o código abaixo para obter imagens estáticas de alta qualidade dos mapas. Esteja ciente de que isso salvará os gráficos em seu diretório de trabalho.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;### \____ Criar Mapas Estaticos ----
+#install.packages(&amp;quot;Cairo&amp;quot;)
+library(&amp;quot;Cairo&amp;quot;)
+
+for (i in 1985:2017) {
+  
+  lost.area.year.km2 &amp;lt;-
+    round(
+      sum(-(df.nat.forest %&amp;gt;% summarize_at(paste0(i),sum)/100),
+          df.nat.forest %&amp;gt;% summarize_at(paste0(1985),sum)/100)
+      ,2
+    )
+  
+  lost.area.year.mi2 &amp;lt;- round(lost.area.year.km2/2.59, 2)
+  
+  map.forest &amp;lt;-
+    # MAPA
+    ggplot(mapping = aes(x = long, y = lat, group = group)) +
+    # MAPA COM LINHAS DA CIDADE TRANSPARENTES
+    geom_polygon(
+      data = df.map.ggplot,
+      aes_string(fill = paste0(&amp;quot;X&amp;quot;,i)),
+      color = &amp;quot;transparent&amp;quot;
+    ) +
+    # LEGENDA
+    scale_fill_manual(
+      values = map.colors,
+      drop = FALSE,
+      na.value = &amp;quot;black&amp;quot;,
+      na.translate = FALSE,
+      name = &amp;quot;&amp;quot;,
+      label = map.labels,
+      guide = guide_legend(
+        direction = &amp;quot;vertical&amp;quot;,
+        ncol = 1,
+        reverse = TRUE,
+        label.vjust = 2.5
+      )
+    ) +
+    # LIMITES DO MAPA
+    xlim(range(df.map.ggplot$long)) +
+    ylim(range(df.map.ggplot$lat)) +
+    coord_map() +
+    # ADICIONAR TITULO E CAPTIONS
+    labs(
+      title = &amp;quot;Percentual da Área da Cidade coberta por Vegetação Nativa, Brasil.&amp;quot;,
+      caption = paste0(&amp;quot;Mapa: Gustavo Varela-Alvarenga - ogustavo.com/pt \n \n &amp;quot;,
+                       &amp;quot;Dados: MapBiomas v.3.1 - mapbiomas.org &amp;amp; &amp;quot;,
+                       &amp;quot;IBGE - www.ibge.gov.br &amp;quot;)
+    ) +
+    # ADICIONAR TEMA
+    map.theme +
+    # ADICIONAR ANNOTATIONS
+    ## PALAVRA ANO
+    annotate(
+      geom = &amp;quot;text&amp;quot;, x = -44.1, y = 2.4, size = 4, family = &amp;quot;Lato&amp;quot;,
+      color = &amp;quot;#f2efef&amp;quot;, label = &amp;quot;ano&amp;quot;, angle = 90
+    ) +
+    ## VALOR DO ANO
+    annotate(
+      geom = &amp;quot;text&amp;quot;, x = -40, y = 2.5, size = 10, family = &amp;quot;Lato&amp;quot;,
+      color = &amp;quot;#f2efef&amp;quot;, label = paste0(i)
+    ) +
+    ## TITULO - TABELA A ESQUERDA
+    annotate(
+      geom = &amp;quot;text&amp;quot;, x = -68.5, y = -26, size = 4, family = &amp;quot;Lato&amp;quot;,
+      color = &amp;quot;#f2efef&amp;quot;, hjust = 0.5,
+      label =
+        paste0(&amp;quot;Área Total de Vegetação \n&amp;quot;, &amp;quot;Nativa Perdida Desde 1985&amp;quot;)
+    ) +
+    ## LINHA ABAIXO TITULO
+    annotate(
+      geom = &amp;quot;segment&amp;quot;, x = -64.5, xend = -72.5, y = -28, yend = -28,
+      linetype = &amp;quot;solid&amp;quot;, color = &amp;quot;#f2efef&amp;quot;
+    ) +
+    ## VALORES EM KMs QUADRADOS COM . PARA MARCAR OS MILHARES
+    annotate(
+      geom = &amp;quot;text&amp;quot;, x = -68.5, y = -29, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+      color = &amp;quot;#f2efef&amp;quot;, hjust = 0.5,
+      label =
+        ifelse(lost.area.year.km2 == 0, &amp;quot;0&amp;quot;,
+               paste0(prettyNum(round(lost.area.year.km2, 0),
+                                big.mark=&amp;quot;.&amp;quot;, decimal.mark = &amp;quot;,&amp;quot;),
+                      &amp;quot; km2&amp;quot;)
+        )
+    ) +
+    ## VALORES EM MILHAS QUADRADAS COM , PARA MARCAR OS MILHARES
+    annotate(
+      geom = &amp;quot;text&amp;quot;, x = -68.5, y = -31, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+      color = &amp;quot;#f2efef&amp;quot;, hjust = 0.5,
+      label =
+        ifelse(lost.area.year.mi2 == 0, &amp;quot;0&amp;quot;,
+               paste0(prettyNum(round(lost.area.year.mi2, 0), big.mark=&amp;quot;,&amp;quot;),
+                      &amp;quot; milhas2&amp;quot;)
+        )
+    ) +
+    ## LINHA ABAIXO TABELA
+    annotate(
+      geom = &amp;quot;segment&amp;quot;, x = -64.5, xend = -72.5, y = -32, yend = -32,
+      linetype = &amp;quot;solid&amp;quot;, color = &amp;quot;#f2efef&amp;quot;
+    ) +
+    ## TITULO - TABELA A DIREITA
+    annotate(
+      geom = &amp;quot;text&amp;quot;, x = -39, y = -26, size = 4, family = &amp;quot;Lato&amp;quot;,
+      color = &amp;quot;#f2efef&amp;quot;, hjust = 0.5,
+      label =  paste0(&amp;quot;Área Perdida em \n&amp;quot;, &amp;quot;% da Área do(a)&amp;quot;)
+    ) +
+    ## LINHA ABAIXO TITULO
+    annotate(
+      geom = &amp;quot;segment&amp;quot;, x = -35, xend = -43, y = -28, yend = -28,
+      linetype = &amp;quot;solid&amp;quot;, color = &amp;quot;#f2efef&amp;quot;
+    ) +
+    ## ADICIONAR PALAVRA TEXAS
+    annotate(
+      geom = &amp;quot;text&amp;quot;, x = -41, y = -29, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+      color = &amp;quot;#f2efef&amp;quot;, label =  &amp;quot;Texas        : &amp;quot;
+    ) +
+    ## ADICIONAR PERCENTUAL PARA TEXAS
+    annotate(
+      geom = &amp;quot;text&amp;quot;, x = -34, y = -29, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+      color = &amp;quot;#f2efef&amp;quot;, hjust = 1,
+      label =
+        ifelse(
+          lost.area.year.km2 == 0, &amp;quot;0%&amp;quot;,
+          paste0(round(lost.area.year.km2/696241, 2) * 100, &amp;quot;%&amp;quot;)
+        )
+    ) +
+    ## ADICIONAR PALAVRA ALEMANHA
+    annotate(
+      geom = &amp;quot;text&amp;quot;, x = -41, y = -31, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+      color = &amp;quot;#f2efef&amp;quot;, label =  &amp;quot;Alemanha : &amp;quot;
+    ) +
+    ## ADICIONAR PERCENTUAL PARA ALEMANHA
+    annotate(
+      geom = &amp;quot;text&amp;quot;, x = -34, y = -31, size = 4.5, family = &amp;quot;Lato&amp;quot;,
+      color = &amp;quot;#f2efef&amp;quot;, hjust = 1,
+      label =
+        ifelse(
+          lost.area.year.km2 == 0, &amp;quot;0%&amp;quot;,
+          paste0(round(lost.area.year.km2/357386, 2) * 100, &amp;quot;%&amp;quot;)
+        )
+    ) +
+    ## LINHA ABAIXO DA TABELA
+    annotate(
+      geom = &amp;quot;segment&amp;quot;, x = -35, xend = -43, y = -32, yend = -32,
+      linetype = &amp;quot;solid&amp;quot;, color = &amp;quot;#f2efef&amp;quot;
+    )
+  
+  ### Observe que o comando abaixo ira salvar varios arquivos
+  ### png com nome Y*_pt-br.png, onde * eh o ano, no seu 
+  ### working directory
+  
+  ggsave(
+    paste0(&amp;quot;Y&amp;quot;,i,&amp;quot;_pt-br.png&amp;quot;), device=&amp;quot;png&amp;quot;, type=&amp;quot;cairo&amp;quot;, 
+    width = 7, height = 7
+  )
+  
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/gu-stat/forest-area/master/gif/Y1985_pt-br.png&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/gu-stat/forest-area/master/gif/Y2017_pt-br.png&#34;/&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Criar um gráfico de haltere (Dumbbell Plot) usando ggplot</title>
