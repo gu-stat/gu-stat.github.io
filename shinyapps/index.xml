@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shiny Apps | Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</title>
-    <link>http://localhost:3677/shinyapps/</link>
-      <atom:link href="http://localhost:3677/shinyapps/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4321/shinyapps/</link>
+      <atom:link href="http://localhost:4321/shinyapps/index.xml" rel="self" type="application/rss+xml" />
     <description>Shiny Apps</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 24 Jul 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:3677/media/icon_hu17379476442904948675.png</url>
+      <url>http://localhost:4321/media/icon_hu17379476442904948675.png</url>
       <title>Shiny Apps</title>
-      <link>http://localhost:3677/shinyapps/</link>
+      <link>http://localhost:4321/shinyapps/</link>
     </image>
     
     <item>
       <title>Shiny App to Compare Images</title>
-      <link>http://localhost:3677/shinyapps/shiny-compare-images/</link>
+      <link>http://localhost:4321/shinyapps/shiny-compare-images/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/shinyapps/shiny-compare-images/</guid>
+      <guid>http://localhost:4321/shinyapps/shiny-compare-images/</guid>
       <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://shiny.ogustavo.com/select_best_image/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://shiny.ogustavo.com/select_best_image/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Shiny App with Modal, Modules and jQuery</title>
-      <link>http://localhost:3677/shinyapps/shiny-modal-modules-jquery/</link>
+      <link>http://localhost:4321/shinyapps/shiny-modal-modules-jquery/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/shinyapps/shiny-modal-modules-jquery/</guid>
+      <guid>http://localhost:4321/shinyapps/shiny-modal-modules-jquery/</guid>
       <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://shiny.ogustavo.com/module_modal_jquery/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://shiny.ogustavo.com/module_modal_jquery/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>

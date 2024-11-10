@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code | Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</title>
-    <link>http://localhost:3677/code/</link>
-      <atom:link href="http://localhost:3677/code/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4321/code/</link>
+      <atom:link href="http://localhost:4321/code/index.xml" rel="self" type="application/rss+xml" />
     <description>Code</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:3677/media/icon_hu17379476442904948675.png</url>
+      <url>http://localhost:4321/media/icon_hu17379476442904948675.png</url>
       <title>Code</title>
-      <link>http://localhost:3677/code/</link>
+      <link>http://localhost:4321/code/</link>
     </image>
     
     <item>
       <title>Map of deforestation in Brazil</title>
-      <link>http://localhost:3677/code/forest-map/</link>
+      <link>http://localhost:4321/code/forest-map/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/code/forest-map/</guid>
+      <guid>http://localhost:4321/code/forest-map/</guid>
       <description>&lt;h2 id=&#34;section-1-intro&#34;&gt;Section 1: Intro&lt;/h2&gt;
 &lt;p&gt;In March 2019, the Brazilian Annual Land Use and Land Cover Mapping Project
 (&lt;a href=&#34;http://mapbiomas.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MapBiomas&lt;/a&gt;) launched the Mapbiomas v.3.1 data
@@ -693,9 +693,9 @@ to plot Brazil&amp;rsquo;s map divided by city using the function &lt;code&gt;br
     
     <item>
       <title>Waterfall chart in R</title>
-      <link>http://localhost:3677/code/waterfall-ggplot/</link>
+      <link>http://localhost:4321/code/waterfall-ggplot/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/code/waterfall-ggplot/</guid>
+      <guid>http://localhost:4321/code/waterfall-ggplot/</guid>
       <description>&lt;p&gt;This plot was created in response to &lt;a href=&#34;https://stackoverflow.com/questions/48259930/how-to-create-a-stacked-waterfall-chart-in-r/52565089#52565089&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this question on StackOverflow&lt;/a&gt;. The objective is to replicate the following plot:
 
 
@@ -719,7 +719,7 @@ to plot Brazil&amp;rsquo;s map divided by city using the function &lt;code&gt;br
                /code/waterfall-ggplot/waterfall_original_hu13493167191276755436.webp 400w,
                /code/waterfall-ggplot/waterfall_original_hu4173478310190524177.webp 760w,
                /code/waterfall-ggplot/waterfall_original_hu409357101510371478.webp 1200w&#34;
-               src=&#34;http://localhost:3677/code/waterfall-ggplot/waterfall_original_hu13493167191276755436.webp&#34;
+               src=&#34;http://localhost:4321/code/waterfall-ggplot/waterfall_original_hu13493167191276755436.webp&#34;
                width=&#34;760&#34;
                height=&#34;402&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -971,7 +971,7 @@ to plot Brazil&amp;rsquo;s map divided by city using the function &lt;code&gt;br
                /code/waterfall-ggplot/waterfall_ggplot_hu8001458759171997478.webp 400w,
                /code/waterfall-ggplot/waterfall_ggplot_hu13854154909710334328.webp 760w,
                /code/waterfall-ggplot/waterfall_ggplot_hu6046298241626895531.webp 1200w&#34;
-               src=&#34;http://localhost:3677/code/waterfall-ggplot/waterfall_ggplot_hu8001458759171997478.webp&#34;
+               src=&#34;http://localhost:4321/code/waterfall-ggplot/waterfall_ggplot_hu8001458759171997478.webp&#34;
                width=&#34;760&#34;
                height=&#34;448&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -982,9 +982,9 @@ to plot Brazil&amp;rsquo;s map divided by city using the function &lt;code&gt;br
     
     <item>
       <title>Dumbbell/Lolliplot of the social media age gap</title>
-      <link>http://localhost:3677/code/dotplot-ggplot/</link>
+      <link>http://localhost:4321/code/dotplot-ggplot/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/code/dotplot-ggplot/</guid>
+      <guid>http://localhost:4321/code/dotplot-ggplot/</guid>
       <description>&lt;p&gt;A friend of mine asked if I could replicate the following plot:
 
 
@@ -1008,7 +1008,7 @@ to plot Brazil&amp;rsquo;s map divided by city using the function &lt;code&gt;br
                /code/dotplot-ggplot/dotplot_original_hu3970447597668875600.webp 400w,
                /code/dotplot-ggplot/dotplot_original_hu10112648398430664609.webp 760w,
                /code/dotplot-ggplot/dotplot_original_hu14510193814594755311.webp 1200w&#34;
-               src=&#34;http://localhost:3677/code/dotplot-ggplot/dotplot_original_hu3970447597668875600.webp&#34;
+               src=&#34;http://localhost:4321/code/dotplot-ggplot/dotplot_original_hu3970447597668875600.webp&#34;
                width=&#34;427&#34;
                height=&#34;542&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -1377,7 +1377,7 @@ with a difference of zero.&lt;/p&gt;
                /code/dotplot-ggplot/dotplot_final_hu11510232287414166891.webp 400w,
                /code/dotplot-ggplot/dotplot_final_hu5502832731449658509.webp 760w,
                /code/dotplot-ggplot/dotplot_final_hu5446609155718823953.webp 1200w&#34;
-               src=&#34;http://localhost:3677/code/dotplot-ggplot/dotplot_final_hu11510232287414166891.webp&#34;
+               src=&#34;http://localhost:4321/code/dotplot-ggplot/dotplot_final_hu11510232287414166891.webp&#34;
                width=&#34;760&#34;
                height=&#34;604&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

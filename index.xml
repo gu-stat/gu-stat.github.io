@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</title>
-    <link>http://localhost:3677/</link>
-      <atom:link href="http://localhost:3677/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4321/</link>
+      <atom:link href="http://localhost:4321/index.xml" rel="self" type="application/rss+xml" />
     <description>Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:3677/media/icon_hu17379476442904948675.png</url>
+      <url>http://localhost:4321/media/icon_hu17379476442904948675.png</url>
       <title>Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</title>
-      <link>http://localhost:3677/</link>
+      <link>http://localhost:4321/</link>
     </image>
     
     <item>
       <title>Example Talk</title>
-      <link>http://localhost:3677/event/example/</link>
+      <link>http://localhost:4321/event/example/</link>
       <pubDate>Sat, 01 Jun 2024 13:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/event/example/</guid>
+      <guid>http://localhost:4321/event/example/</guid>
       <description>&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
@@ -35,17 +35,17 @@
     
     <item>
       <title>Projects</title>
-      <link>http://localhost:3677/projects/</link>
+      <link>http://localhost:4321/projects/</link>
       <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/projects/</guid>
+      <guid>http://localhost:4321/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>🎉 Easily create your own simple yet highly customizable blog</title>
-      <link>http://localhost:3677/post/get-started/</link>
+      <link>http://localhost:4321/post/get-started/</link>
       <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/post/get-started/</guid>
+      <guid>http://localhost:4321/post/get-started/</guid>
       <description>&lt;p&gt;Welcome 👋&lt;/p&gt;
 
 
@@ -129,33 +129,33 @@
     
     <item>
       <title>Pandas</title>
-      <link>http://localhost:3677/project/pandas/</link>
+      <link>http://localhost:4321/project/pandas/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/project/pandas/</guid>
+      <guid>http://localhost:4321/project/pandas/</guid>
       <description>&lt;p&gt;Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>PyTorch</title>
-      <link>http://localhost:3677/project/pytorch/</link>
+      <link>http://localhost:4321/project/pytorch/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/project/pytorch/</guid>
+      <guid>http://localhost:4321/project/pytorch/</guid>
       <description>&lt;p&gt;PyTorch is a Python package that provides tensor computation (like NumPy) with strong GPU acceleration.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>scikit-learn</title>
-      <link>http://localhost:3677/project/scikit/</link>
+      <link>http://localhost:4321/project/scikit/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/project/scikit/</guid>
+      <guid>http://localhost:4321/project/scikit/</guid>
       <description>&lt;p&gt;scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>🧠 Sharpen your thinking with a second brain</title>
-      <link>http://localhost:3677/post/second-brain/</link>
+      <link>http://localhost:4321/post/second-brain/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/post/second-brain/</guid>
+      <guid>http://localhost:4321/post/second-brain/</guid>
       <description>&lt;p&gt;Create a personal knowledge base and share your knowledge with your peers.&lt;/p&gt;
 &lt;p&gt;Hugo Blox web framework empowers you with one of the most flexible note-taking capabilities out there.&lt;/p&gt;
 &lt;p&gt;Create a powerful knowledge base that works on top of a local folder of plain text Markdown files.&lt;/p&gt;
@@ -265,9 +265,9 @@
     
     <item>
       <title>📈 Communicate your results effectively with the best data visualizations</title>
-      <link>http://localhost:3677/post/data-visualization/</link>
+      <link>http://localhost:4321/post/data-visualization/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/post/data-visualization/</guid>
+      <guid>http://localhost:4321/post/data-visualization/</guid>
       <description>&lt;p&gt;Hugo Blox is designed to give technical content creators a seamless experience. You can focus on the content and Hugo Blox handles the rest.&lt;/p&gt;
 &lt;p&gt;Use popular tools such as Plotly, Mermaid, and data frames.&lt;/p&gt;
 &lt;h2 id=&#34;charts&#34;&gt;Charts&lt;/h2&gt;
@@ -278,7 +278,7 @@
 
 
 
-&lt;div id=&#34;chart-659418273&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-314726589&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -296,7 +296,7 @@
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-659418273&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-314726589&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -475,9 +475,9 @@ Crash --&gt; [*]
     
     <item>
       <title>👩🏼‍🏫 Teach academic courses</title>
-      <link>http://localhost:3677/post/teach-courses/</link>
+      <link>http://localhost:4321/post/teach-courses/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/post/teach-courses/</guid>
+      <guid>http://localhost:4321/post/teach-courses/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://hugoblox.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Blox Builder&lt;/a&gt; is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Embed videos, podcasts, code, LaTeX math, and even test students!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Hugo Blox.&lt;/p&gt;
@@ -530,7 +530,7 @@ Crash --&gt; [*]
 
 
 &lt;audio controls &gt;
-  &lt;source src=&#34;http://localhost:3677/post/teach-courses/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
+  &lt;source src=&#34;http://localhost:4321/post/teach-courses/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
 &lt;/audio&gt;
 
 &lt;h2 id=&#34;test-students&#34;&gt;Test students&lt;/h2&gt;
@@ -589,25 +589,25 @@ data.head()
     
     <item>
       <title>Education</title>
-      <link>http://localhost:3677/education/</link>
+      <link>http://localhost:4321/education/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/education/</guid>
+      <guid>http://localhost:4321/education/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Experience</title>
-      <link>http://localhost:3677/experience/</link>
+      <link>http://localhost:4321/experience/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/experience/</guid>
+      <guid>http://localhost:4321/experience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learn JavaScript</title>
-      <link>http://localhost:3677/teaching/js/</link>
+      <link>http://localhost:4321/teaching/js/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/teaching/js/</guid>
+      <guid>http://localhost:4321/teaching/js/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://hugoblox.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Blox Builder&lt;/a&gt; is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Embed videos, podcasts, code, LaTeX math, and even test students!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Hugo Blox.&lt;/p&gt;
@@ -654,7 +654,7 @@ data.head()
 
 
 &lt;audio controls &gt;
-  &lt;source src=&#34;http://localhost:3677/teaching/js/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
+  &lt;source src=&#34;http://localhost:4321/teaching/js/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
 &lt;/audio&gt;
 
 &lt;h2 id=&#34;test-students&#34;&gt;Test students&lt;/h2&gt;
@@ -731,9 +731,9 @@ data.head()
     
     <item>
       <title>Learn Python</title>
-      <link>http://localhost:3677/teaching/python/</link>
+      <link>http://localhost:4321/teaching/python/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/teaching/python/</guid>
+      <guid>http://localhost:4321/teaching/python/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://hugoblox.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Blox Builder&lt;/a&gt; is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Embed videos, podcasts, code, LaTeX math, and even test students!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Hugo Blox.&lt;/p&gt;
@@ -780,7 +780,7 @@ data.head()
 
 
 &lt;audio controls &gt;
-  &lt;source src=&#34;http://localhost:3677/teaching/python/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
+  &lt;source src=&#34;http://localhost:4321/teaching/python/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
 &lt;/audio&gt;
 
 &lt;h2 id=&#34;test-students&#34;&gt;Test students&lt;/h2&gt;
@@ -857,9 +857,9 @@ data.head()
     
     <item>
       <title>✅ Manage your projects</title>
-      <link>http://localhost:3677/post/project-management/</link>
+      <link>http://localhost:4321/post/project-management/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/post/project-management/</guid>
+      <guid>http://localhost:4321/post/project-management/</guid>
       <description>&lt;p&gt;Easily manage your projects - create ideation mind maps, Gantt charts, todo lists, and more!&lt;/p&gt;
 &lt;h2 id=&#34;ideation&#34;&gt;Ideation&lt;/h2&gt;
 &lt;p&gt;Hugo Blox supports a Markdown extension for mindmaps.&lt;/p&gt;
@@ -932,9 +932,9 @@ Parallel 4   :         des6, after des4, 1d
     
     <item>
       <title>Map of deforestation in Brazil</title>
-      <link>http://localhost:3677/code/forest-map/</link>
+      <link>http://localhost:4321/code/forest-map/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/code/forest-map/</guid>
+      <guid>http://localhost:4321/code/forest-map/</guid>
       <description>&lt;h2 id=&#34;section-1-intro&#34;&gt;Section 1: Intro&lt;/h2&gt;
 &lt;p&gt;In March 2019, the Brazilian Annual Land Use and Land Cover Mapping Project
 (&lt;a href=&#34;http://mapbiomas.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MapBiomas&lt;/a&gt;) launched the Mapbiomas v.3.1 data
@@ -1611,9 +1611,9 @@ to plot Brazil&amp;rsquo;s map divided by city using the function &lt;code&gt;br
     
     <item>
       <title>Waterfall chart in R</title>
-      <link>http://localhost:3677/code/waterfall-ggplot/</link>
+      <link>http://localhost:4321/code/waterfall-ggplot/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/code/waterfall-ggplot/</guid>
+      <guid>http://localhost:4321/code/waterfall-ggplot/</guid>
       <description>&lt;p&gt;This plot was created in response to &lt;a href=&#34;https://stackoverflow.com/questions/48259930/how-to-create-a-stacked-waterfall-chart-in-r/52565089#52565089&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this question on StackOverflow&lt;/a&gt;. The objective is to replicate the following plot:
 
 
@@ -1637,7 +1637,7 @@ to plot Brazil&amp;rsquo;s map divided by city using the function &lt;code&gt;br
                /code/waterfall-ggplot/waterfall_original_hu13493167191276755436.webp 400w,
                /code/waterfall-ggplot/waterfall_original_hu4173478310190524177.webp 760w,
                /code/waterfall-ggplot/waterfall_original_hu409357101510371478.webp 1200w&#34;
-               src=&#34;http://localhost:3677/code/waterfall-ggplot/waterfall_original_hu13493167191276755436.webp&#34;
+               src=&#34;http://localhost:4321/code/waterfall-ggplot/waterfall_original_hu13493167191276755436.webp&#34;
                width=&#34;760&#34;
                height=&#34;402&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -1889,7 +1889,7 @@ to plot Brazil&amp;rsquo;s map divided by city using the function &lt;code&gt;br
                /code/waterfall-ggplot/waterfall_ggplot_hu8001458759171997478.webp 400w,
                /code/waterfall-ggplot/waterfall_ggplot_hu13854154909710334328.webp 760w,
                /code/waterfall-ggplot/waterfall_ggplot_hu6046298241626895531.webp 1200w&#34;
-               src=&#34;http://localhost:3677/code/waterfall-ggplot/waterfall_ggplot_hu8001458759171997478.webp&#34;
+               src=&#34;http://localhost:4321/code/waterfall-ggplot/waterfall_ggplot_hu8001458759171997478.webp&#34;
                width=&#34;760&#34;
                height=&#34;448&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -1900,9 +1900,9 @@ to plot Brazil&amp;rsquo;s map divided by city using the function &lt;code&gt;br
     
     <item>
       <title>Dumbbell/Lolliplot of the social media age gap</title>
-      <link>http://localhost:3677/code/dotplot-ggplot/</link>
+      <link>http://localhost:4321/code/dotplot-ggplot/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/code/dotplot-ggplot/</guid>
+      <guid>http://localhost:4321/code/dotplot-ggplot/</guid>
       <description>&lt;p&gt;A friend of mine asked if I could replicate the following plot:
 
 
@@ -1926,7 +1926,7 @@ to plot Brazil&amp;rsquo;s map divided by city using the function &lt;code&gt;br
                /code/dotplot-ggplot/dotplot_original_hu3970447597668875600.webp 400w,
                /code/dotplot-ggplot/dotplot_original_hu10112648398430664609.webp 760w,
                /code/dotplot-ggplot/dotplot_original_hu14510193814594755311.webp 1200w&#34;
-               src=&#34;http://localhost:3677/code/dotplot-ggplot/dotplot_original_hu3970447597668875600.webp&#34;
+               src=&#34;http://localhost:4321/code/dotplot-ggplot/dotplot_original_hu3970447597668875600.webp&#34;
                width=&#34;427&#34;
                height=&#34;542&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -2295,7 +2295,7 @@ with a difference of zero.&lt;/p&gt;
                /code/dotplot-ggplot/dotplot_final_hu11510232287414166891.webp 400w,
                /code/dotplot-ggplot/dotplot_final_hu5502832731449658509.webp 760w,
                /code/dotplot-ggplot/dotplot_final_hu5446609155718823953.webp 1200w&#34;
-               src=&#34;http://localhost:3677/code/dotplot-ggplot/dotplot_final_hu11510232287414166891.webp&#34;
+               src=&#34;http://localhost:4321/code/dotplot-ggplot/dotplot_final_hu11510232287414166891.webp&#34;
                width=&#34;760&#34;
                height=&#34;604&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -2306,43 +2306,43 @@ with a difference of zero.&lt;/p&gt;
     
     <item>
       <title>Shiny App to Compare Images</title>
-      <link>http://localhost:3677/shinyapps/shiny-compare-images/</link>
+      <link>http://localhost:4321/shinyapps/shiny-compare-images/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/shinyapps/shiny-compare-images/</guid>
+      <guid>http://localhost:4321/shinyapps/shiny-compare-images/</guid>
       <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://shiny.ogustavo.com/select_best_image/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://shiny.ogustavo.com/select_best_image/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Shiny App with Modal, Modules and jQuery</title>
-      <link>http://localhost:3677/shinyapps/shiny-modal-modules-jquery/</link>
+      <link>http://localhost:4321/shinyapps/shiny-modal-modules-jquery/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/shinyapps/shiny-modal-modules-jquery/</guid>
+      <guid>http://localhost:4321/shinyapps/shiny-modal-modules-jquery/</guid>
       <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://shiny.ogustavo.com/module_modal_jquery/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://shiny.ogustavo.com/module_modal_jquery/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Impacts of the Brazilian Science and Technology Sector Funds on industrial firms’ R&amp;D inputs and outputs: New perspectives using a dose-response function</title>
-      <link>http://localhost:3677/publication/dose-response-function/</link>
+      <link>http://localhost:4321/publication/dose-response-function/</link>
       <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/publication/dose-response-function/</guid>
+      <guid>http://localhost:4321/publication/dose-response-function/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Demand for air ticket in the Brazilian economy: a co-integration analysis (original title: Demanda por ticket aéreo na economia brasileira: uma análise de co-integração)</title>
-      <link>http://localhost:3677/publication/airticket/</link>
+      <link>http://localhost:4321/publication/airticket/</link>
       <pubDate>Fri, 01 Jul 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/publication/airticket/</guid>
+      <guid>http://localhost:4321/publication/airticket/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos).</title>
-      <link>http://localhost:3677/publication/vehicle-sales/</link>
+      <link>http://localhost:4321/publication/vehicle-sales/</link>
       <pubDate>Fri, 01 Oct 2010 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/publication/vehicle-sales/</guid>
+      <guid>http://localhost:4321/publication/vehicle-sales/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conference Paper | Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</title>
-    <link>http://localhost:3677/publication_types/conference-paper/</link>
-      <atom:link href="http://localhost:3677/publication_types/conference-paper/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4321/publication_types/conference-paper/</link>
+      <atom:link href="http://localhost:4321/publication_types/conference-paper/index.xml" rel="self" type="application/rss+xml" />
     <description>Conference Paper</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 12 Dec 2012 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:3677/media/icon_hu17379476442904948675.png</url>
+      <url>http://localhost:4321/media/icon_hu17379476442904948675.png</url>
       <title>Conference Paper</title>
-      <link>http://localhost:3677/publication_types/conference-paper/</link>
+      <link>http://localhost:4321/publication_types/conference-paper/</link>
     </image>
     
     <item>
       <title>Impacts of the Brazilian Science and Technology Sector Funds on industrial firms’ R&amp;D inputs and outputs: New perspectives using a dose-response function</title>
-      <link>http://localhost:3677/publication/dose-response-function/</link>
+      <link>http://localhost:4321/publication/dose-response-function/</link>
       <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:3677/publication/dose-response-function/</guid>
+      <guid>http://localhost:4321/publication/dose-response-function/</guid>
       <description></description>
     </item>
     
