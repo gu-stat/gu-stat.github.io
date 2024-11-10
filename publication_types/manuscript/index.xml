@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manuscript | Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</title>
+    <link>http://localhost:3677/publication_types/manuscript/</link>
+      <atom:link href="http://localhost:3677/publication_types/manuscript/index.xml" rel="self" type="application/rss+xml" />
+    <description>Manuscript</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Oct 2010 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:3677/media/icon_hu17379476442904948675.png</url>
+      <title>Manuscript</title>
+      <link>http://localhost:3677/publication_types/manuscript/</link>
+    </image>
+    
+    <item>
+      <title>Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos).</title>
+      <link>http://localhost:3677/publication/vehicle-sales/</link>
+      <pubDate>Fri, 01 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3677/publication/vehicle-sales/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>3 on Gustavo Varela-Alvarenga</title>
-    <link>/publication_types/3/</link>
-    <description>Recent content in 3 on Gustavo Varela-Alvarenga</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Fri, 01 Oct 2010 00:00:00 -0400</lastBuildDate>
-    
-	<atom:link href="/publication_types/3/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>3 | Statistician / Data Scientist</title>
+    <link>http://localhost:7724/publication_types/3/</link>
+      <atom:link href="http://localhost:7724/publication_types/3/index.xml" rel="self" type="application/rss+xml" />
+    <description>3</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Oct 2010 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:7724/media/icon_hu7729264130191091259.png</url>
+      <title>3</title>
+      <link>http://localhost:7724/publication_types/3/</link>
+    </image>
     
     <item>
       <title>Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos).</title>
-      <link>/publication/vehicle-sales/</link>
-      <pubDate>Fri, 01 Oct 2010 00:00:00 -0400</pubDate>
-      
-      <guid>/publication/vehicle-sales/</guid>
+      <link>http://localhost:7724/publication/vehicle-sales/</link>
+      <pubDate>Fri, 01 Oct 2010 00:00:00 +0000</pubDate>
+      <guid>http://localhost:7724/publication/vehicle-sales/</guid>
       <description></description>
     </item>
     

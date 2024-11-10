@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on Gustavo Varela-Alvarenga</title>
-    <link>/project/</link>
-    <description>Recent content in Projects on Gustavo Varela-Alvarenga</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 24 Jul 2018 12:00:00 -0400</lastBuildDate>
-    
-	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>Projects | Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</title>
+    <link>http://localhost:3677/project/</link>
+      <atom:link href="http://localhost:3677/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:3677/media/icon_hu17379476442904948675.png</url>
+      <title>Projects</title>
+      <link>http://localhost:3677/project/</link>
+    </image>
     
     <item>
-      <title>Shiny App with Modal, Modules and jQuery</title>
-      <link>/project/shiny-modal-modules-jquery/</link>
-      <pubDate>Tue, 24 Jul 2018 12:00:00 -0400</pubDate>
-      
-      <guid>/project/shiny-modal-modules-jquery/</guid>
-      <description>Use this modal to add/remove sets of variables (and their values) to a dataset.</description>
+      <title>Pandas</title>
+      <link>http://localhost:3677/project/pandas/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3677/project/pandas/</guid>
+      <description>&lt;p&gt;Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Shiny App to Compare Images</title>
-      <link>/project/shiny-compare-images/</link>
-      <pubDate>Tue, 24 Jul 2018 10:00:00 -0400</pubDate>
-      
-      <guid>/project/shiny-compare-images/</guid>
-      <description>Choose between two randomly generated images.</description>
+      <title>PyTorch</title>
+      <link>http://localhost:3677/project/pytorch/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3677/project/pytorch/</guid>
+      <description>&lt;p&gt;PyTorch is a Python package that provides tensor computation (like NumPy) with strong GPU acceleration.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>scikit-learn</title>
+      <link>http://localhost:3677/project/scikit/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3677/project/scikit/</guid>
+      <description>&lt;p&gt;scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.&lt;/p&gt;</description>
     </item>
     
   </channel>

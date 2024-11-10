@@ -1,2426 +1,4411 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: November 10, 2024 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="light">
+  
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3677&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.3.1" />
 
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
+  
+  
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 3.2.0">
-  <meta name="generator" content="Hugo 0.55.4" />
-  <meta name="author" content="Gustavo Varela Alvarenga">
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://localhost:3677/" />
 
   
   
   
   
     
-  
-  <meta name="description" content="Statistician">
-
-  
-  <link rel="alternate" hreflang="pt" href="/pt/">
-  
-  <link rel="alternate" hreflang="en-us" href="/">
-
+    <link rel="stylesheet" href="/css/themes/cyan.min.css" />
   
 
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-  <meta name="theme-color" content="#21ABFF">
-  
-
-  
-  
   
   
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    <link href="/dist/wc.min.css" rel="stylesheet" />
+  
 
+  
+  
+  
+
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
     
-    
-    
+    document.addEventListener('DOMContentLoaded', function () {
       
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician" />
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu8681554187780269523.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4958004962415400686.png" />
+
+  <link rel="canonical" href="http://localhost:3677/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
     
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician" />
+  <meta property="og:url" content="http://localhost:3677/" />
+  <meta property="og:title" content="Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician" />
+  <meta property="og:description" content="Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician" /><meta property="og:image" content="http://localhost:3677/media/icon_hu17379476442904948675.png" />
+    <meta property="twitter:image" content="http://localhost:3677/media/icon_hu17379476442904948675.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta property="og:updated_time" content="2022-10-24T00:00:00&#43;00:00" />
+    
+  
+
+  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite","url": "http://localhost:3677/"
+}
+</script>
+
+
+  
+
+
+  <title>Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</title>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  
+
+  
+  
+
+
+  
+  
+  
+  
+  
     
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
         
       
     
-
-    
-
-    
-
-  
-
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
-  
-
-  <link rel="stylesheet" href="/styles.css">
-  
-  <link rel="stylesheet" href="/css/timelineSkillsCSS.css">
-  
-  <link rel="stylesheet" href="/css/sharelinksCSS.css">
-  
-
   
   
   
-
   
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Gustavo Varela-Alvarenga">
-  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Gustavo Varela-Alvarenga">
   
-
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
-
-  <link rel="canonical" href="/">
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
   
     
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
     
   
-  <meta property="twitter:card" content="summary">
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
   
-  <meta property="twitter:site" content="@ogustavo_com">
-  <meta property="twitter:creator" content="@ogustavo_com">
   
-  <meta property="og:site_name" content="Gustavo Varela-Alvarenga">
-  <meta property="og:url" content="/">
-  <meta property="og:title" content="Gustavo Varela-Alvarenga">
-  <meta property="og:description" content="Statistician"><meta property="og:image" content="/img/portrait.jpg">
-  <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2019-04-26T00:00:00-04:00">
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 
-  
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+
+
+<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+
+
+<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
+
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      baseUrl: window.hbb.pagefind.baseUrl,
+      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
+    });
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    let element = document.getElementById('search');
+    let trigger = document.getElementById('search_toggle');
+
+    if (trigger) {
+      trigger.addEventListener('click', () => {
+        element.classList.toggle('hidden');
+        element.querySelector("input").value = ""
+        element.querySelector("input").focus()
+
+        if (!element.classList.contains('hidden')) {
+          let clear_trigger = document.querySelector('.pagefind-ui__search-clear');
+
+          if (clear_trigger && !clear_trigger.hasAttribute('listenerOnClick')) {
+            clear_trigger.setAttribute('listenerOnClick', 'true');
+
+            clear_trigger.addEventListener('click', () => {
+              element.classList.toggle('hidden');
+            });
+          }
+        }
+
+      });
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="/js/hugo-blox-en.min.js"
+    integrity=""
+  ></script>
 
-  <title>Gustavo Varela-Alvarenga</title>
+  
+  
+
+
+
+
+
+
+
+
+
+
 
 </head>
-<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
-  <aside class="search-results" id="search">
-  <div class="container">
-    <section class="search-header">
 
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1>Search</h1>
-        </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div id="search-box">
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
         
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
         
-      </div>
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
         
-      </div>
-
-    </section>
-  </div>
-</aside>
-
-
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
-  <div class="container">
+          <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-left">
+    <div class="order-0 h-100">
+      
+      <a class="navbar-brand" href="/" title="Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician">
+        Gustavo Varela Alvarenga
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
 
     
-      <a class="navbar-brand" href="/">Gustavo Varela-Alvarenga</a>
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
+      ">
       
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          
+          href="/"
+        >Bio</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/code/"
+        >R Code</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/shinyapps/"
+        >Shiny</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/publication/"
+        >Papers</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/experience/"
+        >Experience</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/education/"
+        >Education</a
+        >
+      </li>
+      
+      
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
+      
+      
+      
+      <button
+        aria-label="search"
+        class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
+        id="search_toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
       </button>
       
 
-    
-    <div class="collapse navbar-collapse" id="navbar">
-
       
       
-      <ul class="navbar-nav ml-auto">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#about" data-target="#about">
-            
-            <span>Home</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#experience" data-target="#experience">
-            
-            <span>Experience</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#skills" data-target="#skills">
-            
-            <span>Coding</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#projects" data-target="#projects">
-            
-            <span>Shiny Apps</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#publications" data-target="#publications">
-            
-            <span>Publications</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#contact" data-target="#contact">
-            
-            <span>Contact</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/files/CV_Varela_Alvarenga.pdf" data-target="files/CV_Varela_Alvarenga.pdf">
-            
-            <span>CV</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-      
-
-        
-
-        
-        <li class="nav-item">
-          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-        </li>
-        
-
-        
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
-            <i class="fas fa-globe" aria-hidden="true"></i>
-            <span>English</span>
-          </a>
-          <ul class="dropdown-menu">
-            
-            <li class="dropdown-item my-0 py-0 mx-0 px-0">
-              <a href="/pt/" data-target="/pt/">
-                <span>Português</span>
-              </a>
-            </li>
-            
-          </ul>
-        </li>
-        
-
-        
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
-        
-
-      </ul>
-
-    </div>
-  </div>
-</nav>
-
-
-
-<span id="homepage" style="display: none"></span>
-
-
-  
-
-
-
-
-
-  
-  
-  
-  <section id="about" class="home-section">
-    <div class="container">
-      
-
-
-
-<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="person-email person-address">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-
-      
-      <img class="portrait" src="/img/portrait.jpg" itemprop="image" alt="Avatar">
-      
-
-      <div class="portrait-title">
-        <h2 itemprop="name">Gustavo Varela Alvarenga</h2>
-        <h3 itemprop="jobTitle">Statistician</h3>
-
-        
-        
-
-        
-        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-          <a href="https://www-math.umd.edu/" target="_blank" itemprop="url" rel="noopener">
-          <span itemprop="name">University of Maryland</span>
-          </a>
-        </h3>
-        
-      </div>
-
-      <link itemprop="url" href="/">
-
-      <ul class="network-icon" aria-hidden="true">
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-        <li>
-          <a itemprop="sameAs" href="mailto:contact@ogustavo.com" >
-            <i class="fas fa-envelope big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a itemprop="sameAs" href="https://twitter.com/ogustavo_com" target="_blank" rel="noopener">
-            <i class="fab fa-twitter big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a itemprop="sameAs" href="https://scholar.google.com/citations?user=-0xpQ54AAAAJ" target="_blank" rel="noopener">
-            <i class="ai ai-google-scholar big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a itemprop="sameAs" href="https://github.com/Gu-Stat" target="_blank" rel="noopener">
-            <i class="fab fa-github big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a itemprop="sameAs" href="https://www.researchgate.net/profile/Gustavo_Varela_Alvarenga" target="_blank" rel="noopener">
-            <i class="ai ai-researchgate big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a itemprop="sameAs" href="/files/CV_Varela_Alvarenga.pdf" >
-            <i class="ai ai-cv big-icon"></i>
-          </a>
-        </li>
-        
-      </ul>
-
-    </div>
-  </div>
-  <div class="col-12 col-lg-8" itemprop="description">
-
-    
-
-<h1 id="biography">Biography</h1>
-
-<p>I am a statistician with 5 years of experience with econometric research and over 10 years of experience with quantitative and qualitative data analysis. I won an award for a paper in which I evaluated the impact of a public policy in Brazil.</p>
-
-<p>I am currently developing a new method for time series forecasting (theory, R package and Shiny app).</p>
-
-
-    <div class="row">
-
-      
-      <div class="col-md-5">
-        <h3>Interests</h3>
-        <ul class="ul-interests">
-          
-          <li>Time Series Forecasting</li>
-          
-          <li>Applied Statistics</li>
-          
-          <li>Data Science</li>
-          
-          <li>Data Visualization</li>
-          
-          <li>Econometrics</li>
-          
-          <li>Programming</li>
-          
-        </ul>
-      </div>
-      
-
-      
-      <div class="col-md-7">
-        <h3>Education</h3>
-        <ul class="ul-edu fa-ul">
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">Ph.D. in Statistics, 2021</p>
-              <p class="institution">University of Maryland, College Park</p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">MA in Economics, 2011</p>
-              <p class="institution">Universidade de Brasilia, Brazil</p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">BSc in Statistics, 2008</p>
-              <p class="institution">Universidade de Brasilia, Brazil</p>
-            </div>
-          </li>
-          
-        </ul>
-      </div>
-      
-
-    </div>
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="experience" class="home-section">
-    <div class="container">
-      
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Experience</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    
-
-    <div class="row experience">
-      
-      <div class="col-auto text-center flex-column d-none d-sm-flex">
-        <div class="row h-50">
-          <div class="col ">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-        <div class="m-2">
-          <span class="badge badge-pill border ">&nbsp;</span>
-        </div>
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-      </div>
-      
-      <div class="col py-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="float-right text-muted exp-meta">
-              <div>
-                December 2021 – Current
-                
-                
-              </div>
-              <div class="text-right">Brasilia, Brazil</div>
-              
-            </div>
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">Regional Head of Data Science, Latin America</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="https://argusmedia.com/" target="_blank" rel="noopener">Argus Media</a></h4>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-    <div class="row experience">
-      
-      <div class="col-auto text-center flex-column d-none d-sm-flex">
-        <div class="row h-50">
-          <div class="col ">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-        <div class="m-2">
-          <span class="badge badge-pill border ">&nbsp;</span>
-        </div>
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-      </div>
-      
-      <div class="col py-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="float-right text-muted exp-meta">
-              <div>
-                August 2013 –
-                
-                  July 2014
-                
-                
-              </div>
-              <div class="text-right">Brasilia, Brazil</div>
-              
-            </div>
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">Lead Statistician</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="https://abdi.com.br/" target="_blank" rel="noopener">Brazilian Agency for Industrial Development (ABDI)</a></h4>
-            <div class="card-text"><p>Worked with a multidisciplinary team in the development of studies and research papers/white-papers to assess the impact of public policies on Brazilian industrial development by gathering data from different sources and surveys, and analyzing it with simulation and quasi-experiment methods (difference in differences, propensity score matching), and data visualization techniques;</p>
-
-<p>With a team, I developed a web enabled tool called The Competitiveness Decoder® (<a href="http://decoder.thegfcc.org/" target="_blank">http://decoder.thegfcc.org/</a>) that is focused on country data and has the goal of allowing users to learn and master the complexity related to competitiveness through different lenses. Find out more about it here: <a href="http://decoder.thegfcc.org/learn/decoder" target="_blank">http://decoder.thegfcc.org/learn/decoder</a>. You can find me under “Former Team Members” on the website;</p>
-
-<p>Supervised the work of other statisticians, helped other teams to build a data frame suitable for answering questions in their areas, and followed up with them to verify the validity of the methods and the outputs they were producing.</p>
-</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row experience">
-      
-      <div class="col-auto text-center flex-column d-none d-sm-flex">
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-        <div class="m-2">
-          <span class="badge badge-pill border ">&nbsp;</span>
-        </div>
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-      </div>
-      
-      <div class="col py-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="float-right text-muted exp-meta">
-              <div>
-                August 2012 –
-                
-                  July 2014
-                
-                
-              </div>
-              <div class="text-right">Brasilia, Brazil</div>
-              
-            </div>
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">Lecturer - Applied Statistics</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="http://www.est.unb.br/" target="_blank" rel="noopener">Universidade de Brasilia</a></h4>
-            <div class="card-text"><p>Taught applied statistics to undergraduate students from areas outside STEM (e.g. social sciences, psychology &amp; others);</p>
-
-<p>Found ways to convey complex concepts to a non-technical audience.</p>
-</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row experience">
-      
-      <div class="col-auto text-center flex-column d-none d-sm-flex">
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-        <div class="m-2">
-          <span class="badge badge-pill border ">&nbsp;</span>
-        </div>
-        <div class="row h-50">
-          <div class="col ">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-      </div>
-      
-      <div class="col py-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="float-right text-muted exp-meta">
-              <div>
-                January 2009 –
-                
-                  August 2013
-                
-                
-              </div>
-              <div class="text-right">Brasilia, Brazil</div>
-              
-            </div>
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">Researcher / Statistical Consultant</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="http://www.ipea.gov.br/portal/index.php?option=com_content&amp;view=frontpage&amp;Itemid=61" target="_blank" rel="noopener">Institute for Applied Economic Research (IPEA)</a></h4>
-            <div class="card-text"><p>Developed studies and research papers that used statistical and econometric methods to understand and quantify the impact of different Brazilian policies to support industry development;</p>
-
-<p>Provided technical and methodological advisory services to senior researchers regarding statistical and econometric methods at various stages in the research process;</p>
-
-<p>Handled, processed, and analyzed large datasets (12GB, 50+ million observations) of firm-level and employee data from Census and Surveys using SAS (PROC SQL).</p>
-</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="skills" class="home-section">
-    <div class="container">
-      
-
-
-<div class="row featurette">
-  
-  <div class="col-md-12 section-heading">
-    <h1>Programming Languages</h1>
-    
-  </div>
-  
-
-  
-  <div class="col-md-12">
-    <p>Hover over the bars to see the specific dates
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<div id="timeline.skills" class="chart"></p>
-  </div>
-  
-
-  
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="projects" class="home-section">
-    <div class="container">
-      
-
-
-
-
-
-
-
-<div class="row">
-  <div class="col-xs-12 col-md-4 section-heading">
-
-    <h1>Shiny Apps</h1>
-    <p>For a list of my Shiny Apps, go to <a href="https://shiny.ogustavo.com" target="_blank">https://shiny.ogustavo.com</a></p>
-
-  </div>
-  <div class="col-xs-12 col-md-8">
-
-
-
-    
-
-    
-
-      
-
-      
-      
-      
-      
-        
-      
-
-      <span class="d-none default-project-filter">*</span>
-
-      
-      
-      <div class="project-toolbar">
-        <div class="project-filters">
-          <div class="btn-toolbar">
-            <div class="btn-group flex-wrap">
-              
-                
-                
-                
-                  
-                
-                <a href="#" data-filter="*" class="btn btn-primary btn-lg active">All</a>
-              
-                
-                
-                
-                <a href="#" data-filter=".js-id-Shiny-App" class="btn btn-primary btn-lg">Shiny App</a>
-              
-                
-                
-                
-                <a href="#" data-filter=".js-id-Shiny-Module" class="btn btn-primary btn-lg">Shiny Module</a>
-              
-                
-                
-                
-                <a href="#" data-filter=".js-id-jQuery" class="btn btn-primary btn-lg">jQuery</a>
-              
-                
-                
-                
-                <a href="#" data-filter=".js-id-JavaScript" class="btn btn-primary btn-lg">JavaScript</a>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    
-
-    <div class="row isotope projects-container js-layout-row project-showcase mt-5">
-      
-        
-        
-        
-          
-          
-        
-        
-          
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-<div class="col-lg-12 project-item isotope-item js-id-Shiny-App js-id-Shiny-Module js-id-jQuery js-id-JavaScript" itemscope itemtype="http://schema.org/CreativeWork">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <h3 class="article-title mb-0 mt-0" itemprop="name"><a href="https://shiny.ogustavo.com/module_modal_jquery/" target="_blank" rel="noopener" itemprop="url">Shiny App with Modal, Modules and jQuery</a></h3>
-
-      
-      
-        
-      
-      
-      <div class="article-style" itemprop="articleBody">
-        Use this modal to add/remove sets of variables (and their values) to a dataset.
-      </div>
-      
-
-      <div class="btn-links">
-        
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first ">
-      
-      
-      
-      <a href="https://shiny.ogustavo.com/module_modal_jquery/" target="_blank" rel="noopener">
-        <img src="/project/shiny-modal-modules-jquery/featured_hu3c776c53e170df25f2b8206595d7016f_74131_540x0_resize_q75_box.jpg" itemprop="image" alt="">
-      </a>
-      
-    </div>
-  </div>
-</div>
-
-        
-      
-        
-        
-        
-          
-          
-        
-        
-          
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-<div class="col-lg-12 project-item isotope-item js-id-Shiny-App" itemscope itemtype="http://schema.org/CreativeWork">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <h3 class="article-title mb-0 mt-0" itemprop="name"><a href="https://shiny.ogustavo.com/select_best_image/" target="_blank" rel="noopener" itemprop="url">Shiny App to Compare Images</a></h3>
-
-      
-      
-        
-      
-      
-      <div class="article-style" itemprop="articleBody">
-        Choose between two randomly generated images.
-      </div>
-      
-
-      <div class="btn-links">
-        
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first ">
-      
-      
-      
-      <a href="https://shiny.ogustavo.com/select_best_image/" target="_blank" rel="noopener">
-        <img src="/project/shiny-compare-images/featured_hu1e6406baf6c4ee3db3e20be643334030_59777_540x0_resize_q75_box.jpg" itemprop="image" alt="">
-      </a>
-      
-    </div>
-  </div>
-</div>
-
-        
-      
-    </div>
-
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="posts" class="home-section">
-    <div class="container">
-      
-
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-
-    <h1>Data Visualization with R</h1>
-    
-    
-
-  </div>
-  <div class="col-12 col-lg-8">
-
-    
-
-    
-      
-
-      
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-          
-      
-          
-      
-          
-      
-
-      
-      
-        
-          
-
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/post/forest-map/" itemprop="url">Create a Map in R with ggplot and transform it into a gif</a>
-    </h3>
-
-    
-    
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      Create a Map in R with ggplot and transform it into a gif
-    </div>
-    
-
-    <div class="stream-meta">
-    
-
-<div class="article-metadata">
-
-  
-  
-  
-  <div>
-    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">G Varela-Alvarenga</span>
-    </span>
-    
-  </div>
-  
-
-  <span class="article-date">
-    
-        Last updated on
-    
-    <meta content="2019-04-26 00:00:00 -0400 EDT" itemprop="datePublished">
-    <time datetime="2019-04-27 00:00:00 -0400 EDT" itemprop="dateModified">
-      Apr 27, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Gustavo Varela Alvarenga">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    14 min read
-  </span>
-  
-
-  
-  
-
-  
-
-  
-
-</div>
-
-    </div>
-
-  </div>
-  <div class="ml-3">
-    
-    
-    
-    <a href="/post/forest-map/">
-      <img src="/post/forest-map/featured_hu4e8705c4f11b742cb08723badbf9cf72_122270_150x0_resize_box_2.png" itemprop="image">
-    </a>
-    
-  </div>
-</div>
-
-        
-      
-
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-
-      
-      
-        
-          
-
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/post/dotplot-ggplot/" itemprop="url">Create a Dumbbell Plot using ggplot</a>
-    </h3>
-
-    
-    
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      Create a Dumbbell Plot using geom_point
-    </div>
-    
-
-    <div class="stream-meta">
-    
-
-<div class="article-metadata">
-
-  
-  
-  
-  <div>
-    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">G Varela-Alvarenga</span>
-    </span>
-    
-  </div>
-  
-
-  <span class="article-date">
-    
-    <meta content="2018-11-28 00:00:00 -0500 EST" itemprop="datePublished">
-    <time datetime="2018-11-28 00:00:00 -0500 EST" itemprop="dateModified">
-      Nov 28, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Gustavo Varela Alvarenga">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    6 min read
-  </span>
-  
-
-  
-  
-
-  
-
-  
-
-</div>
-
-    </div>
-
-  </div>
-  <div class="ml-3">
-    
-    
-    
-    <a href="/post/dotplot-ggplot/">
-      <img src="/post/dotplot-ggplot/featured_hu822c493f26884bd0c9d01f8e0b5c3d90_3010962_150x0_resize_box_2.png" itemprop="image">
-    </a>
-    
-  </div>
-</div>
-
-        
-      
-
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-
-      
-      
-        
-          
-
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/post/waterfall-ggplot/" itemprop="url">Create a Waterfall Chart using ggplot</a>
-    </h3>
-
-    
-    
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      Create a create a &lsquo;stacked waterfall&rsquo; chart in R
-    </div>
-    
-
-    <div class="stream-meta">
-    
-
-<div class="article-metadata">
-
-  
-  
-  
-  <div>
-    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">G Varela-Alvarenga</span>
-    </span>
-    
-  </div>
-  
-
-  <span class="article-date">
-    
-    <meta content="2018-09-29 00:00:00 -0400 EDT" itemprop="datePublished">
-    <time datetime="2018-09-29 00:00:00 -0400 EDT" itemprop="dateModified">
-      Sep 29, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Gustavo Varela Alvarenga">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    5 min read
-  </span>
-  
-
-  
-  
-
-  
-
-  
-
-</div>
-
-    </div>
-
-  </div>
-  <div class="ml-3">
-    
-    
-    
-    <a href="/post/waterfall-ggplot/">
-      <img src="/post/waterfall-ggplot/featured_hue8f16c8e670c1787d51be0bb93770b9b_8613_150x0_resize_box_2.png" itemprop="image">
-    </a>
-    
-  </div>
-</div>
-
-        
-      
-
-      
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="awards" class="home-section">
-    <div class="container">
-      
-
-
-
-
-<div class="container-award">
-    <div class="row">
-        <div class="col-xs-12 col-md-4 section-heading">
-            <h1>Awards</h1>
-            
-        </div>
-        <div class="col-xs-12 col-md-8">
-          
-          
-            <div class="awards-metadata" style="margin-bottom: 1rem">
-              <div class="row">
-                  <div class="col-xs-12 col-sm-12">
-                    <span itemprop="name"><a href="/awards/premio-cni/">CNI National Economy Award (Prêmio CNI de Economia)</a></span>
-                  </div>
-                  <div class="col-xs-12 col-sm-12">
-                    2nd Best Paper
-                  </div>
-                  <div class="col-xs-12 col-sm-12">
-                    Category: Evaluation of Productivity and Innovation in the Brazilian Industry
-                </div>
-                <div class="col-xs-12 col-sm-12">
-                    Pernambuco, Brazil
-                  </div>
-                  <div class="col-xs-12 col-sm-12">
-                    
-                    December, 2012  
-                  </div>
-                </div>
-              </div>
-            
-        </div>
-    </div>
-</div>
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="publications" class="home-section">
-    <div class="container">
-      
-
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Selected Publications</h1>
-    
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    
-
-    
-      
-    
-
-    
-
-    
-    
-      
-        <div class="media stream-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/publication/dose-response-function/" itemprop="url">Impacts of the Brazilian Science and Technology Sector Funds on industrial firms’ R&amp;D inputs and outputs: New perspectives using a dose-response function</a>
-    </h3>
-
-    
-    
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      This study aims to assess the impact of Brazilian Sector Funds from the standpoint of the amount of resources provided to industrial …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-      <div itemprop="author">
-        G Varela-Alvarenga, DM Pianto, BC Araújo</div>
-    </div>
-
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-  
-    
-  
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.anpec.org.br/encontro/2012/inscricao/files_I/i8-5fe1cb9e5d777ea40cd1a965ecfba0b8.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
-        data-filename="/publication/dose-response-function/cite.bib">
-  Cite
-</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-      
-    
-      
-        <div class="media stream-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/publication/airticket/" itemprop="url">Demand for air ticket in the Brazilian economy: a co-integration analysis (original title: Demanda por ticket aéreo na economia brasileira: uma análise de co-integração).</a>
-    </h3>
-
-    
-    
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      The air transport demand is directly related to economic cycles (domestic and international), to the currency fluctuations and …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-      <div itemprop="author">
-        PF Alves, G Varela-Alvarenga, CH Rocha</div>
-    </div>
-
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-  
-    
-  
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="/files/airticket.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
-        data-filename="/publication/airticket/cite.bib">
-  Cite
-</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-      
-    
-      
-        <div class="media stream-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/publication/vehicle-sales/" itemprop="url">Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos).</a>
-    </h3>
-
-    
-    
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      The aim of this paper is to analyze the impacts of the reduction of the Brazilian Tax on Industrialized Products (IPI) on the local …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-      <div itemprop="author">
-        G Varela-Alvarenga, et.al</div>
-    </div>
-
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-  
-    
-  
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.econstor.eu/bitstream/10419/91099/1/640454380.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
-        data-filename="/publication/vehicle-sales/cite.bib">
-  Cite
-</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-      
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="short" class="home-section">
-    <div class="container">
-      
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Short Courses</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    
-
-    
-    
-    
-    <div class="row experience">
-      
-      <div class="col-auto text-center flex-column d-none d-sm-flex">
-        <div class="row h-50">
-          <div class="col ">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-        <div class="m-2">
-          <span class="badge badge-pill border ">&nbsp;</span>
-        </div>
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-      </div>
-      
-      <div class="col py-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="float-right text-muted exp-meta">
-              <div>
-                May 2018 –
-                
-                  July 2018
-                
-                
-              </div>
-              <div class="text-right">Online Course</div>
-              
-            </div>
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">Introduction to JavaScript</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank" rel="noopener">CodeAcademy</a></h4>
-            <div class="card-text"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row experience">
-      
-      <div class="col-auto text-center flex-column d-none d-sm-flex">
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-        <div class="m-2">
-          <span class="badge badge-pill border ">&nbsp;</span>
-        </div>
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-      </div>
-      
-      <div class="col py-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="float-right text-muted exp-meta">
-              <div>
-                April 2018 –
-                
-                  May 2018
-                
-                
-              </div>
-              <div class="text-right">Online Course</div>
-              
-            </div>
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">Learn Python</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="https://www.codecademy.com/learn/learn-python" target="_blank" rel="noopener">CodeAcademy</a></h4>
-            <div class="card-text"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row experience">
-      
-      <div class="col-auto text-center flex-column d-none d-sm-flex">
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-        <div class="m-2">
-          <span class="badge badge-pill border ">&nbsp;</span>
-        </div>
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-      </div>
-      
-      <div class="col py-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="float-right text-muted exp-meta">
-              <div>
-                March 2012 –
-                
-                  May 2012
-                
-                
-              </div>
-              <div class="text-right">Online Course - Coursera</div>
-              
-            </div>
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">Game Theory</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="https://www.coursera.org/learn/game-theory-1" target="_blank" rel="noopener">Stanford University</a></h4>
-            <div class="card-text"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row experience">
-      
-      <div class="col-auto text-center flex-column d-none d-sm-flex">
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-        <div class="m-2">
-          <span class="badge badge-pill border ">&nbsp;</span>
-        </div>
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-      </div>
-      
-      <div class="col py-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="float-right text-muted exp-meta">
-              <div>
-                February 2012 –
-                
-                  June 2012
-                
-                
-              </div>
-              <div class="text-right">Online Course - Coursera</div>
-              
-            </div>
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">Model Thinking</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="https://www.coursera.org/learn/game-theory-1" target="_blank" rel="noopener">University of Michigan</a></h4>
-            <div class="card-text"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row experience">
-      
-      <div class="col-auto text-center flex-column d-none d-sm-flex">
-        <div class="row h-50">
-          <div class="col border-right">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-        <div class="m-2">
-          <span class="badge badge-pill border ">&nbsp;</span>
-        </div>
-        <div class="row h-50">
-          <div class="col ">&nbsp;</div>
-          <div class="col">&nbsp;</div>
-        </div>
-      </div>
-      
-      <div class="col py-2">
-        <div class="card">
-          <div class="card-body">
-            <div class="float-right text-muted exp-meta">
-              <div>
-                January 2012 –
-                
-                  February 2012
-                
-                
-              </div>
-              <div class="text-right">Universidade de Brasilia, Brazil</div>
-              
-            </div>
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">Topics in Real Analysis</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="http://www.mat.unb.br/verao/" target="_blank" rel="noopener">Summer Course</a></h4>
-            <div class="card-text"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="stack_exchange" class="home-section">
-    <div class="container">
-      
-
-
-<div class="row">
-  
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Selected Answers on Stack Exchange</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    <p><a href="https://stats.stackexchange.com/questions/78354/what-is-a-contrast-matrix-a-term-pertaining-to-an-analysis-with-categorical-pr/221861#221861" target="_blank">What is a contrast matrix (a term, pertaining to an analysis with categorical predictors)?</a></p>
-
-<p><a href="https://math.stackexchange.com/questions/1708587/hitting-times-for-brownian-motion-2/1793520#1793520" target="_blank">Hitting times for Brownian Motion (2)</a></p>
-
-<p><a href="https://stats.stackexchange.com/questions/223059/how-to-define-a-rejection-region/223069#223069" target="_blank">How to define a rejection region?</a></p>
-
-<p><a href="https://stats.stackexchange.com/questions/133977/why-a-sufficient-statistic-contains-all-the-information-needed-to-compute-any-es/221604#221604" target="_blank">Why a sufficient statistic contains all the information needed to compute any estimate of the parameter?</a></p>
-
-<p><a href="https://math.stackexchange.com/questions/328460/if-operatornameranka-k-can-we-say-something-about-operatornameranka/1821366#1821366" target="_blank">If rank(A)=k, can we say something about rank(AAt)?</a></p>
-
-<p><a href="https://stackoverflow.com/questions/8156925/r-package-for-motion-capture-data-analysis-and-visualisation/46187763#46187763" target="_blank">R package for motion capture data analysis and visualisation</a></p>
-
-<p><a href="https://stackoverflow.com/questions/37128099/transposing-time-series-mutate-with-lags-with-dplyr/49416789#49416789" target="_blank">Transposing time series (mutate with lags) with dplyr</a></p>
-
-  </div>
-  
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="analytical_skills" class="home-section">
-    <div class="container">
-      
-
-
-<div class="row">
-  
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Analytical Skills</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    <ul>
-<li>Impact Evaluation</li>
-<li>Dataset cleaning</li>
-<li>Dataset Manipulation</li>
-<li>Research</li>
-<li>Econometric Analysis</li>
-<li>Quantitative and Qualitative Analysis</li>
-<li>Data Modeling</li>
-<li>Data Visualization</li>
-<li>Problem Solving</li>
-<li>Critical thinking</li>
-</ul>
-
-  </div>
-  
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="statistical_skills" class="home-section">
-    <div class="container">
-      
-
-
-<div class="row">
-  
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Statistical Skills</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    <ul>
-<li>Time Series Analysis</li>
-<li>Generalized Linear and Mixed Models</li>
-<li>ANOVA/MANOVA/ANCOVA</li>
-<li>Instrumental Variables Models</li>
-<li>Selection Models</li>
-<li>Matching Algorithms</li>
-<li>Hypothesis Testing</li>
-<li>Monte Carlo Simulations</li>
-<li>Bootstrap Methods</li>
-<li>Descriptive Statistics</li>
-<li>Survey design</li>
-</ul>
-
-  </div>
-  
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="datasets" class="home-section">
-    <div class="container">
-      
-
-
-<div class="row">
-  
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Dataset Skills</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    <p>Experience with large datasets, including data from household surveys.</p>
-
-<p>Had to combine several datasets - with around 50 million lines each and 15 GB each - by an unique identification number.</p>
-
-<p>Used SQL procedures in SAS (PROC SQL) for data extraction and manipulation due to the size and complexity of the datasets.</p>
-
-  </div>
-  
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="data_visualization" class="home-section">
-    <div class="container">
-      
-
-
-<div class="row">
-  
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Data Visualization</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    <p>Some of the R packages that I have used for data visualization:</p>
-
-<ul>
-<li>ggplot2</li>
-<li>plotly</li>
-<li>highcharter</li>
-<li>dygraph</li>
-<li>googlevis</li>
-<li>ggiraph</li>
-<li>shiny</li>
-</ul>
-
-  </div>
-  
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="teaching" class="home-section">
-    <div class="container">
-      
-
-
-<div class="row">
-  
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Teaching</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    
-
-<p>Teaching instructor for the following courses at University of Maryland, College Park:</p>
-
-<h3 id="2019-spring">2019 - Spring</h3>
-
-<ul>
-<li>MATH240: Introduction to Linear Algebra</li>
-</ul>
-
-<h3 id="2018-fall">2018 - Fall</h3>
-
-<ul>
-<li>STAT100: Elementary Statistics and Probability</li>
-</ul>
-
-  </div>
-  
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="contact" class="home-section">
-    <div class="container">
-      
-
-
-
-
-<div class="row contact-widget">
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Contact</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    
-
-    
-
-    <ul class="fa-ul" itemscope>
-
-      
-      <li>
-        <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
-        <span id="person-email" itemprop="email"><a href="mailto:contact@ogustavo.com">contact@ogustavo.com</a></span>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-      <li>
-        <i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i>
-        <span id="person-address" itemprop="address">William E. Kirwan Hall - Room 4314, University of Maryland, College Park, 20742, USA</span>
-      </li>
-      
-
-      
-      <li>
-        <i class="fa-li fas fa-clock fa-2x" aria-hidden="true"></i>
-        <span>Tuesday 3pm to 4pm<br />
-  Otherwise email to book an appointment</span>
-      </li>
-      
-
-      
-
-    </ul>
-
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-
-
- <div class="sticky-share">
-        <a href="#" class="shareBtn"><i class="fas fa-share-alt"></i></a> 
-        <div class="sticky-share-list">
-            <ul class="sticky-share-icons">
-                
-
-
-
-  <li>
-    
-    <a class="social-facebook"
-       href="https://www.facebook.com/sharer.php?u=https://ogustavo.com%2f"
-       target="_blank"
-       data-name="Facebook"
-       title="Share to Facebook"
-       tabindex="6"
-       role="button">
-      <i class="fb fab fa-facebook-f"></i>
-      <p>Facebook</p>
-    </a>
-  </li>
-
-
-  <li>
-    <a class="social-twitter"
-       href="https://twitter.com/intent/tweet?text=Gustavo%20Varela-Alvarenga &amp;url=https://ogustavo.com%2f&amp;hashtags=rstats, ShinyApp&amp;via=ogustavo_com"
-       target="_blank"
-       data-name="Twitter"
-       title="Share to Twitter"
-       tabindex="5"
-       role="button">
-      <i class="tw fab fa-twitter"></i>
-      <p>Twitter</p>
-    </a>
-  </li>
-
-
-
-    <li>
-      <a class="social-linkedin"
-         href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://ogustavo.com%2f&amp;title=Gustavo%20Varela-Alvarenga &amp;summary=Gustavo%20Varela-Alvarenga&amp;source=www.ogustavo.com"
-         target="_blank"
-         data-name="Linkedin"
-         title="Share to Linkedin"
-         tabindex="4"
-         role="button">
-        <i class="lnkd fab fa-linkedin"></i>
-        <p>LinkedIn</p>
-      </a>
-    </li>
-
-
-<li>
-  <a class="social-whatsapp"
-     href="whatsapp://send?text=Gustavo%20Varela-Alvarenga - https://ogustavo.com%2f"
-     target="_blank"
-     data-name="WhatsApp"
-     title="Share to WhatsApp"
-     tabindex="3"
-     role="button"
-     >
-    <i class="zap fab fa-whatsapp"></i>
-    <p>WhatsApp</p>
-  </a>
-</li>
-
-
-<li>
-  <a class="social-email"
-     href="mailto:?subject=Gustavo%20Varela-Alvarenga &amp;body=https://ogustavo.com%2f" 
-     target="_blank"
-     data-name="Email"
-     title="Share to Email"
-     tabindex="2"
-     role="button">
-    <i class="ma fa fa-envelope"></i>
-    <p>Email</p>
-    <br>
-  </a>
-</li>
-
-
-
-
-            </ul>
-          </div>
-        </div>
-
-
-
-<div class="container">
-  <footer class="site-footer">
-  
-  <p class="powered-by">
-    <a href="/privacy/">Privacy Policy</a>
-  </p>
-  
-
-  <p class="powered-by">
-    &copy; 2018 &middot; 
-
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-
-    
-    <span class="float-right" aria-hidden="true">
-      <a href="#" id="back_to_top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
-    
-  </p>
-</footer>
-
-</div>
-
-
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+      <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
+            [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
+        <button class="theme-toggle mt-1" accesskey="t" title="appearance">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="dark:hidden">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class=" dark:block [&:not(dark)]:hidden">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
         </button>
       </div>
-      <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
+      
+
+      
+      
+
+      
+      
+    </div>
+  </nav>
+</header>
+
+
+<div id="search" class="hidden p-3"></div>
+
+
+        
+      
+    </div>
+    <div class="page-body ">
+      
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+    
+      
+    
+    
+  
+  
+    
+    
+  
+  
+    
+    
+  
+
+
+
+  
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-resume-biography-3" class="relative hbb-section blox-resume-biography-3  dark" style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg  bg-image" style="background-color: black;background-image: url(&#39;http://localhost:3677/media/v882-kul-42_hu16778553879088780508.webp&#39;);background-size: cover;background-position: center;filter: brightness(1);">
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="resume-biography px-3 flex flex-col md:flex-row justify-center gap-12">
+  <div class="flex-none m-w-[130px] mx-auto md:mx-0">
+
+  
+  
+
+  <div id="profile" class="flex justify-center items-center flex-col">
+    
+
+    <div class="avatar-wrapper mt-10">
+      
+      <img class="avatar rounded-full bg-white dark:bg-gray-800 p-1" src="/author/avatar_hu4506190337956981486.jpg" alt=""
+           width="150" height="150">
+      
+    </div>
+    
+
+    <div class="portrait-title dark:text-white">
+
+      <div class="text-3xl font-bold mb-2 mt-6"><ruby>
+            <rb></rb>
+            <rt>Gustavo Varela Alvarenga</rt>
+          </ruby></div>
+
+      <h3 class="font-semibold mb-1">Regional Head of Data Science for Latin America</h3>
+
+      
+      <div class="mb-2">
+        <a href="https://www.argusmedia.com/" target="_blank" rel="noopener">
+        <div>Argus Media</div>
         </a>
-        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-          <i class="fas fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
       </div>
+      
+    </div>
+
+    <ul class="network-icon dark:text-zinc-100">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="https://github.com/Gu-Stat" target="_blank" rel="noopener" aria-label="brands/github"
+           >
+          <svg style="height: 1.5rem;" fill="currentColor" viewBox="3 3 18 18"><path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path></svg>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="https://www.linkedin.com/in/gustavo-varela-alvarenga" target="_blank" rel="noopener" aria-label="brands/linkedin"
+           >
+          <svg style="height: 1.5rem;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="https://scholar.google.com/citations?user=-0xpQ54AAAAJ" target="_blank" rel="noopener" aria-label="academicons/google-scholar"
+           >
+          <svg style="height: 1.5rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M343.759 106.662V79.43L363.524 64h-213.89L20.476 176.274h85.656a82.339 82.339 0 0 0-.219 6.225c0 20.845 7.22 38.087 21.672 51.861c14.453 13.797 32.252 20.648 53.327 20.648c4.923 0 9.75-.368 14.438-1.024c-2.907 6.5-4.374 12.523-4.374 18.142c0 9.875 4.499 20.43 13.467 31.642c-39.234 2.67-68.061 9.732-86.437 21.163c-10.531 6.5-19 14.704-25.39 24.531c-6.391 9.9-9.578 20.515-9.578 31.962c0 9.648 2.062 18.336 6.219 26.062c4.156 7.726 9.578 14.07 16.312 18.984c6.718 4.968 14.469 9.101 23.219 12.469c8.734 3.344 17.406 5.718 26.061 7.062A167.052 167.052 0 0 0 180.555 448c13.469 0 26.953-1.734 40.547-5.187c13.562-3.485 26.28-8.642 38.171-15.493c11.86-6.805 21.515-16.086 28.922-27.718c7.39-11.68 11.094-24.805 11.094-39.336c0-11.016-2.25-21.039-6.75-30.14c-4.468-9.073-9.938-16.542-16.452-22.345c-6.501-5.813-13-11.155-19.516-15.968c-6.5-4.845-12-9.75-16.468-14.813c-4.485-5.046-6.735-10.054-6.735-14.984c0-4.921 1.734-9.672 5.216-14.265c3.455-4.61 7.674-9.048 12.61-13.306c4.937-4.25 9.875-8.968 14.796-14.133c4.922-5.147 9.141-11.827 12.61-20.008c3.485-8.18 5.203-17.445 5.203-27.757c0-13.453-2.547-24.46-7.547-33.314c-.594-1.022-1.218-1.803-1.875-3.022l56.907-46.672v17.119c-7.393.93-6.624 5.345-6.624 10.635V245.96c0 5.958 4.875 10.834 10.834 10.834h3.989c5.958 0 10.833-4.875 10.833-10.834V117.293c0-5.277.778-9.688-6.561-10.63zm-107.36 222.48c1.14.75 3.704 2.78 7.718 6.038c4.05 3.243 6.797 5.695 8.266 7.414a443.553 443.553 0 0 1 6.376 7.547c2.813 3.375 4.718 6.304 5.718 8.734c1 2.477 2.016 5.461 3.047 8.946a38.27 38.27 0 0 1 1.485 10.562c0 17.048-6.564 29.68-19.656 37.859c-13.125 8.18-28.767 12.274-46.938 12.274c-9.187 0-18.203-1.093-27.063-3.196c-8.843-2.116-17.311-5.336-25.39-9.601c-8.078-4.258-14.577-10.204-19.5-17.797c-4.938-7.64-7.407-16.415-7.407-26.25c0-10.32 2.797-19.29 8.422-26.906c5.594-7.625 12.938-13.391 22.032-17.315c9.063-3.946 18.25-6.742 27.562-8.398a157.865 157.865 0 0 1 28.438-2.555c4.47 0 7.936.25 10.405.696c.455.219 3.032 2.07 7.735 5.563c4.704 3.462 7.625 5.595 8.75 6.384zm-3.359-100.579c-7.406 8.86-17.734 13.288-30.953 13.288c-11.86 0-22.298-4.764-31.266-14.312c-9-9.523-15.422-20.328-19.344-32.43c-3.937-12.109-5.906-23.984-5.906-35.648c0-13.694 3.596-25.352 10.781-34.976c7.187-9.65 17.5-14.485 30.938-14.485c11.875 0 22.374 5.038 31.437 15.157c9.094 10.085 15.61 21.413 19.517 33.968c3.922 12.54 5.873 24.53 5.873 35.984c0 13.446-3.702 24.61-11.076 33.454z"/></svg>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  </div>
+
+  <div class="flex-auto max-w-prose md:mt-12">
+    
+    <div class="pt-2 justify-content-center prose prose-slate dark:prose-invert">
+      <div class="bio-text" >
+        <h2 id="about-me">About Me</h2>
+<p>Experienced Head of Data Science with over 20 years of combined academic and professional expertise, specializing in predictive modeling, data product development, and team leadership. Proficient in R, Python, and SQL with substantial experience in deploying data-driven solutions to enhance client decision-making in complex commodity markets. Demonstrates strong capabilities in statistical analysis, machine learning, and data visualization, facilitating effective collaboration across technical and non-technical teams.</p>
+
+      </div>
+    </div>
+    
+
+    
+    <a href="uploads/Resume-Gustavo-Varela-Alvarenga.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-primary-700 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
+      <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+    </svg> Download CV</a>
+    
+
+
+
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between mt-6 dark:text-gray-300">
+
+    
+    <div class="">
+      <div class="section-subheading mb-3">Interests</div>
+      <ul class="list-disc list-inside space-y-1 pl-5">
+        
+        <li>
+          Time Series Forecasting
+        </li>
+        
+        <li>
+          Artificial Intelligence
+        </li>
+        
+        <li>
+          Machine Learning
+        </li>
+        
+        <li>
+          Applied Statistics
+        </li>
+        
+        <li>
+          Data Science
+        </li>
+        
+        <li>
+          Programming
+        </li>
+        
+      </ul>
+    </div>
+    
+
+    
+    <div class="">
+      <div class="section-subheading mb-3">Education</div>
+      <ul class="">
+        
+        <li class="flex items-start gap-3">
+          <svg style="" class='flex-shrink-0 w-5 h-5 me-2 mt-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41a60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84a51.39 51.39 0 0 0-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
+          <div class="description">
+            <p class="course">Ph.D. Mathematical Statistics</p>
+            <p class="text-sm">University of Maryland</p>
+          </div>
+        </li>
+        
+        <li class="flex items-start gap-3">
+          <svg style="" class='flex-shrink-0 w-5 h-5 me-2 mt-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41a60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84a51.39 51.39 0 0 0-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
+          <div class="description">
+            <p class="course">MA Economics</p>
+            <p class="text-sm">Universidade de Brasilia, Brazil</p>
+          </div>
+        </li>
+        
+        <li class="flex items-start gap-3">
+          <svg style="" class='flex-shrink-0 w-5 h-5 me-2 mt-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41a60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84a51.39 51.39 0 0 0-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
+          <div class="description">
+            <p class="course">BSc Statistics</p>
+            <p class="text-sm">Universidade de Brasilia, Brazil</p>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+
+</div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-resume-experience" class="relative hbb-section blox-resume-experience  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto">
+
+
+
+
+
+<div class="flex flex-col lg:gap-x-6 w-100 px-6 sm:px-0 ">
+
+
+<div class="w-full">
+  <h3 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Experience</h3>
+  <ol class="relative border-s border-gray-200 dark:border-gray-700">
+    
+    <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </span>
+      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Regional Head of Data Science for Latin America
+        
+      </h3>
+      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Argus Media</span>
+      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+        
+          January 2021 –
+        
+        
+          Present
+        
+      </time>
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert"><p>Responsibilities include:</p>
+<ul>
+<li>Established and currently manage the Latin American Data Science team, assembling a group of 12 professionals, including data engineers and scientists across three departments. Two of these departments are led by one department head and one team lead reporting directly to me.</li>
+<li>Enhanced project delivery efficiency by promoting a culture of innovation and collaboration, resulting in a notable team retention rate of 86% over nearly three years.</li>
+<li>Spearheaded the creation and deployment of R-based data products, enhancing client decision-making processes and operational efficiency by utilizing automation tools.</li>
+<li>Cultivated strategic partnerships with shareholders, driving the development of new analytical dashboards and products in R/Shiny, which led to an uplift in stakeholder engagement and product adoption.</li>
+<li>Collaborated with Business Developers and with the Sales team to design and present data science solutions to clients, enhancing the relevance and impact of presentations, which in turn spiked client interest and engagement.</li>
+<li>Provided expert guidance in statistical methods and time series analysis, significantly improving project outcomes and team skill levels.</li>
+<li>In charge of the daily production of the two principal data science products, ensuring the integrity of automated models and the accuracy of results prior to publication.</li>
+<li>Responsible for reviewing and approving changes to the code-base of the top revenue-generating data science product, instituting robust quality assurance protocols and enforcing strict version control with Git to enhance product reliability and performance.</li>
+</ul></div>
+
+      
+
+    </li>
+    
+    <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </span>
+      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Lecturer
+        
+      </h3>
+      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Maryland</span>
+      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+        
+          January 2020 –
+        
+        
+          May 2021
+        
+      </time>
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert"><p>Responsibilities include:</p>
+<ul>
+<li>Responsible for the development and delivery of a 400-level course in Computational Statistics, focusing on data wrangling, exploratory data analysis, and inferential statistics (including model building) using SAS© and SQL, directly contributing to the advancement of applied statistics and data science education.</li>
+<li>Designed and implemented cutting-edge evaluation strategies for a Computational Statistics course, incorporating data-backed research projects that required students to choose a topic, formulate their own research questions, and apply advanced statistical methods such as linear regression, logistic regression, or ANOVA.</li>
+<li>Emphasized the critical evaluation of methodological assumptions and coding accuracy, significantly enhancing students&rsquo; practical skills in data analysis and model interpretation, and preparing them for future careers as data scientists.</li>
+</ul></div>
+
+      
+
+    </li>
+    
+    <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </span>
+      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">National Science Foundation (NSF) Mathematical Sciences Graduate Intern
+        
+      </h3>
+      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Pacific Northwest National Laboratory - PNNL</span>
+      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+        
+          June 2019 –
+        
+        
+          August 2019
+        
+      </time>
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert"><p>Responsibilities include:</p>
+<ul>
+<li>Completed Coursera&rsquo;s Deep Learning Specialization, covering from basics to CNNs &amp; RNNs, demonstrating a solid foundation in AI/ML technologies critical for developing advanced data-driven solutions.</li>
+<li>Led the development and proposal of a RDBMS (PostgreSQL &amp; MySQL) for a DOE, NETL, and PNNL project, showcasing leadership in managing tech projects and contributing to an increase in data processing efficiency by optimizing database architecture.</li>
+<li>Engineered a Python web crawler to extract relevant data for a PostgreSQL database, and spearheaded the development of a web application for experimental data input, achieving an improvement in data collection accuracy and efficiency.</li>
+<li>Led a workshop on R programming, focusing on &lsquo;blogdown&rsquo; and &lsquo;shiny&rsquo; packages, to an all-women audience, promoting diversity in tech and enhancing participants&rsquo; data analysis skills.</li>
+</ul></div>
+
+      
+      <a href="https://orise.orau.gov/nsf-msgi/profiles/varela-alvarenga.html" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-primary-700 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
+        <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+      </svg> Read more about my experience on NSF&#39;s website (external link)</a>
+      
+
+    </li>
+    
+    <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </span>
+      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Principal Statistician
+        
+      </h3>
+      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Brazilian Agency for Industrial Development (ABDI)</span>
+      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+        
+          August 2013 –
+        
+        
+          July 2014
+        
+      </time>
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert"><p>Responsibilities include:</p>
+<ul>
+<li>Collaborated with a multidisciplinary team to analyze the impact of public policies (using simulation and quasi-experiment methods -difference in differences, propensity score matching -, and data visualization techniques) on Brazilian industrial development, delivering actionable insights and recommendations. This work was directly showcased through presentations to the Brazilian Minister of Industry.</li>
+<li>Spearheaded the collection and analysis of diverse socioeconomic data, driving data-driven decision-making and policy formulation. This role highlighted my project management and leadership skills, aligning with the competencies required for a Tech Lead Manager position.</li>
+<li>Managed data summarization and reporting processes, culminating in strategic recommendations that informed policy improvement initiatives, demonstrating a significant contribution to data-driven policy development.</li>
+<li>Worked with a team to developed a web enabled tool called <a href="http://decoder.thegfcc.org/" target="_blank" rel="noopener">The Competitiveness Decoder®</a> that is focused on country data and has the goal of allowing users to learn and master the complexity related to competitiveness through different lenses. Find out more about it <a href="http://decoder.thegfcc.org/learn/decoder" target="_blank" rel="noopener">here</a>. You can find me under “Former Team Members” on the website.</li>
+</ul></div>
+
+      
+
+    </li>
+    
+    <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </span>
+      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Lecturer
+        
+      </h3>
+      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Universidade de Brasilia (UnB), Brazil</span>
+      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+        
+          August 2012 –
+        
+        
+          July 2014
+        
+      </time>
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert"><p>Responsibilities include:</p>
+<ul>
+<li>Transformed the understanding of statistical models among undergraduate students from non-STEM backgrounds, achieving a marked improvement in their ability to apply data insights to diverse fields, as evidenced by enhanced course evaluations and increased student engagement.</li>
+<li>Pioneered innovative teaching methodologies to demystify complex statistical and machine learning concepts, fostering an interdisciplinary approach to data science education and preparing students for data-driven decision-making roles.</li>
+<li>Cultivated a collaborative educational environment that bridged the gap between technical and non-technical disciplines, significantly enhancing the interdisciplinary communication skills of students, as measured by their performance in team-based projects.</li>
+</ul></div>
+
+      
+
+    </li>
+    
+    <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </span>
+      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Statistical Consultant
+        
+      </h3>
+      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Institute for Applied Economic Research (IPEA)</span>
+      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+        
+          January 2009 –
+        
+        
+          August 2013
+        
+      </time>
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert"><p>Responsibilities include:</p>
+<ul>
+<li>Transformed the understanding of statistical models among undergraduate students from non-STEM backgrounds, achieving a marked improvement in their ability to apply data insights to diverse fields, as evidenced by enhanced course evaluations and increased student engagement.</li>
+<li>Pioneered innovative teaching methodologies to demystify complex statistical and machine learning concepts, fostering an interdisciplinary approach to data science education and preparing students for data-driven decision-making roles.</li>
+<li>Cultivated a collaborative educational environment that bridged the gap between technical and non-technical disciplines, significantly enhancing the interdisciplinary communication skills of students, as measured by their performance in team-based projects.</li>
+</ul></div>
+
+      
+
+    </li>
+    
+    <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </span>
+      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Operational Risk Management - Intern
+        
+      </h3>
+      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Caixa Economica Federal</span>
+      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+        
+          May 2006 –
+        
+        
+          April 2008
+        
+      </time>
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert"><p>Responsibilities include:</p>
+<ul>
+<li>Wrote advanced SAS macros to automate Value-at-Risk (VaR) calculations and predictions, utilizing convolutions and generalized extreme value distribution (GEV) to significantly enhance risk assessment efficiency by reducing system runtime.</li>
+<li>Led comprehensive database management and querying initiatives using SAS and SQL procedures, optimizing data retrieval processes and enhancing the accuracy of data-driven decision-making.</li>
+</ul></div>
+
+      
+
+    </li>
+    
+    <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </span>
+      <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap">Junior Entrepreneur and Marketing Director
+        
+      </h3>
+      <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">ESTAT Consultoria</span>
+      <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+        
+          October 2004 –
+        
+        
+          September 2007
+        
+      </time>
+      <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert"><p>Responsibilities include:</p>
+<ul>
+<li>Pioneered the university&rsquo;s first election poll under professorial supervision, establishing a foundation for subsequent academic inquiries.</li>
+<li>Delivered statistical consulting services to a diverse array of professionals, including sociologists, physicians, and musicians, enhancing their data interpretation and decision-making processes.</li>
+<li>Designed questionnaires and surveys for market research, focusing on optimizing data quality and reliability.</li>
+<li>Developed input masks using Microsoft Access and VBA to minimize data collection errors, ensuring higher accuracy in data analysis.</li>
+<li>Conducted research to refine management and advertising strategies, effectively driving business objectives and creating new opportunities.</li>
+</ul></div>
+
+      
+
+    </li>
+    
+  </ol>
+</div>
+
+
+</div>
+
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-resume-education" class="relative hbb-section blox-resume-education  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto">
+
+
+
+
+
+<div class="flex flex-col lg:gap-x-6 w-100 px-6 sm:px-0 ">
+
+
+<div class="w-full">
+  <h3 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">Education</h3>
+    <ol class="relative border-s border-gray-200 dark:border-gray-700">
+      
+      <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
+            </svg>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Ph.D. Mathematical Statistics
+
+        </h3>
+        <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">University of Maryland</span>
+        <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+          
+            December 2021 –
+          
+          
+            August 2014
+          
+        </time>
+        <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 prose prose-slate dark:prose-invert">Dissertation on <em>Innovations In Time Series Forecasting: New Validation Procedures to Improve Forecasting Accuracy and A Novel Machine Learning Strategy for Model Selection</em>. Supervised by <a href="https://math.umd.edu/~bnk/" target="_blank" rel="noopener">Prof. Dr. Benjamin Kedem</a>.</div>
+
+        
+        <a href="https://drum.lib.umd.edu/items/d88faace-9817-4c44-9a7a-f993d32a37e9" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-primary-700 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
+          <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+        </svg> Read dissertation</a>
+        
+
+      </li>
+      
+      <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
+            </svg>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">MA Economics
+
+        </h3>
+        <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Universidade de Brasilia, Brazil</span>
+        <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+          
+            December 2011 –
+          
+          
+            September 2009
+          
+        </time>
+        <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 prose prose-slate dark:prose-invert">Thesis on <em>Impacts of the Brazilian science and technology sector funds on industrial firms’ R&amp;D inputs and outputs: new perspectives using a dose-response function</em>. Supervised by Prof. Dr. Donald Pianto. Won the brazilian Premio CNI de Economia in 2012.</div>
+
+        
+        <a href="http://repositorio.unb.br/handle/10482/11361" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-primary-700 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
+          <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+        </svg> Read thesis</a>
+        
+
+      </li>
+      
+      <li class="mb-10 ms-6">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
+            </svg>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">BSc Statistics
+
+        </h3>
+        <span class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">Universidade de Brasilia, Brazil</span>
+        <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+          
+            December 2008 –
+          
+          
+            March 2004
+          
+        </time>
+        <div class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 prose prose-slate dark:prose-invert"></div>
+
+        
+
+      </li>
+      
+    </ol>
+</div>
+
+
+</div>
+
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-resume-skills" class="relative hbb-section blox-resume-skills  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Skills &amp; Hobbies
+  </div>
+</div>
+
+<div class="flex flex-col lg:flex-row items-center max-w-prose mx-auto gap-3 px-6 md:px-0 text-gray-900 dark:text-white">
+
+    <div id="timeline.skills" style="height: 600px;width:100%"></div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current', {packages:['timeline']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+var container = document.getElementById('timeline.skills');
+var chart = new google.visualization.Timeline(container);
+var dataTable = new google.visualization.DataTable();
+
+    dataTable.addColumn({ type: 'string', id: 'Language' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+    	['R', 						new Date(2005, 1),  new Date() ],
+      ['Shiny',      	new Date(2017, 3),  new Date(2021,7) ],
+      ['SAS',  				new Date(2004, 10), new Date(2014,7) ],
+      ['SQL',  				new Date(2008, 6),  new Date(2014,7) ],
+      ['LaTeX',  			new Date(2010, 9),  new Date(2021,7) ],
+      ['STATA',  			new Date(2010, 4),  new Date(2012,8) ],
+      ['MATLAB',  			new Date(2004, 2),  new Date(2005,5) ],
+      ['MATLAB',  			new Date(2014, 8),  new Date(2015,5)],
+      ['Python',  			new Date(2018, 3),  new Date(2021,12) ],
+      ['HTML',  				new Date(2018, 4),  new Date(2021,7) ],
+      ['CSS',  				new Date(2018, 4),  new Date(2021,7) ],
+      ["JavaScript",  	new Date(2018, 4),  new Date(2021,7) ],
+      ]);
+var options = {
+  timeline: { singleColor: '#7CB5EC' },
+  hAxis: {
+    minValue: new Date(2014, 0, 0),
+    maxValue: new Date(2025, 0, 0),
+    textStyle: { color: '#FFFFFF' }
+  }
+};
+
+chart.draw(dataTable, options);
+}
+</script>
+
+
+</div>
+
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-resume-languages" class="relative hbb-section blox-resume-languages  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Languages
+  </div>
+
+  
+
+  <div class="flex items-center flex-col lg:flex-row gap-x-8">
+    
+    <div class="flex flex-col items-center">
+      <div class="flex items-center justify-center w-28 h-28">
+        <svg class="transform -rotate-90" viewBox="0 0 288 288">
+          <circle cx="145" cy="145" r="120" stroke="currentColor" stroke-width="30" fill="transparent"
+                  class="text-gray-200 dark:text-gray-700" />
+          <circle cx="145" cy="145" r="120" stroke="currentColor" stroke-width="30" fill="transparent"
+                  class="text-primary-600 dark:text-primary-300"
+                  style="stroke-dasharray: calc(2 * 22 / 7 * 120); stroke-dashoffset: calc(((2 * 22 / 7 * 120) * 100/100) - (2 * 22 / 7 * 120))" />
+        </svg>
+        <span class="absolute text-3xl">100%</span>
+      </div>
+      <span class="text-1xl">English</span>
+    </div>
+    
+    <div class="flex flex-col items-center">
+      <div class="flex items-center justify-center w-28 h-28">
+        <svg class="transform -rotate-90" viewBox="0 0 288 288">
+          <circle cx="145" cy="145" r="120" stroke="currentColor" stroke-width="30" fill="transparent"
+                  class="text-gray-200 dark:text-gray-700" />
+          <circle cx="145" cy="145" r="120" stroke="currentColor" stroke-width="30" fill="transparent"
+                  class="text-primary-600 dark:text-primary-300"
+                  style="stroke-dasharray: calc(2 * 22 / 7 * 120); stroke-dashoffset: calc(((2 * 22 / 7 * 120) * 100/100) - (2 * 22 / 7 * 120))" />
+        </svg>
+        <span class="absolute text-3xl">100%</span>
+      </div>
+      <span class="text-1xl">Portuguese</span>
+    </div>
+    
+  </div>
+
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-resume-awards" class="relative hbb-section blox-resume-awards  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Awards and Certifications
+  </div>
+
+  
+
+<div class="w-full flex flex-col gap-6">
+
+
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  <a href=https://www-math.umd.edu/graduate/124-math/graduate/graduate-awards.html target="_blank" rel="noopener">
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Herbert A. Hauptman Fellowship</h5>
+  </a>
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    University of Maryland - Department of Mathematics &#8729;
+    
+      December 2021
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">The fellowship program was created with an estate gift from Carol Fullerton that honors the memory of her late father, Nobel laureate Herbert A. Hauptman (Ph.D. ’55, mathematics), and launched in 2020.</div>
+  
+
+  
+</div>
+  
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">CNI National Economy Award (Prêmio CNI de Economia)</h5>
+  
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    Brazilian National Confederation of Industry (CNI) &#8729;
+    
+      December 2012
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">2nd best paper in the category <em>Evaluation of Productivity and Innovation in the Brazilian Industry</em>.
+Issued by the Brazilian National Confederation of Industry with the support from the Brazilian Association of Graduate Centers in Economics.
+Award granted to the paper: &lsquo;&lsquo;Impacts of the Brazilian Sector Funds on industrial firms’ R&amp;D inputs and outputs: New perspectives using a dose-response function&rsquo;&rsquo; (original title: Impactos dos Fundos Setoriais nas Empresas: Novas Perspectivas a partir da Função Dose-Resposta).
+Click <a href="https://goo.gl/lnuSpe" target="_blank" rel="noopener">here</a> for the full paper in English.</div>
+  
+
+  
+</div>
+  
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  <div class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3">
+    <svg style="height: 100%;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+  </div>
+  
+  <a href=https://www.linkedin.com/learning/project-management-with-monday-com/manage-your-projects-effectively-with-monday-com target="_blank" rel="noopener">
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Project Management with Monday.com</h5>
+  </a>
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    LinkedIn &#8729;
+    
+      June 2023
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">I learned how to create boards, add tasks, items, and columns, and invite team members to collaborate effectively. Understood how to manage day-to-day tasks, add updates, and maintain boards by copying, renaming, or deleting them. Discovered how to create folders, additional workspaces, and automations to streamline workflows and increase efficiency.</div>
+  
+
+  
+</div>
+  
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  <div class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3">
+    <svg style="height: 100%;" fill="none" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><path d="m307.031 292.969h-14.062v14.062h14.062z" fill="#fff"/><path d="m600 0h-600v600h600z" fill="#fff"/><path d="m600 0h-600v600h600z" fill="#0056d2"/><g fill="#fff"><path d="m117.913 300.434c0-19.301 15.923-34.875 35.859-34.875 20.07 0 35.992 15.574 35.992 34.875 0 19.167-15.922 35.007-35.992 35.007-19.936 0-35.859-15.973-35.859-35.007zm54.725 0c0-9.583-8.43-18.104-18.866-18.104-10.303 0-18.598 8.521-18.598 18.104 0 9.717 8.429 18.236 18.598 18.236 10.436 0 18.866-8.519 18.866-18.236z"/><path d="m478.15 300.965c0-21.164 17.326-35.406 33.036-35.406 10.747 0 16.924 3.194 21.086 9.452l1.612-8.253h16.116v67.353h-16.116l-2.015-6.923c-4.701 5.059-10.61 8.253-20.546 8.253-15.713 0-33.173-13.577-33.173-34.476zm54.795-.133c0-10.247-8.463-18.502-18.936-18.502-10.341 0-18.668 8.388-18.668 18.771 0 9.316 8.461 17.702 18.668 17.702 10.607-.133 18.936-8.519 18.936-17.971z"/><path d="m458.833 274.982v-7.721h-17.101v66.211h17.101v-35.724c0-10.729 5.221-16.356 14.487-16.356.652 0 1.176 0 1.697.131l3.133-15.964c-8.875.131-15.272 3.14-19.317 9.423z"/><path d="m284.158 274.982v-7.721h-17.623l.135 66.211h17.625l-.137-35.724c0-10.729 5.382-16.356 14.801-16.356.672 0 1.209 0 1.75.131l3.228-15.964c-9.15.131-15.741 3.14-19.779 9.423z"/><path d="m196.654 307.776v-41.233h17.209v39.104c0 8.645 4.73 13.699 13.006 13.699 9.196 0 14.583-5.718 14.583-16.624v-36.179h17.209v67.3h-17.209v-7.845c-4.073 6.383-10.641 9.442-19.706 9.442-15.502.133-25.092-11.172-25.092-27.664z"/><path d="m365.945 300.369c0-18.867 13.621-34.942 34.985-34.809 19.893 0 33.913 15.942 33.913 34.541 0 1.861-.134 3.854-.401 5.582l-51.405-.133c2.004 8.104 8.678 13.816 18.693 13.949 6.141 0 12.685-2.259 16.69-7.308l11.885 9.567c-6.144 8.634-16.959 13.683-28.441 13.683-20.297-.265-35.919-15.411-35.919-35.072zm51.408-6.909c-.937-6.777-8.145-12.091-16.423-12.091-8.145 0-14.689 4.783-17.226 11.958z"/><path d="m303.937 319.559 15.522-8.073c2.542 5.558 7.76 8.734 14.984 8.734 6.691 0 9.234-2.118 9.234-5.029 0-10.721-36.93-4.234-36.93-28.853 0-13.631 12.043-20.779 26.894-20.779 11.239 0 21.274 4.897 26.76 14.163l-15.388 8.073c-2.272-4.5-6.555-7.015-12.041-7.015-5.352 0-7.894 1.854-7.894 4.897 0 10.456 36.93 3.837 36.93 28.853 0 12.97-10.704 20.911-27.966 20.911-14.717-.132-25.02-4.897-30.105-15.882z"/><path d="m50 300.074c0-19.161 15.7897-34.515 35.5599-34.515 12.7377 0 23.7511 6.301 30.1201 15.747l-14.861 8.532c-3.4503-4.724-8.8902-7.873-15.2591-7.873-10.2169 0-18.4434 8.398-18.4434 17.978 0 9.578 8.359 17.976 18.4434 17.976 6.6342 0 12.4724-3.411 15.6571-8.529l14.728 8.66c-6.236 9.843-17.5148 16.406-30.3851 16.406-19.7702.131-35.5599-15.616-35.5599-34.382z"/></g></svg>
+
+  </div>
+  
+  <a href=https://www.coursera.org/learn/neural-networks-deep-learning target="_blank" rel="noopener">
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Neural Networks and Deep Learning</h5>
+  </a>
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    Coursera &#8729;
+    
+      July 2019
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications. Certificate <a href="https://www.coursera.org/account/accomplishments/verify/FK37CKPCD7MW" target="_blank" rel="noopener">here</a>.</div>
+  
+
+  
+</div>
+  
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  <div class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3">
+    <svg style="height: 100%;" fill="none" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><path d="m307.031 292.969h-14.062v14.062h14.062z" fill="#fff"/><path d="m600 0h-600v600h600z" fill="#fff"/><path d="m600 0h-600v600h600z" fill="#0056d2"/><g fill="#fff"><path d="m117.913 300.434c0-19.301 15.923-34.875 35.859-34.875 20.07 0 35.992 15.574 35.992 34.875 0 19.167-15.922 35.007-35.992 35.007-19.936 0-35.859-15.973-35.859-35.007zm54.725 0c0-9.583-8.43-18.104-18.866-18.104-10.303 0-18.598 8.521-18.598 18.104 0 9.717 8.429 18.236 18.598 18.236 10.436 0 18.866-8.519 18.866-18.236z"/><path d="m478.15 300.965c0-21.164 17.326-35.406 33.036-35.406 10.747 0 16.924 3.194 21.086 9.452l1.612-8.253h16.116v67.353h-16.116l-2.015-6.923c-4.701 5.059-10.61 8.253-20.546 8.253-15.713 0-33.173-13.577-33.173-34.476zm54.795-.133c0-10.247-8.463-18.502-18.936-18.502-10.341 0-18.668 8.388-18.668 18.771 0 9.316 8.461 17.702 18.668 17.702 10.607-.133 18.936-8.519 18.936-17.971z"/><path d="m458.833 274.982v-7.721h-17.101v66.211h17.101v-35.724c0-10.729 5.221-16.356 14.487-16.356.652 0 1.176 0 1.697.131l3.133-15.964c-8.875.131-15.272 3.14-19.317 9.423z"/><path d="m284.158 274.982v-7.721h-17.623l.135 66.211h17.625l-.137-35.724c0-10.729 5.382-16.356 14.801-16.356.672 0 1.209 0 1.75.131l3.228-15.964c-9.15.131-15.741 3.14-19.779 9.423z"/><path d="m196.654 307.776v-41.233h17.209v39.104c0 8.645 4.73 13.699 13.006 13.699 9.196 0 14.583-5.718 14.583-16.624v-36.179h17.209v67.3h-17.209v-7.845c-4.073 6.383-10.641 9.442-19.706 9.442-15.502.133-25.092-11.172-25.092-27.664z"/><path d="m365.945 300.369c0-18.867 13.621-34.942 34.985-34.809 19.893 0 33.913 15.942 33.913 34.541 0 1.861-.134 3.854-.401 5.582l-51.405-.133c2.004 8.104 8.678 13.816 18.693 13.949 6.141 0 12.685-2.259 16.69-7.308l11.885 9.567c-6.144 8.634-16.959 13.683-28.441 13.683-20.297-.265-35.919-15.411-35.919-35.072zm51.408-6.909c-.937-6.777-8.145-12.091-16.423-12.091-8.145 0-14.689 4.783-17.226 11.958z"/><path d="m303.937 319.559 15.522-8.073c2.542 5.558 7.76 8.734 14.984 8.734 6.691 0 9.234-2.118 9.234-5.029 0-10.721-36.93-4.234-36.93-28.853 0-13.631 12.043-20.779 26.894-20.779 11.239 0 21.274 4.897 26.76 14.163l-15.388 8.073c-2.272-4.5-6.555-7.015-12.041-7.015-5.352 0-7.894 1.854-7.894 4.897 0 10.456 36.93 3.837 36.93 28.853 0 12.97-10.704 20.911-27.966 20.911-14.717-.132-25.02-4.897-30.105-15.882z"/><path d="m50 300.074c0-19.161 15.7897-34.515 35.5599-34.515 12.7377 0 23.7511 6.301 30.1201 15.747l-14.861 8.532c-3.4503-4.724-8.8902-7.873-15.2591-7.873-10.2169 0-18.4434 8.398-18.4434 17.978 0 9.578 8.359 17.976 18.4434 17.976 6.6342 0 12.4724-3.411 15.6571-8.529l14.728 8.66c-6.236 9.843-17.5148 16.406-30.3851 16.406-19.7702.131-35.5599-15.616-35.5599-34.382z"/></g></svg>
+
+  </div>
+  
+  <a href=https://www.coursera.org/learn/game-theory-1 target="_blank" rel="noopener">
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Game Theory</h5>
+  </a>
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    Coursera &#8729;
+    
+      May 2012
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">Completed an in-depth Stanford University course on Game Theory, exploring strategic interactions across varied contexts such as political campaigns and market behaviors. The course involved weekly problem sets, online labs, and a final exam, emphasizing practical applications of game theory through mathematical models. This rigorous coursework honed analytical skills, enhancing abilities in strategic decision-making and predictive analysis.</div>
+  
+
+  
+</div>
+  
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  <div class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3">
+    <svg style="height: 100%;" fill="none" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><path d="m307.031 292.969h-14.062v14.062h14.062z" fill="#fff"/><path d="m600 0h-600v600h600z" fill="#fff"/><path d="m600 0h-600v600h600z" fill="#0056d2"/><g fill="#fff"><path d="m117.913 300.434c0-19.301 15.923-34.875 35.859-34.875 20.07 0 35.992 15.574 35.992 34.875 0 19.167-15.922 35.007-35.992 35.007-19.936 0-35.859-15.973-35.859-35.007zm54.725 0c0-9.583-8.43-18.104-18.866-18.104-10.303 0-18.598 8.521-18.598 18.104 0 9.717 8.429 18.236 18.598 18.236 10.436 0 18.866-8.519 18.866-18.236z"/><path d="m478.15 300.965c0-21.164 17.326-35.406 33.036-35.406 10.747 0 16.924 3.194 21.086 9.452l1.612-8.253h16.116v67.353h-16.116l-2.015-6.923c-4.701 5.059-10.61 8.253-20.546 8.253-15.713 0-33.173-13.577-33.173-34.476zm54.795-.133c0-10.247-8.463-18.502-18.936-18.502-10.341 0-18.668 8.388-18.668 18.771 0 9.316 8.461 17.702 18.668 17.702 10.607-.133 18.936-8.519 18.936-17.971z"/><path d="m458.833 274.982v-7.721h-17.101v66.211h17.101v-35.724c0-10.729 5.221-16.356 14.487-16.356.652 0 1.176 0 1.697.131l3.133-15.964c-8.875.131-15.272 3.14-19.317 9.423z"/><path d="m284.158 274.982v-7.721h-17.623l.135 66.211h17.625l-.137-35.724c0-10.729 5.382-16.356 14.801-16.356.672 0 1.209 0 1.75.131l3.228-15.964c-9.15.131-15.741 3.14-19.779 9.423z"/><path d="m196.654 307.776v-41.233h17.209v39.104c0 8.645 4.73 13.699 13.006 13.699 9.196 0 14.583-5.718 14.583-16.624v-36.179h17.209v67.3h-17.209v-7.845c-4.073 6.383-10.641 9.442-19.706 9.442-15.502.133-25.092-11.172-25.092-27.664z"/><path d="m365.945 300.369c0-18.867 13.621-34.942 34.985-34.809 19.893 0 33.913 15.942 33.913 34.541 0 1.861-.134 3.854-.401 5.582l-51.405-.133c2.004 8.104 8.678 13.816 18.693 13.949 6.141 0 12.685-2.259 16.69-7.308l11.885 9.567c-6.144 8.634-16.959 13.683-28.441 13.683-20.297-.265-35.919-15.411-35.919-35.072zm51.408-6.909c-.937-6.777-8.145-12.091-16.423-12.091-8.145 0-14.689 4.783-17.226 11.958z"/><path d="m303.937 319.559 15.522-8.073c2.542 5.558 7.76 8.734 14.984 8.734 6.691 0 9.234-2.118 9.234-5.029 0-10.721-36.93-4.234-36.93-28.853 0-13.631 12.043-20.779 26.894-20.779 11.239 0 21.274 4.897 26.76 14.163l-15.388 8.073c-2.272-4.5-6.555-7.015-12.041-7.015-5.352 0-7.894 1.854-7.894 4.897 0 10.456 36.93 3.837 36.93 28.853 0 12.97-10.704 20.911-27.966 20.911-14.717-.132-25.02-4.897-30.105-15.882z"/><path d="m50 300.074c0-19.161 15.7897-34.515 35.5599-34.515 12.7377 0 23.7511 6.301 30.1201 15.747l-14.861 8.532c-3.4503-4.724-8.8902-7.873-15.2591-7.873-10.2169 0-18.4434 8.398-18.4434 17.978 0 9.578 8.359 17.976 18.4434 17.976 6.6342 0 12.4724-3.411 15.6571-8.529l14.728 8.66c-6.236 9.843-17.5148 16.406-30.3851 16.406-19.7702.131-35.5599-15.616-35.5599-34.382z"/></g></svg>
+
+  </div>
+  
+  <a href=https://www.coursera.org/learn/model-thinking target="_blank" rel="noopener">
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Model Thinking</h5>
+  </a>
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    Coursera &#8729;
+    
+      April 2012
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">Participated in an advanced course focused on using diverse models to understand complex global phenomena such as political uprisings and market crashes. The course emphasized the strategic application of these models across various fields, including economics, political science, and business, enhancing decision-making and forecasting abilities. Engaged deeply with the material through technical details and algebraic formulations, culminating in successful completion of quizzes and a final exam to earn a Course Certificate. This experience has significantly sharpened my analytical and strategic thinking skills, applicable both academically and in practical scenarios.</div>
+  
+
+  
+</div>
+  
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  <div class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3">
+    <svg style="height: 100%;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+  </div>
+  
+  <a href=https://www.linkedin.com/learning/project-management-with-monday-com/manage-your-projects-effectively-with-monday-com target="_blank" rel="noopener">
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Project Management with Monday.com</h5>
+  </a>
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    LinkedIn &#8729;
+    
+      June 2023
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">I learned how to create boards, add tasks, items, and columns, and invite team members to collaborate effectively. Understood how to manage day-to-day tasks, add updates, and maintain boards by copying, renaming, or deleting them. Discovered how to create folders, additional workspaces, and automations to streamline workflows and increase efficiency.</div>
+  
+
+  
+</div>
+  
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  <div class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3">
+    <svg style="height: 100%;" fill="none" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><path d="m307.031 292.969h-14.062v14.062h14.062z" fill="#fff"/><path d="m600 0h-600v600h600z" fill="#fff"/><path d="m600 0h-600v600h600z" fill="#0056d2"/><g fill="#fff"><path d="m117.913 300.434c0-19.301 15.923-34.875 35.859-34.875 20.07 0 35.992 15.574 35.992 34.875 0 19.167-15.922 35.007-35.992 35.007-19.936 0-35.859-15.973-35.859-35.007zm54.725 0c0-9.583-8.43-18.104-18.866-18.104-10.303 0-18.598 8.521-18.598 18.104 0 9.717 8.429 18.236 18.598 18.236 10.436 0 18.866-8.519 18.866-18.236z"/><path d="m478.15 300.965c0-21.164 17.326-35.406 33.036-35.406 10.747 0 16.924 3.194 21.086 9.452l1.612-8.253h16.116v67.353h-16.116l-2.015-6.923c-4.701 5.059-10.61 8.253-20.546 8.253-15.713 0-33.173-13.577-33.173-34.476zm54.795-.133c0-10.247-8.463-18.502-18.936-18.502-10.341 0-18.668 8.388-18.668 18.771 0 9.316 8.461 17.702 18.668 17.702 10.607-.133 18.936-8.519 18.936-17.971z"/><path d="m458.833 274.982v-7.721h-17.101v66.211h17.101v-35.724c0-10.729 5.221-16.356 14.487-16.356.652 0 1.176 0 1.697.131l3.133-15.964c-8.875.131-15.272 3.14-19.317 9.423z"/><path d="m284.158 274.982v-7.721h-17.623l.135 66.211h17.625l-.137-35.724c0-10.729 5.382-16.356 14.801-16.356.672 0 1.209 0 1.75.131l3.228-15.964c-9.15.131-15.741 3.14-19.779 9.423z"/><path d="m196.654 307.776v-41.233h17.209v39.104c0 8.645 4.73 13.699 13.006 13.699 9.196 0 14.583-5.718 14.583-16.624v-36.179h17.209v67.3h-17.209v-7.845c-4.073 6.383-10.641 9.442-19.706 9.442-15.502.133-25.092-11.172-25.092-27.664z"/><path d="m365.945 300.369c0-18.867 13.621-34.942 34.985-34.809 19.893 0 33.913 15.942 33.913 34.541 0 1.861-.134 3.854-.401 5.582l-51.405-.133c2.004 8.104 8.678 13.816 18.693 13.949 6.141 0 12.685-2.259 16.69-7.308l11.885 9.567c-6.144 8.634-16.959 13.683-28.441 13.683-20.297-.265-35.919-15.411-35.919-35.072zm51.408-6.909c-.937-6.777-8.145-12.091-16.423-12.091-8.145 0-14.689 4.783-17.226 11.958z"/><path d="m303.937 319.559 15.522-8.073c2.542 5.558 7.76 8.734 14.984 8.734 6.691 0 9.234-2.118 9.234-5.029 0-10.721-36.93-4.234-36.93-28.853 0-13.631 12.043-20.779 26.894-20.779 11.239 0 21.274 4.897 26.76 14.163l-15.388 8.073c-2.272-4.5-6.555-7.015-12.041-7.015-5.352 0-7.894 1.854-7.894 4.897 0 10.456 36.93 3.837 36.93 28.853 0 12.97-10.704 20.911-27.966 20.911-14.717-.132-25.02-4.897-30.105-15.882z"/><path d="m50 300.074c0-19.161 15.7897-34.515 35.5599-34.515 12.7377 0 23.7511 6.301 30.1201 15.747l-14.861 8.532c-3.4503-4.724-8.8902-7.873-15.2591-7.873-10.2169 0-18.4434 8.398-18.4434 17.978 0 9.578 8.359 17.976 18.4434 17.976 6.6342 0 12.4724-3.411 15.6571-8.529l14.728 8.66c-6.236 9.843-17.5148 16.406-30.3851 16.406-19.7702.131-35.5599-15.616-35.5599-34.382z"/></g></svg>
+
+  </div>
+  
+  <a href=https://www.coursera.org/learn/neural-networks-deep-learning target="_blank" rel="noopener">
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Neural Networks and Deep Learning</h5>
+  </a>
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    Coursera &#8729;
+    
+      July 2019
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications. Certificate <a href="https://www.coursera.org/account/accomplishments/verify/FK37CKPCD7MW" target="_blank" rel="noopener">here</a>.</div>
+  
+
+  
+</div>
+  
+  
+</div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-resume-shortcourses" class="relative hbb-section blox-resume-shortcourses  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Short Courses
+  </div>
+
+  
+
+<div class="w-full flex flex-col gap-6">
+
+
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  <a href=https://www.codecademy.com/learn/introduction-to-javascript target="_blank" rel="noopener">
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Introduction to JavaScript</h5>
+  </a>
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    CodeAcademy &#8729;
+    
+      July 2018
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">Learned JavaScript fundamentals</div>
+  
+
+  
+</div>
+  
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  <a href=https://www.codecademy.com/learn/learn-python target="_blank" rel="noopener">
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Learn Python</h5>
+  </a>
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    CodeAcademy &#8729;
+    
+      May 2018
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">Learned Python fundamentals</div>
+  
+
+  
+</div>
+  
+<div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  
+  <a href=https://www.codecademy.com/learn/learn-python target="_blank" rel="noopener">
+    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Topics in Real Analysis</h5>
+  </a>
+
+  <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">
+    Universidade de Brasilia &#8729;
+    
+      February 2012
+    
+  </div>
+
+  
+  <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">Summer Course in Real Analysis</div>
+  
+
+  
+</div>
+  
+  
+</div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="papers" class="relative hbb-section blox-collection  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Data Visualization with R
+  </div>
+
+  
+</div>
+
+
+<div class="flex flex-col items-center px-6">
+
+  
+  
+
+
+<div class="container px-8 mx-auto xl:px-5 py-5 lg:py-8 max-w-screen-lg ">
+  <div class="grid gap-10 md:grid-cols-2 lg:gap-10">
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/code/forest-map/" >
+
+      <img alt="Map of deforestation in Brazil"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/code/forest-map/featured_hu12354113985091889720.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/data-vizualisation/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Data Vizualisation</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/code/forest-map/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Map of deforestation in Brazil
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/code/forest-map/" >
+        Create a Map in R with ggplot and transform it into a gif</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <time class="truncate text-sm" datetime="2019-04-07">Apr 7, 2019</time>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
+  
     
 
-    
-    
 
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
 
-      
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/code/waterfall-ggplot/" >
+
+      <img alt="Waterfall chart in R"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/code/waterfall-ggplot/featured_hu12026430875364529090.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        <a href="/tags/data-vizualisation/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Data Vizualisation</span></a>
         
+      </div>
       
-
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/code/waterfall-ggplot/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Waterfall chart in R
+          </span></a>
+      </h2>
       
-      
-    
-
-    
-    
-
-    
-    
-    
-
-    
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    
-    
-    <script>
-      const search_index_filename = "/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "results found",
-        'no_results': "No results found"
-      };
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks"
-        };
-    </script>
-    
-
-    
-    
-
-    
-    
-    <script id="search-hit-fuse-template" type="text/x-template">
-      <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/code/waterfall-ggplot/" >
+        Create a waterfall chart in R with ggplot.</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <time class="truncate text-sm" datetime="2018-09-29">Sep 29, 2018</time>
         </div>
       </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/code/dotplot-ggplot/" >
+
+      <img alt="Dumbbell/Lolliplot of the social media age gap"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/code/dotplot-ggplot/featured_hu17711832835045937093.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/data-vizualisation/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Data Vizualisation</span></a>
+        
       </div>
-    </script>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/code/dotplot-ggplot/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Dumbbell/Lolliplot of the social media age gap
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/code/dotplot-ggplot/" >
+        Create a dumbbell/lolliplot in R with ggplot.</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <time class="truncate text-sm" datetime="2018-09-28">Sep 28, 2018</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
     
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="papers" class="relative hbb-section blox-collection  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Shiny Apps (external page)
+  </div>
+
+  
+</div>
+
+
+<div class="flex flex-col items-center px-6">
+
+  
+  
+
+
+<div class="container px-8 mx-auto xl:px-5 py-5 lg:py-8 max-w-screen-lg ">
+  <div class="grid gap-10 md:grid-cols-2 lg:gap-10">
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/shinyapps/shiny-compare-images/" >
+
+      <img alt="Shiny App to Compare Images"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/shinyapps/shiny-compare-images/featured_hu3588804667896519905.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/shiny-app/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Shiny App</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/shinyapps/shiny-compare-images/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Shiny App to Compare Images
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/shinyapps/shiny-compare-images/" >
+        Choose between two randomly generated images.</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <time class="truncate text-sm" datetime="2018-07-24">Jul 24, 2018</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/shinyapps/shiny-modal-modules-jquery/" >
+
+      <img alt="Shiny App with Modal, Modules and jQuery"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/shinyapps/shiny-modal-modules-jquery/featured_hu10826489450097991984.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/shiny-app/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Shiny App</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/shinyapps/shiny-modal-modules-jquery/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Shiny App with Modal, Modules and jQuery
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/shinyapps/shiny-modal-modules-jquery/" >
+        Create a dumbbell/lolliplot in R with ggplot.</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <time class="truncate text-sm" datetime="2018-07-24">Jul 24, 2018</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-collection" class="relative hbb-section blox-collection  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Publications
+  </div>
+
+  
+</div>
+
+
+<div class="flex flex-col items-center px-6">
+
+  
+  
+<div class="mt-16 sm:mt-20 container max-w-3xl w-full">
+  <div class="flex flex-col space-y-3">
+
+
+  
+    
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      G Varela-Alvarenga</span>, <span >
+      DM Pianto</span>, <span >
+      BC Araújo</span>
+  </span>
+  (2012).
+  <a href="/publication/dose-response-function/" class="underline">Impacts of the Brazilian Science and Technology Sector Funds on industrial firms’ R&amp;D inputs and outputs: New perspectives using a dose-response function</a>.
+  In <em>ANPEC</em>.
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="https://www.anpec.org.br/encontro/2012/inscricao/files_I/i8-5fe1cb9e5d777ea40cd1a965ecfba0b8.pdf" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+  PDF
+</a>
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/dose-response-function/cite.bib" target="_blank" data-filename="/publication/dose-response-function/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+  
+    
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      PF Alves</span>, <span >
+      G Varela-Alvarenga</span>, <span >
+      CH Rocha</span>
+  </span>
+  (2011).
+  <a href="/publication/airticket/" class="underline">Demand for air ticket in the Brazilian economy: a co-integration analysis (original title: Demanda por ticket aéreo na economia brasileira: uma análise de co-integração)</a>.
+  In <em>RELIT</em>.
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/files/airticket.pdf" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+  PDF
+</a>
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/airticket/cite.bib" target="_blank" data-filename="/publication/airticket/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+  
+    
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span >
+      G Varela-Alvarenga</span>, <span >
+      Et.al</span>
+  </span>
+  (2010).
+  <a href="/publication/vehicle-sales/" class="underline">Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales (original title: Políticas anticíclicas na indústria automobilística: uma análise de co-integração dos impactos da redução do IPI sobre as vendas de veículos).</a>.
+  In <em>IPEA</em>.
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="https://www.econstor.eu/bitstream/10419/91099/1/640454380.pdf" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+  PDF
+</a>
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/vehicle-sales/cite.bib" target="_blank" data-filename="/publication/vehicle-sales/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+  
+
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-markdown" class="relative hbb-section blox-markdown  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Selected Answers on Stack Exchange
+  </div>
+
+  
+  <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose"><a href="https://stats.stackexchange.com/questions/78354/what-is-a-contrast-matrix-a-term-pertaining-to-an-analysis-with-categorical-pr/221861#221861" target="_blank" rel="noopener">- What is a contrast matrix (a term, pertaining to an analysis with categorical predictors)?</a> <br> <a href="https://math.stackexchange.com/questions/1708587/hitting-times-for-brownian-motion-2/1793520#1793520" target="_blank" rel="noopener">- Hitting times for Brownian Motion (2)</a> <br> <a href="https://stats.stackexchange.com/questions/223059/how-to-define-a-rejection-region/223069#223069" target="_blank" rel="noopener">- How to define a rejection region?</a> <br> <a href="https://stats.stackexchange.com/questions/133977/why-a-sufficient-statistic-contains-all-the-information-needed-to-compute-any-es/221604#221604" target="_blank" rel="noopener">- Why a sufficient statistic contains all the information needed to compute any estimate of the parameter?</a> <br> <a href="https://math.stackexchange.com/questions/328460/if-operatornameranka-k-can-we-say-something-about-operatornameranka/1821366#1821366" target="_blank" rel="noopener">- If rank(A)=k, can we say something about rank(AAt)?</a> <br> <a href="https://stackoverflow.com/questions/8156925/r-package-for-motion-capture-data-analysis-and-visualisation/46187763#46187763" target="_blank" rel="noopener">- R package for motion capture data analysis and visualisation</a> <br> <a href="https://stackoverflow.com/questions/37128099/transposing-time-series-mutate-with-lags-with-dplyr/49416789#49416789" target="_blank" rel="noopener">- Transposing time series (mutate with lags) with dplyr</a> <br></div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-markdown" class="relative hbb-section blox-markdown  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Analytical Skills
+  </div>
+
+  
+  <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose"><ul> <li>Impact Evaluation</li> <li>Dataset cleaning</li> <li>Dataset Manipulation</li> <li>Research</li> <li>Econometric Analysis</li> <li>Quantitative and Qualitative Analysis</li> <li>Data Modeling</li> <li>Data Visualization</li> <li>Problem Solving</li> <li>Critical thinking</li> </ul> </div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-markdown" class="relative hbb-section blox-markdown  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Statistical and Machine Learning Skills
+  </div>
+
+  
+  <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose"><ul> <li>Time Series Analysis</li> <li>Generalized Linear and Mixed Models</li> <li>ANOVA/MANOVA/ANCOVA</li> <li>Instrumental Variables Models</li> <li>Selection Models</li> <li>Matching Algorithms</li> <li>Hypothesis Testing</li> <li>Monte Carlo Simulations</li> <li>Bootstrap Methods</li> <li>Descriptive Statistics</li> <li>Survey design</li> </ul> </div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-markdown" class="relative hbb-section blox-markdown  " style="padding: 6rem 0 6rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Dataset Skills
+  </div>
+
+  
+  <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose"><ul> <li>Experience with large datasets, including data from household surveys.</li> <li>Had to combine several datasets - with around 50 million lines each and 15 GB each - by an unique identification number.</li> <li>Used SQL procedures in SAS (PROC SQL) for data extraction and manipulation due to the size and complexity of the datasets.</li> </ul> </div>
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by text-center">
+    © 2024 Gustavo Varela Alvarenga. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by text-center">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+
+</footer>
+
+    </div>
 
     
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-    
 
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/js/academic.min.d037ee5294b166a79dec317c58aea9cc.js"></script>
 
-    
-    <script src="/js/timelineSkills.js"></script>
-    
+
+
+
+
+
+
+
 
   </body>
 </html>
-
-

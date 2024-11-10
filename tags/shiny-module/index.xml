@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shiny Module on Gustavo Varela-Alvarenga</title>
-    <link>/tags/shiny-module/</link>
-    <description>Recent content in Shiny Module on Gustavo Varela-Alvarenga</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 24 Jul 2018 12:00:00 -0400</lastBuildDate>
-    
-	<atom:link href="/tags/shiny-module/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>Shiny Module | Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</title>
+    <link>http://localhost:3677/tags/shiny-module/</link>
+      <atom:link href="http://localhost:3677/tags/shiny-module/index.xml" rel="self" type="application/rss+xml" />
+    <description>Shiny Module</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 24 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:3677/media/icon_hu17379476442904948675.png</url>
+      <title>Shiny Module</title>
+      <link>http://localhost:3677/tags/shiny-module/</link>
+    </image>
     
     <item>
       <title>Shiny App with Modal, Modules and jQuery</title>
-      <link>/project/shiny-modal-modules-jquery/</link>
-      <pubDate>Tue, 24 Jul 2018 12:00:00 -0400</pubDate>
-      
-      <guid>/project/shiny-modal-modules-jquery/</guid>
-      <description>Use this modal to add/remove sets of variables (and their values) to a dataset.</description>
+      <link>http://localhost:3677/shinyapps/shiny-modal-modules-jquery/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:3677/shinyapps/shiny-modal-modules-jquery/</guid>
+      <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://shiny.ogustavo.com/module_modal_jquery/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://shiny.ogustavo.com/module_modal_jquery/&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>
