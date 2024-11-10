@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Module | Gustavo Varela Alvarenga, Ph.D. - Data Scientist/Statistician</title>
+    <link>http://localhost:4321/tags/module/</link>
+      <atom:link href="http://localhost:4321/tags/module/index.xml" rel="self" type="application/rss+xml" />
+    <description>Module</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 24 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:4321/media/icon_hu5612823499671049974.png</url>
+      <title>Module</title>
+      <link>http://localhost:4321/tags/module/</link>
+    </image>
+    
+    <item>
+      <title>Shiny App to Dinamically Add/Remove variables to a data frame.</title>
+      <link>http://localhost:4321/shinyapps/shiny-add-remove-module/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/shinyapps/shiny-add-remove-module/</guid>
+      <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://gustav.shinyapps.io/add_remove_module/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://gustav.shinyapps.io/add_remove_module/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

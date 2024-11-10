@@ -118,6 +118,18 @@
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>http://localhost:4321/shinyapps/shiny-dadoscoronavirus/</loc>
+    <lastmod>2021-10-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:4321/tags/shiny-app/</loc>
+    <lastmod>2021-10-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:4321/shinyapps/</loc>
+    <lastmod>2021-10-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>http://localhost:4321/code/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -158,7 +170,7 @@
     <lastmod>2018-07-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/tags/shiny-app/</loc>
+    <loc>http://localhost:4321/tags/module/</loc>
     <lastmod>2018-07-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -166,11 +178,11 @@
     <lastmod>2018-07-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/shinyapps/shiny-modal-modules-jquery/</loc>
+    <loc>http://localhost:4321/shinyapps/shiny-add-remove-module/</loc>
     <lastmod>2018-07-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/shinyapps/</loc>
+    <loc>http://localhost:4321/shinyapps/shiny-modal-modules-jquery/</loc>
     <lastmod>2018-07-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>

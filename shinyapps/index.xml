@@ -5,19 +5,37 @@
     <link>http://localhost:4321/shinyapps/</link>
       <atom:link href="http://localhost:4321/shinyapps/index.xml" rel="self" type="application/rss+xml" />
     <description>Shiny Apps</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 24 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:4321/media/icon_hu17379476442904948675.png</url>
+      <url>http://localhost:4321/media/icon_hu5612823499671049974.png</url>
       <title>Shiny Apps</title>
       <link>http://localhost:4321/shinyapps/</link>
     </image>
+    
+    <item>
+      <title>Dados Coronavirus Dashboard</title>
+      <link>http://localhost:4321/shinyapps/shiny-dadoscoronavirus/</link>
+      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/shinyapps/shiny-dadoscoronavirus/</guid>
+      <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://gustav.shinyapps.io/dadoscoronavirus/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://gustav.shinyapps.io/dadoscoronavirus/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Shiny App to Compare Images</title>
       <link>http://localhost:4321/shinyapps/shiny-compare-images/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       <guid>http://localhost:4321/shinyapps/shiny-compare-images/</guid>
-      <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://shiny.ogustavo.com/select_best_image/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://shiny.ogustavo.com/select_best_image/&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://gustav.shinyapps.io/select_best_image/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://gustav.shinyapps.io/select_best_image/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Shiny App to Dinamically Add/Remove variables to a data frame.</title>
+      <link>http://localhost:4321/shinyapps/shiny-add-remove-module/</link>
+      <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/shinyapps/shiny-add-remove-module/</guid>
+      <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://gustav.shinyapps.io/add_remove_module/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://gustav.shinyapps.io/add_remove_module/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -26,7 +44,7 @@
       <link>http://localhost:4321/shinyapps/shiny-modal-modules-jquery/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       <guid>http://localhost:4321/shinyapps/shiny-modal-modules-jquery/</guid>
-      <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://shiny.ogustavo.com/module_modal_jquery/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://shiny.ogustavo.com/module_modal_jquery/&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;You can access this app and its code in &lt;a href=&#34;https://gustav.shinyapps.io/module_modal_jquery/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://gustav.shinyapps.io/module_modal_jquery/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
