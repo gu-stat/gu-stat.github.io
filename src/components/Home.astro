@@ -1,0 +1,44 @@
+---
+import { SITE, localePath, type Locale } from '../data/site';
+import { content } from '../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = content[locale];
+const idx = (n: number) => String(n + 1).padStart(2, '0');
+---
+<section class="hero">
+  <div>
+    <div class="kicker reveal" style="animation-delay:.05s">{t.hero.kicker}</div>
+    <h1 class="hd reveal" style="animation-delay:.12s" set:html={t.hero.headlineHtml} />
+    <p class="sub reveal" style="animation-delay:.22s">{t.hero.sub}</p>
+    <p class="now reveal" style="animation-delay:.28s" set:html={t.hero.now} />
+    <a class="cta reveal" style="animation-delay:.34s" href={SITE.cv[locale]} download>{t.hero.cta} →</a>
+    <div class="social reveal" style="animation-delay:.4s">
+      <a href={SITE.socials.github}>GitHub</a>
+      <a href={SITE.socials.linkedin}>LinkedIn</a>
+      <a href={SITE.socials.scholar}>Google Scholar</a>
+    </div>
+  </div>
+  <div class="portrait reveal" style="animation-delay:.3s">
+    <div class="frame">
+      <!-- Drop a photo at /public/img/portrait.jpg to replace the placeholder frame. -->
+      <img src="/img/portrait.jpg" alt={SITE.name} onerror="this.style.display='none'" />
+      <div class="arc"></div><div class="arc arc2"></div>
+    </div>
+  </div>
+</section>
+
+<div class="facts reveal" style="animation-delay:.46s">
+  {t.facts.map((f) => <div set:html={f} />)}
+</div>
+
+<section class="exp">
+  <h2>{t.selected}</h2>
+  {t.experience.slice(0, 4).map((j, i) => (
+    <a class="row" href={localePath(locale, 'experience')}>
+      <span class="idx">{idx(i)}</span>
+      <span><span class="role">{j.role}</span><span class="org">{j.org}</span></span>
+      <span class="yr">{j.period}</span>
+    </a>
+  ))}
+</section>

@@ -1,0 +1,59 @@
+---
+import { SITE, type Locale } from '../data/site';
+interface Props { title: string; description: string; locale: Locale; path: string; }
+const { title, description, locale, path } = Astro.props;
+const canonical = new URL(path, SITE.url).href;
+const enHref = new URL(path.startsWith('/pt') ? path.replace(/^\/pt/, '') || '/' : path, SITE.url).href;
+const ptHref = new URL(path.startsWith('/pt') ? path : (path === '/' ? '/pt/' : `/pt${path}`), SITE.url).href;
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: SITE.name,
+  url: SITE.url,
+  jobTitle: locale === 'pt' ? 'Cientista de Dados e Estatístico' : 'Data Scientist and Statistician',
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'University of Maryland' },
+    { '@type': 'CollegeOrUniversity', name: 'Universidade de Brasília' },
+  ],
+  sameAs: [SITE.socials.github, SITE.socials.linkedin, SITE.socials.scholar],
+};
+const profile = { '@context': 'https://schema.org', '@type': 'ProfilePage', mainEntity: { '@type': 'Person', name: SITE.name, url: SITE.url } };
+---
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<link rel="alternate" hreflang="en" href={enHref} />
+<link rel="alternate" hreflang="pt-BR" href={ptHref} />
+<link rel="alternate" hreflang="x-default" href={enHref} />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+<meta property="og:type" content="profile" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:locale" content={locale === 'pt' ? 'pt_BR' : 'en_US'} />
+<meta name="twitter:card" content="summary" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json" set:html={JSON.stringify(person)} />
+<script type="application/ld+json" set:html={JSON.stringify(profile)} />
+
+<!-- No-FOUC theme: applies the saved preference before paint. Stored locally only. -->
+<script is:inline>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {}
+  })();
+</script>

@@ -1,0 +1,23 @@
+---
+import { type Locale } from '../data/site';
+import { content } from '../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = content[locale];
+---
+<main class="page">
+  <div class="eyebrow">{t.fullExpHeading}</div>
+  <h1 class="page-h1">{t.fullExpHeading}</h1>
+  {t.experience.map((j) => (
+    <article class="entry">
+      <div class="head">
+        <div>
+          <div class="role">{j.role}</div>
+          <div class="org">{j.org}{j.location ? ` · ${j.location}` : ''}</div>
+        </div>
+        <div class="yr">{j.period}</div>
+      </div>
+      <ul>{j.bullets.map((b) => <li>{b}</li>)}</ul>
+    </article>
+  ))}
+</main>

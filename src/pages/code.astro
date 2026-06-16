@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import Code from '../components/Code.astro';
+import { content } from '../data/content';
+const locale = 'en' as const;
+const t = content[locale];
+---
+<Base title={t.meta.codeTitle} description={t.meta.homeDesc} locale={locale} path={Astro.url.pathname}>
+  <Code locale={locale} />
+</Base>

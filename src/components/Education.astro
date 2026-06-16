@@ -1,0 +1,41 @@
+---
+import { type Locale } from '../data/site';
+import { content } from '../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = content[locale];
+---
+<main class="page">
+  <div class="eyebrow">{t.educationHeading}</div>
+  <h1 class="page-h1">{t.educationHeading}</h1>
+  {t.education.map((d) => (
+    <article class="entry">
+      <div class="head">
+        <div>
+          <div class="role">{d.degree}</div>
+          <div class="org">{d.org}</div>
+        </div>
+        <div class="yr">{d.period}</div>
+      </div>
+      {d.note && <p class="note">{d.note}</p>}
+    </article>
+  ))}
+
+  <div class="eyebrow" style="margin-top:48px">{t.awardsHeading}</div>
+  <article class="entry">
+    <ul>{t.awards.map((a) => <li>{a}</li>)}</ul>
+  </article>
+
+  <div class="eyebrow" style="margin-top:48px">{t.coursesHeading}</div>
+  {t.courses.map((co) => (
+    <article class="entry">
+      <div class="head">
+        <div>
+          <div class="role" style="font-size:18px">{co.title}</div>
+          <div class="org">{co.institution} · {co.kind}</div>
+        </div>
+        <div class="yr">{co.year}</div>
+      </div>
+    </article>
+  ))}
+</main>

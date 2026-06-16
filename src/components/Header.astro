@@ -1,0 +1,43 @@
+---
+import { SITE, alternatePath, localePath, type Locale } from '../data/site';
+import { content } from '../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = content[locale];
+const path = Astro.url.pathname;
+const alt = alternatePath(path);
+const items = [
+  { label: t.nav.bio, href: localePath(locale, '') },
+  { label: t.nav.code, href: localePath(locale, 'code') },
+  { label: t.nav.papers, href: localePath(locale, 'publication') },
+  { label: t.nav.experience, href: localePath(locale, 'experience') },
+  { label: t.nav.education, href: localePath(locale, 'education') },
+];
+const cur = (href: string) => (path === href || (href !== '/' && path.startsWith(href)) ? 'page' : undefined);
+---
+<header class="site">
+  <a class="brand" href={localePath(locale, '')}>{SITE.name}</a>
+  <nav class="nav">
+    <input type="checkbox" id="navtoggle" />
+    <label class="iconbtn burger" for="navtoggle" aria-label="menu">
+      <svg viewBox="0 0 20 20" fill="currentColor"><path d="M0 3h20v2H0zM0 9h20v2H0zM0 15h20v2H0z"/></svg>
+    </label>
+    <div class="links">
+      {items.map((i) => <a href={i.href} aria-current={cur(i.href)}>{i.label}</a>)}
+    </div>
+    <div class="seg">
+      <a class={locale === 'en' ? 'on' : ''} href={locale === 'en' ? path : alt.href} aria-label="English">EN</a>
+      <a class={locale === 'pt' ? 'on' : ''} href={locale === 'pt' ? path : alt.href} aria-label="Português">PT</a>
+    </div>
+    <button class="iconbtn" id="themebtn" type="button" aria-label="theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </nav>
+</header>
+<script is:inline>
+  document.getElementById('themebtn')?.addEventListener('click', function () {
+    var root = document.documentElement;
+    root.classList.toggle('dark');
+    try { localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); } catch (e) {}
+  });
+</script>

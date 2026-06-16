@@ -1,0 +1,25 @@
+---
+import { type Locale } from '../data/site';
+import { content } from '../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = content[locale];
+---
+<main class="page">
+  <div class="eyebrow">{t.papers.heading}</div>
+  <h1 class="page-h1">{t.papers.heading}</h1>
+  <p class="lead">{t.papers.intro}</p>
+
+  {t.publications.map((p) => (
+    <article class="entry">
+      <div class="head">
+        <div class="pub-title">{p.title}</div>
+        <div class="yr">{p.year}</div>
+      </div>
+      <div class="org">{p.authors}</div>
+      <div class="pub-venue">{p.venue}{p.note ? ` · ${p.note}` : ''}</div>
+      <p class="pub-abstract">{p.abstract}</p>
+      {p.pdf && <a class="pdf-link" href={p.pdf} target="_blank" rel="noopener">{t.papers.pdfLabel} ↓</a>}
+    </article>
+  ))}
+</main>

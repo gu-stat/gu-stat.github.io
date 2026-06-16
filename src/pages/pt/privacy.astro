@@ -1,0 +1,10 @@
+---
+import Base from '../../layouts/Base.astro';
+import Privacy from '../../components/Privacy.astro';
+import { content } from '../../data/content';
+const locale = 'pt' as const;
+const t = content[locale];
+---
+<Base title={t.meta.privTitle} description={t.meta.homeDesc} locale={locale} path={Astro.url.pathname}>
+  <Privacy locale={locale} />
+</Base>

@@ -1,0 +1,28 @@
+---
+import { type Locale } from '../data/site';
+import { content } from '../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = content[locale];
+const c = t.code;
+---
+<main class="page">
+  <div class="eyebrow">{c.heading}</div>
+  <h1 class="page-h1">{c.heading}</h1>
+
+  <section class="block">
+    <h2 class="sub-h">{c.vizHeading}</h2>
+    <p class="lead" style="margin-bottom:14px">{c.vizIntro}</p>
+    <div class="tags">{c.vizPackages.map((p) => <span class="tag">{p}</span>)}</div>
+  </section>
+
+  <section class="block">
+    <h2 class="sub-h">{c.answersHeading}</h2>
+    {c.answers.map((a) => (
+      <a class="answer" href={a.url} target="_blank" rel="noopener">
+        <span class="answer-label">{a.label}</span>
+        <span class="answer-site">{a.site}</span>
+      </a>
+    ))}
+  </section>
+</main>

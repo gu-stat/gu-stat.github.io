@@ -1,0 +1,12 @@
+---
+import { localePath, type Locale } from '../data/site';
+import { content } from '../data/content';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = content[locale];
+const year = new Date().getFullYear();
+---
+<footer class="site wrap">
+  <div>© {year} Gustavo Varela Alvarenga · CC BY-NC-ND 4.0</div>
+  <div class="priv"><b>{t.footerPrivacy}</b> <a href={localePath(locale, 'privacy')}>{t.privacyLink}</a></div>
+</footer>
