@@ -22,9 +22,8 @@ jobs:
         uses: actions/checkout@v6
       - name: Install, build, and upload your site
         uses: withastro/action@v6
-        # with:
-        #   path: .          # root of your Astro project, if not the repo root
-        #   node-version: 24
+        with:
+          package-manager: npm
   deploy:
     needs: build
     runs-on: ubuntu-latest
