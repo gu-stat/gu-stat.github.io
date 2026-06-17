@@ -1,6 +1,7 @@
 import type { Locale } from './site';
 
 export interface Link { label: string; url: string; }
+export interface HomeJob { role: string; org: string; period: string; }
 export interface Job { role: string; org: string; period: string; location?: string; bullets: string[]; link?: Link; }
 export interface Degree { degree: string; org: string; period: string; note?: string; link?: string; linkLabel?: string; }
 export interface Publication { title: string; authors: string; venue: string; year: string; abstract: string; pdf?: string; note?: string; award?: string; links?: Link[]; }
@@ -31,6 +32,7 @@ interface Content {
   selected: string;
   fullExpHeading: string;
   experience: Job[];
+  homeExperience: HomeJob[];
   educationHeading: string;
   education: Degree[];
   viewWork: string;
@@ -65,7 +67,7 @@ const en: Content = {
     kicker: 'Data Scientist & Statistician · Ph.D.',
     headlineHtml: 'Turning <em>messy</em> data into <span class="ac">decisions</span>.',
     sub: 'Ph.D. in Mathematical Statistics, University of Maryland. Two decades across industry, research, and academia.',
-    now: '<b>Now —</b> on sabbatical, working on independent data projects.',
+    now: '<b>Now —</b> on sabbatical, working on independent data projects and teaching math.',
     cta: 'Download CV',
   },
   facts: ['<b>Ph.D.</b> · University of Maryland', '<b>20+ years</b> in data', '<b>R</b> · <b>Python</b> · <b>SQL</b>', '<b>Forecasting</b> & ML'],
@@ -73,6 +75,12 @@ const en: Content = {
   seeAll: 'See all \u2192',
   selected: 'Selected Experience',
   fullExpHeading: 'Experience',
+  homeExperience: [
+    { role: 'Senior Data Science Researcher', org: 'Google', period: '2025 — 2026' },
+    { role: 'Volunteer Teacher', org: 'Cursinho Popular MTST', period: '2023 — Present' },
+    { role: 'Regional Head of Data Science, Latin America', org: 'Argus Media', period: '2021 — 2025' },
+    { role: 'NSF Mathematical Sciences Graduate Intern', org: 'Pacific Northwest National Laboratory (PNNL)', period: '2019' },
+  ],
   experience: [
     { role: 'Senior Data Science Researcher', org: 'Google', period: '2025 — 2026', bullets: [
       'Designed a novel metric for evaluating content on the Search results page, enabling systematic assessment of content quality and pinpointing where relevant content was missing.',
@@ -192,7 +200,7 @@ const pt: Content = {
     kicker: 'Cientista de Dados & Estat\u00edstico · Ph.D.',
     headlineHtml: 'Transformando dados <em>confusos</em> em <span class="ac">decis\u00f5es</span>.',
     sub: 'Ph.D. em Estat\u00edstica Matem\u00e1tica, University of Maryland. Duas d\u00e9cadas entre ind\u00fastria, pesquisa e academia.',
-    now: '<b>Agora —</b> em ano sab\u00e1tico, trabalhando em projetos de dados independentes.',
+    now: '<b>Agora —</b> em ano sab\u00e1tico, trabalhando em projetos de dados independentes e dando aulas de matem\u00e1tica.',
     cta: 'Baixar CV',
   },
   facts: ['<b>Ph.D.</b> · University of Maryland', '<b>20+ anos</b> em dados', '<b>R</b> · <b>Python</b> · <b>SQL</b>', '<b>Previs\u00e3o</b> & ML'],
@@ -200,6 +208,12 @@ const pt: Content = {
   seeAll: 'Ver tudo \u2192',
   selected: 'Experi\u00eancia Selecionada',
   fullExpHeading: 'Experi\u00eancia',
+  homeExperience: [
+    { role: 'Pesquisador S\u00eanior de Ci\u00eancia de Dados', org: 'Google', period: '2025 — 2026' },
+    { role: 'Professor Volunt\u00e1rio', org: 'Cursinho Popular MTST', period: '2023 — Atual' },
+    { role: 'Head Regional de Ci\u00eancia de Dados, Am\u00e9rica Latina', org: 'Argus Media', period: '2021 — 2025' },
+    { role: 'Estagi\u00e1rio de P\u00f3s-Gradua\u00e7\u00e3o em Ci\u00eancias Matem\u00e1ticas (NSF)', org: 'Pacific Northwest National Laboratory (PNNL)', period: '2019' },
+  ],
   experience: [
     { role: 'Pesquisador S\u00eanior de Ci\u00eancia de Dados', org: 'Google', period: '2025 — 2026', bullets: [
       'Desenvolveu uma nova m\u00e9trica para avaliar o conte\u00fado da p\u00e1gina de resultados de busca (Search), permitindo a avalia\u00e7\u00e3o sistem\u00e1tica da qualidade do conte\u00fado e a identifica\u00e7\u00e3o de lacunas onde faltava conte\u00fado relevante.',

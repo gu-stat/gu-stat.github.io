@@ -37,7 +37,7 @@ const idx = (n: number) => String(n + 1).padStart(2, '0');
     <h2>{t.selected}</h2>
     <a class="see-all" href={localePath(locale, 'experience')}>{t.seeAll}</a>
   </div>
-  {t.experience.slice(0, 4).map((j, i) => (
+  {t.homeExperience.map((j, i) => (
     <a class="row" href={localePath(locale, 'experience')}>
       <span class="idx">{idx(i)}</span>
       <span><span class="role">{j.role}</span><span class="org">{j.org}</span></span>
