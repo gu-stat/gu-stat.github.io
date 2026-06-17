@@ -17,6 +17,7 @@ const LINKS = {
   cniPaper: 'https://web.archive.org/web/20130117201154/https://www.anpec.org.br/encontro/2012/inscricao/files_I/i8-5fe1cb9e5d777ea40cd1a965ecfba0b8.pdf',
   oriseProfile: 'https://web.archive.org/web/20211202154918/https://orise.orau.gov/nsf-msgi/profiles/varela-alvarenga.html',
   isrStory: 'https://web.archive.org/web/20220707165125/https://isr.umd.edu/news/story/phd-student-gustavo-varelaalvarenga-featured-in-orise-profile',
+  mtstCursinho: 'https://www.instagram.com/cursinhopopular.mtst/',
   bachelorPdf: '/uploads/Relatorio_Final_Estagio_Supervisionado_2.pdf',
 };
 
@@ -77,6 +78,9 @@ const en: Content = {
       'Designed a novel metric for evaluating content on the Search results page, enabling systematic assessment of content quality and pinpointing where relevant content was missing.',
       'Assessed where Google\u2019s AI Mode could benefit from AI agents, defining the cases in which agentic information retrieval would better fulfill user queries.',
       'Evaluated the landscape of grounding and corroboration sources for AI Overviews, recommending higher-quality sources to validate AI-generated information.' ] },
+    { role: 'Volunteer Teacher', org: 'Cursinho Popular MTST', period: '2023 — Present', location: 'S\u00e3o Paulo, Brazil', link: { label: 'Instagram \u2197', url: LINKS.mtstCursinho }, bullets: [
+      'Teach free mathematics classes for ENEM (Brazil\u2019s national university-entrance exam) prep at a community course (cursinho popular) run by the <a class="inline-link" href="https://mtst.org/" target="_blank" rel="noopener">MTST</a> (Homeless Workers\u2019 Movement) in S\u00e3o Paulo\u2019s periphery, on alternating Saturdays.',
+      'Focus on helping students find meaning in \u2014 and learn to enjoy \u2014 mathematics, while weaving in critical thinking and civics (e.g., a lesson on how Brazil\u2019s proportional system for electing federal deputies works).' ] },
     { role: 'Regional Head of Data Science, Latin America', org: 'Argus Media', period: '2021 — 2025', location: 'S\u00e3o Paulo, Brazil', bullets: [
       'Founded and led the Latin American data science team, growing it to 12 data engineers and scientists across three departments, with a department head and team lead reporting directly.',
       'Drove an 86% team-retention rate over nearly four years by building a culture of innovation and collaboration.',
@@ -201,6 +205,9 @@ const pt: Content = {
       'Desenvolveu uma nova m\u00e9trica para avaliar o conte\u00fado da p\u00e1gina de resultados de busca (Search), permitindo a avalia\u00e7\u00e3o sistem\u00e1tica da qualidade do conte\u00fado e a identifica\u00e7\u00e3o de lacunas onde faltava conte\u00fado relevante.',
       'Avaliou os casos em que o AI Mode do Google poderia se beneficiar de agentes de IA, definindo as situa\u00e7\u00f5es em que a recupera\u00e7\u00e3o de informa\u00e7\u00e3o por agentes atenderia melhor \u00e0s consultas dos usu\u00e1rios.',
       'Avaliou o panorama de fontes de embasamento e corrobora\u00e7\u00e3o (grounding/corroboration) das AI Overviews, recomendando fontes de maior qualidade para validar as informa\u00e7\u00f5es geradas pela IA.' ] },
+    { role: 'Professor Volunt\u00e1rio', org: 'Cursinho Popular MTST', period: '2023 — Atual', location: 'S\u00e3o Paulo, Brasil', link: { label: 'Instagram \u2197', url: LINKS.mtstCursinho }, bullets: [
+      'Ministra aulas gratuitas de matem\u00e1tica para a prepara\u00e7\u00e3o do ENEM em um cursinho popular do <a class="inline-link" href="https://mtst.org/" target="_blank" rel="noopener">MTST</a> (Movimento dos Trabalhadores Sem Teto), na periferia de S\u00e3o Paulo, em s\u00e1bados alternados (a cada 15 dias).',
+      'Busca ajudar os estudantes a encontrar sentido na matem\u00e1tica \u2014 e a \u201cgostar\u201d dela \u2014, integrando pensamento cr\u00edtico e cidadania (por exemplo, uma aula sobre como funciona o sistema proporcional de elei\u00e7\u00e3o de deputados federais no Brasil).' ] },
     { role: 'Head Regional de Ci\u00eancia de Dados, Am\u00e9rica Latina', org: 'Argus Media', period: '2021 — 2025', location: 'S\u00e3o Paulo, Brasil', bullets: [
       'Fundou e liderou a equipe de ci\u00eancia de dados para a Am\u00e9rica Latina, expandindo-a para 12 engenheiros e cientistas de dados em tr\u00eas departamentos, com um head de departamento e um l\u00edder t\u00e9cnico reportando-se diretamente.',
       'Alcan\u00e7ou uma taxa de reten\u00e7\u00e3o de 86% ao longo de quase quatro anos, construindo uma cultura de inova\u00e7\u00e3o e colabora\u00e7\u00e3o.',
