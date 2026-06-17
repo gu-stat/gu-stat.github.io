@@ -18,8 +18,12 @@ const t = content[locale];
       </div>
       <div class="org">{p.authors}</div>
       <div class="pub-venue">{p.venue}{p.note ? ` · ${p.note}` : ''}</div>
+      {p.award && <div class="award-badge">★ {p.award}</div>}
       <p class="pub-abstract">{p.abstract}</p>
-      {p.pdf && <a class="pdf-link" href={p.pdf} target="_blank" rel="noopener">{t.papers.pdfLabel} ↓</a>}
+      <div class="pub-links">
+        {p.pdf && <a class="pdf-link" href={p.pdf} target="_blank" rel="noopener">{t.papers.pdfLabel} ↓</a>}
+        {p.links?.map((l) => <a class="work-link" href={l.url} target="_blank" rel="noopener">{l.label}</a>)}
+      </div>
     </article>
   ))}
 </main>

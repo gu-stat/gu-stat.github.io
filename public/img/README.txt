@@ -1,2 +1,4 @@
-Drop your portrait here as portrait.jpg (recommended ~800x1000px).
-Until then, the homepage shows a clean placeholder frame.
+portrait.jpg is the homepage avatar (square image, shown in a circular frame).
+To replace it, drop a new square image here named portrait.jpg (~800x800px works well).
+
+r/  — result images for the R scripts shown on the R Code page.

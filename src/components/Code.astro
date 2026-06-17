@@ -17,6 +17,25 @@ const c = t.code;
   </section>
 
   <section class="block">
+    <h2 class="sub-h">{c.scriptsHeading}</h2>
+    <p class="lead" style="margin-bottom:18px">{c.scriptsIntro}</p>
+    <div class="scripts">
+      {c.scripts.map((s) => (
+        <article class="script-card">
+          <a class="script-thumb" href={s.file} download>
+            <img src={s.img} alt={s.title} loading="lazy" />
+          </a>
+          <div class="script-body">
+            <h3 class="script-title">{s.title}</h3>
+            <p class="script-desc">{s.desc}</p>
+            <a class="pdf-link" href={s.file} download>{c.downloadLabel}</a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="block">
     <h2 class="sub-h">{c.answersHeading}</h2>
     {c.answers.map((a) => (
       <a class="answer" href={a.url} target="_blank" rel="noopener">

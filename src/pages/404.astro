@@ -1,8 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
 import { content } from '../data/content';
+import { localePath } from '../data/site';
 const locale = 'en' as const;
 const t = content[locale];
+const links = [
+  { label: t.nav.experience, href: localePath(locale, 'experience') },
+  { label: t.nav.education, href: localePath(locale, 'education') },
+  { label: t.nav.papers, href: localePath(locale, 'publication') },
+  { label: t.nav.code, href: localePath(locale, 'code') },
+];
 ---
 <Base title="404 — Gustavo Varela Alvarenga" description={t.notFound.body} locale={locale} path="/404">
   <main class="page">
@@ -10,5 +17,8 @@ const t = content[locale];
     <h1 class="page-h1">{t.notFound.title}</h1>
     <p class="lead">{t.notFound.body}</p>
     <a class="cta" href="/">{t.backHome}</a>
+    <div class="social" style="margin-top:28px">
+      {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    </div>
   </main>
 </Base>

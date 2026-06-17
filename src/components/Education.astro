@@ -18,12 +18,15 @@ const t = content[locale];
         <div class="yr">{d.period}</div>
       </div>
       {d.note && <p class="note">{d.note}</p>}
+      {d.link && <a class="work-link" href={d.link} target="_blank" rel="noopener">{d.linkLabel ?? t.viewWork}</a>}
     </article>
   ))}
 
   <div class="eyebrow" style="margin-top:48px">{t.awardsHeading}</div>
   <article class="entry">
-    <ul>{t.awards.map((a) => <li>{a}</li>)}</ul>
+    <ul>{t.awards.map((a) => (
+      <li>{a.link ? <a class="inline-link" href={a.link} target="_blank" rel="noopener">{a.text}</a> : a.text}</li>
+    ))}</ul>
   </article>
 
   <div class="eyebrow" style="margin-top:48px">{t.coursesHeading}</div>

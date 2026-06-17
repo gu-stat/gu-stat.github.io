@@ -18,6 +18,7 @@ const t = content[locale];
         <div class="yr">{j.period}</div>
       </div>
       <ul>{j.bullets.map((b) => <li>{b}</li>)}</ul>
+      {j.link && <a class="work-link" href={j.link.url} target="_blank" rel="noopener">{j.link.label}</a>}
     </article>
   ))}
 </main>

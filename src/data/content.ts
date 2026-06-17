@@ -1,26 +1,45 @@
 import type { Locale } from './site';
 
-export interface Job { role: string; org: string; period: string; location?: string; bullets: string[]; }
-export interface Degree { degree: string; org: string; period: string; note?: string; }
-export interface Publication { title: string; authors: string; venue: string; year: string; abstract: string; pdf?: string; note?: string; }
+export interface Link { label: string; url: string; }
+export interface Job { role: string; org: string; period: string; location?: string; bullets: string[]; link?: Link; }
+export interface Degree { degree: string; org: string; period: string; note?: string; link?: string; linkLabel?: string; }
+export interface Publication { title: string; authors: string; venue: string; year: string; abstract: string; pdf?: string; note?: string; award?: string; links?: Link[]; }
 export interface Course { title: string; institution: string; kind: string; year: string; }
 export interface LinkItem { label: string; url: string; site: string; }
+export interface Award { text: string; link?: string; }
+export interface Featured { kicker: string; title: string; desc: string; link: string; linkLabel: string; }
+export interface RScript { title: string; desc: string; file: string; img: string; }
+
+// Permanent / external reference links, shared across locales.
+const LINKS = {
+  hauptman: 'https://web.archive.org/web/20250524232347/https://www-math.umd.edu/graduate-awards/894-hauptman-fellowship.html',
+  cniAward: 'https://web.archive.org/web/20170627151558/http://admin.cni.org.br/portal/data/pages/FF80808121B629230121B62A73BB04BC.htm',
+  cniPaper: 'https://web.archive.org/web/20130117201154/https://www.anpec.org.br/encontro/2012/inscricao/files_I/i8-5fe1cb9e5d777ea40cd1a965ecfba0b8.pdf',
+  oriseProfile: 'https://web.archive.org/web/20211202154918/https://orise.orau.gov/nsf-msgi/profiles/varela-alvarenga.html',
+  isrStory: 'https://web.archive.org/web/20220707165125/https://isr.umd.edu/news/story/phd-student-gustavo-varelaalvarenga-featured-in-orise-profile',
+  bachelorPdf: '/uploads/Relatorio_Final_Estagio_Supervisionado_2.pdf',
+};
 
 interface Content {
   nav: { bio: string; code: string; papers: string; experience: string; education: string };
   meta: { homeTitle: string; homeDesc: string; expTitle: string; eduTitle: string; privTitle: string; codeTitle: string; papersTitle: string };
   hero: { kicker: string; headlineHtml: string; sub: string; now: string; cta: string };
   facts: string[];
+  summary: string;
+  seeAll: string;
   selected: string;
   fullExpHeading: string;
   experience: Job[];
   educationHeading: string;
   education: Degree[];
+  viewWork: string;
   awardsHeading: string;
-  awards: string[];
+  awards: Award[];
   coursesHeading: string;
   courses: Course[];
-  code: { heading: string; vizHeading: string; vizIntro: string; vizPackages: string[]; answersHeading: string; answers: LinkItem[] };
+  recognitionHeading: string;
+  featured: Featured[];
+  code: { heading: string; vizHeading: string; vizIntro: string; vizPackages: string[]; scriptsHeading: string; scriptsIntro: string; downloadLabel: string; scripts: RScript[]; answersHeading: string; answers: LinkItem[] };
   papers: { heading: string; intro: string; pdfLabel: string };
   publications: Publication[];
   privacy: { heading: string; body: string[] };
@@ -49,6 +68,8 @@ const en: Content = {
     cta: 'Download CV',
   },
   facts: ['<b>Ph.D.</b> · University of Maryland', '<b>20+ years</b> in data', '<b>R</b> · <b>Python</b> · <b>SQL</b>', '<b>Forecasting</b> & ML'],
+  summary: 'I build statistical and machine-learning models that find patterns and forecast what comes next. Over two decades across industry, research, and academia \u2014 most recently at <b>Google</b> and as Regional Head of Data Science for Latin America at <b>Argus Media</b> \u2014 I\u2019ve shipped R and Python data products, taught computational statistics, and published award-winning applied economics.',
+  seeAll: 'See all \u2192',
   selected: 'Selected Experience',
   fullExpHeading: 'Experience',
   experience: [
@@ -66,9 +87,10 @@ const en: Content = {
     { role: 'Lecturer', org: 'University of Maryland', period: '2020 — 2021', bullets: [
       'Developed and taught a 400-level Computational Statistics course covering data wrangling, exploratory data analysis, and inferential modeling using SAS and SQL.',
       'Designed data-backed research projects and evaluation strategies, guiding students through regression, logistic regression, and ANOVA.' ] },
-    { role: 'NSF Mathematical Sciences Graduate Intern', org: 'Pacific Northwest National Laboratory (PNNL)', period: '2019', bullets: [
+    { role: 'NSF Mathematical Sciences Graduate Intern', org: 'Pacific Northwest National Laboratory (PNNL)', period: '2019', link: { label: 'ORISE profile \u2197', url: LINKS.oriseProfile }, bullets: [
+      'Applied machine learning to classify alloy micrographs for the U.S. Department of Energy\u2019s Fossil Energy eXtreme MATerials (XMAT) project, within PNNL\u2019s Reactor Materials and Mechanical Design group (mentor: Ram Devanathan).',
       'Proposed and prototyped a PostgreSQL/MySQL RDBMS for a DOE/NETL/PNNL project, optimizing database architecture for processing efficiency.',
-      'Engineered a Python web crawler and a web application for experimental data input, improving data-collection accuracy.',
+      'Engineered a Python web crawler (sourcing micrograph data from Cambridge\u2019s DoITPoMS library) and a web application for experimental data input, improving data-collection accuracy.',
       'Led an R programming workshop (blogdown, Shiny) for an all-women audience.' ] },
     { role: 'Lead Statistician', org: 'Ag\u00eancia Brasileira de Desenvolvimento Industrial (ABDI)', period: '2013 — 2014', bullets: [
       'Evaluated the impact of public policies on Brazilian industrial development using simulation and quasi-experimental methods (difference-in-differences, propensity score matching), presenting findings to the Brazilian Minister of Industry.',
@@ -82,15 +104,16 @@ const en: Content = {
   ],
   educationHeading: 'Education',
   education: [
-    { degree: 'Ph.D., Mathematical Statistics', org: 'University of Maryland', period: '2014 — 2021', note: 'Dissertation: Innovations in Time Series Forecasting — new validation procedures to improve forecasting accuracy and a novel machine-learning strategy for model selection.' },
-    { degree: 'M.A., Economics', org: 'Universidade de Bras\u00edlia', period: '2009 — 2011' },
-    { degree: 'B.S., Statistics', org: 'Universidade de Bras\u00edlia', period: '2004 — 2008' },
+    { degree: 'Ph.D., Mathematical Statistics', org: 'University of Maryland', period: '2014 — 2021', note: 'Dissertation: Innovations In Time Series Forecasting — New Validation Procedures to Improve Forecasting Accuracy and A Novel Machine Learning Strategy for Model Selection. (Advisor: Benjamin Kedem.)', link: 'https://drum.lib.umd.edu/items/d88faace-9817-4c44-9a7a-f993d32a37e9' },
+    { degree: 'M.A., Economics', org: 'Universidade de Bras\u00edlia', period: '2009 — 2011', note: 'Master\u2019s thesis: Impacts of Sector Funds on firms — new perspectives from the dose-response function.', link: 'https://repositorio.unb.br/handle/10482/11361' },
+    { degree: 'B.S., Statistics', org: 'Universidade de Bras\u00edlia', period: '2004 — 2008', note: 'Final project: The empirical characteristic function applied to operational risk.', link: LINKS.bachelorPdf, linkLabel: 'PDF \u2193' },
   ],
+  viewWork: 'View ↗',
   awardsHeading: 'Honors & Certifications',
   awards: [
-    'Herbert A. Hauptman Fellowship, University of Maryland (2021)',
-    'Pr\u00eamio CNI de Economia (CNI National Economy Award), 2nd place (2012)',
-    'Neural Networks & Deep Learning (Coursera)',
+    { text: 'Herbert A. Hauptman Fellowship, University of Maryland (2021)', link: LINKS.hauptman },
+    { text: 'Pr\u00eamio CNI de Economia (CNI National Economy Award), 2nd place (2012)', link: LINKS.cniAward },
+    { text: 'Neural Networks & Deep Learning (Coursera)' },
   ],
   coursesHeading: 'Short Courses',
   courses: [
@@ -100,11 +123,24 @@ const en: Content = {
     { title: 'Learn Python', institution: 'Codecademy', kind: 'Online course', year: '2018' },
     { title: 'Introduction to JavaScript', institution: 'Codecademy', kind: 'Online course', year: '2018' },
   ],
+  recognitionHeading: 'Recognition',
+  featured: [
+    { kicker: 'Pr\u00eamio CNI de Economia \u00b7 2012', title: 'Second place \u2014 Innovation & Productivity', desc: 'Awarded by Brazil\u2019s National Confederation of Industry (CNI), with the Brazilian association of graduate economics programs (ANPEC), for the first Brazilian study to use a continuous-treatment (dose-response) method to evaluate innovation incentives \u2014 finding no crowding-out of private R&D.', link: LINKS.cniAward, linkLabel: 'About the award \u2197' },
+    { kicker: 'NSF MSGI \u00b7 ORISE Profile', title: 'Doctoral student uses AI to improve energy systems', desc: 'Profiled by the Oak Ridge Institute for Science and Education (ORISE) for summer-2019 research at Pacific Northwest National Laboratory \u2014 applying machine learning to alloy micrographs for the DOE\u2019s Fossil Energy XMAT project.', link: LINKS.oriseProfile, linkLabel: 'Read the profile \u2197' },
+  ],
   code: {
     heading: 'R Code',
     vizHeading: 'Data Visualization',
     vizIntro: 'Some of the R packages I have used for data visualization:',
     vizPackages: ['ggplot2', 'plotly', 'highcharter', 'dygraphs', 'googleVis', 'ggiraph', 'shiny'],
+    scriptsHeading: 'Selected R Scripts',
+    scriptsIntro: 'A few self-contained ggplot2 walkthroughs. Each link downloads the full, runnable R script.',
+    downloadLabel: 'Download .R \u2193',
+    scripts: [
+      { title: 'Waterfall chart with ggplot2', desc: 'A stacked waterfall built from scratch with geom_rect, with running totals printed above each bar.', file: '/uploads/r/waterfall-chart-ggplot.R', img: '/img/r/waterfall-chart.png' },
+      { title: 'Dumbbell (dot) plot with ggplot2', desc: 'A two-point dumbbell plot comparing values across groups with geom_point and geom_segment.', file: '/uploads/r/dumbbell-dotplot-ggplot.R', img: '/img/r/dumbbell-dotplot.png' },
+      { title: 'Animated Brazil deforestation map', desc: 'A choropleth of native-forest loss rendered with ggplot2 and animated frame-by-frame into a GIF.', file: '/uploads/r/brazil-forest-map-gif-ggplot.R', img: '/img/r/brazil-forest-map.jpg' },
+    ],
     answersHeading: 'Selected Answers on Stack Exchange',
     answers: [
       { label: 'What is a contrast matrix (in an analysis with categorical predictors)?', site: 'Cross Validated', url: 'https://stats.stackexchange.com/questions/78354/what-is-a-contrast-matrix-a-term-pertaining-to-an-analysis-with-categorical-pr/221861#221861' },
@@ -118,8 +154,9 @@ const en: Content = {
   },
   papers: { heading: 'Papers', intro: 'Selected publications and working papers.', pdfLabel: 'PDF' },
   publications: [
-    { title: 'Impacts of Sector Funds on firms: new perspectives from the dose-response function', authors: 'G. Varela Alvarenga, D. M. Pianto, B. C. Ara\u00fajo', venue: 'Pr\u00eamio CNI de Economia — Innovation & Productivity category', year: '2012', note: 'Award-winning paper (2nd place).',
-      abstract: 'Uses a generalized propensity score and a continuous-treatment (dose-response) approach to evaluate the impact of Brazil\u2019s Sector Funds on firms\u2019 R&D effort, size, and high-technology exports. The first Brazilian study to apply continuous-treatment methods to innovation incentives; the results reject the crowding-out hypothesis.', pdf: '/uploads/papers/Premio_CNI.pdf' },
+    { title: 'Impacts of Sector Funds on firms: new perspectives from the dose-response function', authors: 'G. Varela Alvarenga, D. M. Pianto, B. C. Ara\u00fajo', venue: 'XL ANPEC Brazilian National Economics Meeting', year: '2012', award: 'Pr\u00eamio CNI de Economia \u00b7 2nd place, Innovation & Productivity (2012)',
+      abstract: 'Uses a generalized propensity score and a continuous-treatment (dose-response) approach to evaluate the impact of Brazil\u2019s Sector Funds on firms\u2019 R&D effort, size, and high-technology exports. The first Brazilian study to apply continuous-treatment methods to innovation incentives; the results reject the crowding-out hypothesis.', pdf: '/uploads/papers/Premio_CNI.pdf',
+      links: [ { label: 'Permanent PDF \u00b7 ANPEC \u2197', url: LINKS.cniPaper }, { label: 'About the award \u2197', url: LINKS.cniAward } ] },
     { title: 'Demand for air tickets in the Brazilian economy: a co-integration analysis', authors: 'P. F. Alves, G. Varela-Alvarenga, C. H. Rocha', venue: 'Journal of Transport Literature, vol. 5, no. 3, pp. 64–88', year: '2011',
       abstract: 'A vector error-correction (VECM) study of Brazilian domestic air-ticket demand and its long-run relationship with GDP, fares, and jet-fuel prices. Demand is income-elastic but price-inelastic, reflecting the dominance of business travelers in the domestic market.', pdf: '/uploads/papers/airticket.pdf' },
     { title: 'Counter-cyclical policies in the automobile industry: a co-integration analysis of the impacts of IPI reduction on vehicle sales', authors: 'G. Varela-Alvarenga, P. F. Alves, C. F. dos Santos, F. De Negri, L. R. Cavalcante, M. C. Passos', venue: 'XXXVIII ANPEC Brazilian National Economics Meeting', year: '2010',
@@ -155,6 +192,8 @@ const pt: Content = {
     cta: 'Baixar CV',
   },
   facts: ['<b>Ph.D.</b> · University of Maryland', '<b>20+ anos</b> em dados', '<b>R</b> · <b>Python</b> · <b>SQL</b>', '<b>Previs\u00e3o</b> & ML'],
+  summary: 'Construo modelos estat\u00edsticos e de machine learning que identificam padr\u00f5es e preveem o que vem a seguir. S\u00e3o mais de duas d\u00e9cadas entre ind\u00fastria, pesquisa e academia \u2014 recentemente no <b>Google</b> e como Head Regional de Ci\u00eancia de Dados para a Am\u00e9rica Latina na <b>Argus Media</b> \u2014 desenvolvendo produtos de dados em R e Python, ensinando estat\u00edstica computacional e publicando trabalhos premiados em economia aplicada.',
+  seeAll: 'Ver tudo \u2192',
   selected: 'Experi\u00eancia Selecionada',
   fullExpHeading: 'Experi\u00eancia',
   experience: [
@@ -172,9 +211,10 @@ const pt: Content = {
     { role: 'Professor', org: 'University of Maryland', period: '2020 — 2021', bullets: [
       'Desenvolveu e ministrou uma disciplina de Estat\u00edstica Computacional (n\u00edvel avan\u00e7ado) abrangendo tratamento de dados, an\u00e1lise explorat\u00f3ria e modelagem inferencial com SAS e SQL.',
       'Desenhou projetos de pesquisa baseados em dados e estrat\u00e9gias de avalia\u00e7\u00e3o, orientando os alunos em regress\u00e3o, regress\u00e3o log\u00edstica e ANOVA.' ] },
-    { role: 'Estagi\u00e1rio de P\u00f3s-Gradua\u00e7\u00e3o em Ci\u00eancias Matem\u00e1ticas (NSF)', org: 'Pacific Northwest National Laboratory (PNNL)', period: '2019', bullets: [
+    { role: 'Estagi\u00e1rio de P\u00f3s-Gradua\u00e7\u00e3o em Ci\u00eancias Matem\u00e1ticas (NSF)', org: 'Pacific Northwest National Laboratory (PNNL)', period: '2019', link: { label: 'Perfil ORISE \u2197', url: LINKS.oriseProfile }, bullets: [
+      'Aplicou machine learning \u00e0 classifica\u00e7\u00e3o de micrografias de ligas met\u00e1licas no projeto eXtreme MATerials (XMAT) do Departamento de Energia dos EUA, junto ao grupo Reactor Materials and Mechanical Design do PNNL (mentor: Ram Devanathan).',
       'Prop\u00f4s e prototipou um banco de dados relacional (PostgreSQL/MySQL) para um projeto DOE/NETL/PNNL, otimizando a arquitetura de dados para maior efici\u00eancia de processamento.',
-      'Desenvolveu um web crawler em Python e uma aplica\u00e7\u00e3o web para entrada de dados experimentais, melhorando a precis\u00e3o da coleta de dados.',
+      'Desenvolveu um web crawler em Python (coletando micrografias da biblioteca DoITPoMS, de Cambridge) e uma aplica\u00e7\u00e3o web para entrada de dados experimentais, melhorando a precis\u00e3o da coleta de dados.',
       'Conduziu um workshop de programa\u00e7\u00e3o em R (blogdown, Shiny) para um p\u00fablico exclusivamente feminino.' ] },
     { role: 'Estat\u00edstico L\u00edder', org: 'Ag\u00eancia Brasileira de Desenvolvimento Industrial (ABDI)', period: '2013 — 2014', bullets: [
       'Avaliou o impacto de pol\u00edticas p\u00fablicas no desenvolvimento industrial brasileiro por meio de simula\u00e7\u00e3o e m\u00e9todos quase-experimentais (diferen\u00e7as-em-diferen\u00e7as, pareamento por escore de propens\u00e3o), apresentando resultados ao Ministro da Ind\u00fastria.',
@@ -188,15 +228,16 @@ const pt: Content = {
   ],
   educationHeading: 'Forma\u00e7\u00e3o Acad\u00eamica',
   education: [
-    { degree: 'Doutorado (Ph.D.) em Estat\u00edstica Matem\u00e1tica', org: 'University of Maryland', period: '2014 — 2021', note: 'Tese: Inova\u00e7\u00f5es em Previs\u00e3o de S\u00e9ries Temporais — novos procedimentos de valida\u00e7\u00e3o para melhorar a acur\u00e1cia e uma nova estrat\u00e9gia de machine learning para sele\u00e7\u00e3o de modelos.' },
-    { degree: 'Mestrado em Economia', org: 'Universidade de Bras\u00edlia', period: '2009 — 2011' },
-    { degree: 'Bacharelado em Estat\u00edstica', org: 'Universidade de Bras\u00edlia', period: '2004 — 2008' },
+    { degree: 'Doutorado (Ph.D.) em Estat\u00edstica Matem\u00e1tica', org: 'University of Maryland', period: '2014 — 2021', note: 'Tese: Innovations In Time Series Forecasting — New Validation Procedures to Improve Forecasting Accuracy and A Novel Machine Learning Strategy for Model Selection. (Orientador: Benjamin Kedem.)', link: 'https://drum.lib.umd.edu/items/d88faace-9817-4c44-9a7a-f993d32a37e9' },
+    { degree: 'Mestrado em Economia', org: 'Universidade de Bras\u00edlia', period: '2009 — 2011', note: 'Disserta\u00e7\u00e3o de mestrado: Impactos dos fundos setoriais nas empresas — novas perspectivas a partir da fun\u00e7\u00e3o dose-resposta.', link: 'https://repositorio.unb.br/handle/10482/11361' },
+    { degree: 'Bacharelado em Estat\u00edstica', org: 'Universidade de Bras\u00edlia', period: '2004 — 2008', note: 'Projeto final: A fun\u00e7\u00e3o caracter\u00edstica emp\u00edrica aplicada ao risco operacional.', link: LINKS.bachelorPdf, linkLabel: 'PDF \u2193' },
   ],
+  viewWork: 'Ver ↗',
   awardsHeading: 'Pr\u00eamios & Certifica\u00e7\u00f5es',
   awards: [
-    'Bolsa Herbert A. Hauptman, University of Maryland (2021)',
-    'Pr\u00eamio CNI de Economia — 2\u00ba lugar (2012)',
-    'Redes Neurais e Deep Learning (Coursera)',
+    { text: 'Bolsa Herbert A. Hauptman, University of Maryland (2021)', link: LINKS.hauptman },
+    { text: 'Pr\u00eamio CNI de Economia — 2\u00ba lugar (2012)', link: LINKS.cniAward },
+    { text: 'Redes Neurais e Deep Learning (Coursera)' },
   ],
   coursesHeading: 'Cursos de Curta Dura\u00e7\u00e3o',
   courses: [
@@ -206,11 +247,24 @@ const pt: Content = {
     { title: 'Learn Python', institution: 'Codecademy', kind: 'Curso online', year: '2018' },
     { title: 'Introduction to JavaScript', institution: 'Codecademy', kind: 'Curso online', year: '2018' },
   ],
+  recognitionHeading: 'Reconhecimento',
+  featured: [
+    { kicker: 'Pr\u00eamio CNI de Economia \u00b7 2012', title: 'Segundo lugar \u2014 Inova\u00e7\u00e3o e Produtividade', desc: 'Concedido pela Confedera\u00e7\u00e3o Nacional da Ind\u00fastria (CNI), com a Associa\u00e7\u00e3o Nacional dos Centros de P\u00f3s-Gradua\u00e7\u00e3o em Economia (ANPEC), ao primeiro trabalho no Brasil a usar tratamento cont\u00ednuo (fun\u00e7\u00e3o dose-resposta) para avaliar incentivos \u00e0 inova\u00e7\u00e3o \u2014 rejeitando a hip\u00f3tese de crowding-out de P&D privado.', link: LINKS.cniAward, linkLabel: 'Sobre o pr\u00eamio \u2197' },
+    { kicker: 'NSF MSGI \u00b7 Perfil ORISE', title: 'Doutorando usa IA para aprimorar sistemas de energia', desc: 'Perfil publicado pelo Oak Ridge Institute for Science and Education (ORISE) sobre a pesquisa de ver\u00e3o de 2019 no Pacific Northwest National Laboratory \u2014 aplicando machine learning a micrografias de ligas no projeto Fossil Energy XMAT do DOE.', link: LINKS.oriseProfile, linkLabel: 'Ler o perfil \u2197' },
+  ],
   code: {
     heading: 'C\u00f3digo R',
     vizHeading: 'Visualiza\u00e7\u00e3o de Dados',
     vizIntro: 'Alguns dos pacotes de R que utilizo para visualiza\u00e7\u00e3o de dados:',
     vizPackages: ['ggplot2', 'plotly', 'highcharter', 'dygraphs', 'googleVis', 'ggiraph', 'shiny'],
+    scriptsHeading: 'Scripts em R Selecionados',
+    scriptsIntro: 'Alguns tutoriais em ggplot2, completos e independentes. Cada link baixa o script em R, pronto para rodar.',
+    downloadLabel: 'Baixar .R \u2193',
+    scripts: [
+      { title: 'Gr\u00e1fico de cascata (waterfall) com ggplot2', desc: 'Uma cascata empilhada constru\u00edda do zero com geom_rect, com os totais acumulados acima de cada barra.', file: '/uploads/r/waterfall-chart-ggplot.R', img: '/img/r/waterfall-chart.png' },
+      { title: 'Gr\u00e1fico de haltere (dumbbell) com ggplot2', desc: 'Um gr\u00e1fico de haltere de dois pontos comparando valores entre grupos com geom_point e geom_segment.', file: '/uploads/r/dumbbell-dotplot-ggplot.R', img: '/img/r/dumbbell-dotplot.png' },
+      { title: 'Mapa animado do desmatamento no Brasil', desc: 'Um mapa coropl\u00e9tico da perda de floresta nativa feito com ggplot2 e animado quadro a quadro em um GIF.', file: '/uploads/r/brazil-forest-map-gif-ggplot.R', img: '/img/r/brazil-forest-map.jpg' },
+    ],
     answersHeading: 'Respostas Selecionadas no Stack Exchange',
     answers: [
       { label: 'O que \u00e9 uma matriz de contrastes (em an\u00e1lises com preditores categ\u00f3ricos)?', site: 'Cross Validated', url: 'https://stats.stackexchange.com/questions/78354/what-is-a-contrast-matrix-a-term-pertaining-to-an-analysis-with-categorical-pr/221861#221861' },
@@ -224,8 +278,9 @@ const pt: Content = {
   },
   papers: { heading: 'Artigos', intro: 'Publica\u00e7\u00f5es e working papers selecionados.', pdfLabel: 'PDF' },
   publications: [
-    { title: 'Impactos dos Fundos Setoriais nas Empresas: Novas Perspectivas a partir da Fun\u00e7\u00e3o Dose-Resposta', authors: 'G. Varela Alvarenga, D. M. Pianto, B. C. Ara\u00fajo', venue: 'Pr\u00eamio CNI de Economia — categoria Inova\u00e7\u00e3o e Produtividade', year: '2012', note: 'Artigo premiado (2\u00ba lugar).',
-      abstract: 'Utiliza o escore de propens\u00e3o generalizado e uma abordagem de tratamento cont\u00ednuo (fun\u00e7\u00e3o dose-resposta) para avaliar o impacto dos Fundos Setoriais sobre o esfor\u00e7o em P&D, o tamanho e as exporta\u00e7\u00f5es de alta tecnologia das empresas. \u00c9 o primeiro trabalho no Brasil a aplicar tratamento cont\u00ednuo a incentivos \u00e0 inova\u00e7\u00e3o; os resultados rejeitam a hip\u00f3tese de crowding-out.', pdf: '/uploads/papers/Premio_CNI.pdf' },
+    { title: 'Impactos dos Fundos Setoriais nas Empresas: Novas Perspectivas a partir da Fun\u00e7\u00e3o Dose-Resposta', authors: 'G. Varela Alvarenga, D. M. Pianto, B. C. Ara\u00fajo', venue: 'XL Encontro Nacional de Economia — ANPEC', year: '2012', award: 'Pr\u00eamio CNI de Economia \u00b7 2\u00ba lugar, Inova\u00e7\u00e3o e Produtividade (2012)',
+      abstract: 'Utiliza o escore de propens\u00e3o generalizado e uma abordagem de tratamento cont\u00ednuo (fun\u00e7\u00e3o dose-resposta) para avaliar o impacto dos Fundos Setoriais sobre o esfor\u00e7o em P&D, o tamanho e as exporta\u00e7\u00f5es de alta tecnologia das empresas. \u00c9 o primeiro trabalho no Brasil a aplicar tratamento cont\u00ednuo a incentivos \u00e0 inova\u00e7\u00e3o; os resultados rejeitam a hip\u00f3tese de crowding-out.', pdf: '/uploads/papers/Premio_CNI.pdf',
+      links: [ { label: 'PDF permanente \u00b7 ANPEC \u2197', url: LINKS.cniPaper }, { label: 'Sobre o pr\u00eamio \u2197', url: LINKS.cniAward } ] },
     { title: 'Demanda por ticket a\u00e9reo na economia brasileira: uma an\u00e1lise de co-integra\u00e7\u00e3o', authors: 'P. F. Alves, G. Varela-Alvarenga, C. H. Rocha', venue: 'Revista de Literatura dos Transportes, vol. 5, n. 3, pp. 64–88', year: '2011',
       abstract: 'Estudo com modelo vetorial de corre\u00e7\u00e3o de erros (VECM) sobre a demanda dom\u00e9stica por passagens a\u00e9reas no Brasil e sua rela\u00e7\u00e3o de longo prazo com o PIB, as tarifas e o pre\u00e7o do querosene de avia\u00e7\u00e3o. A demanda \u00e9 el\u00e1stica \u00e0 renda, mas inel\u00e1stica ao pre\u00e7o, refletindo a predomin\u00e2ncia do viajante a neg\u00f3cios.', pdf: '/uploads/papers/airticket.pdf' },
     { title: 'Pol\u00edticas anticíclicas na ind\u00fastria automobil\u00edstica: uma an\u00e1lise de co-integra\u00e7\u00e3o dos impactos da redu\u00e7\u00e3o do IPI sobre as vendas de ve\u00edculos', authors: 'G. Varela-Alvarenga, P. F. Alves, C. F. dos Santos, F. De Negri, L. R. Cavalcante, M. C. Passos', venue: 'XXXVIII Encontro Nacional de Economia — ANPEC', year: '2010',

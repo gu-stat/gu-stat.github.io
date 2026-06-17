@@ -21,9 +21,7 @@ const idx = (n: number) => String(n + 1).padStart(2, '0');
   </div>
   <div class="portrait reveal" style="animation-delay:.3s">
     <div class="frame">
-      <!-- Drop a photo at /public/img/portrait.jpg to replace the placeholder frame. -->
       <img src="/img/portrait.jpg" alt={SITE.name} onerror="this.style.display='none'" />
-      <div class="arc"></div><div class="arc arc2"></div>
     </div>
   </div>
 </section>
@@ -32,8 +30,13 @@ const idx = (n: number) => String(n + 1).padStart(2, '0');
   {t.facts.map((f) => <div set:html={f} />)}
 </div>
 
-<section class="exp">
-  <h2>{t.selected}</h2>
+<p class="summary reveal" style="animation-delay:.5s" set:html={t.summary} />
+
+<section class="home-sec">
+  <div class="sec-head">
+    <h2>{t.selected}</h2>
+    <a class="see-all" href={localePath(locale, 'experience')}>{t.seeAll}</a>
+  </div>
   {t.experience.slice(0, 4).map((j, i) => (
     <a class="row" href={localePath(locale, 'experience')}>
       <span class="idx">{idx(i)}</span>
@@ -41,4 +44,49 @@ const idx = (n: number) => String(n + 1).padStart(2, '0');
       <span class="yr">{j.period}</span>
     </a>
   ))}
+</section>
+
+<section class="home-sec">
+  <div class="sec-head">
+    <h2>{t.educationHeading}</h2>
+    <a class="see-all" href={localePath(locale, 'education')}>{t.seeAll}</a>
+  </div>
+  {t.education.map((d) => (
+    <a class="row mini" href={localePath(locale, 'education')}>
+      <span><span class="role">{d.degree}</span><span class="org">{d.org}</span></span>
+      <span class="yr">{d.period}</span>
+    </a>
+  ))}
+</section>
+
+<section class="home-sec">
+  <div class="sec-head">
+    <h2>{t.papers.heading}</h2>
+    <a class="see-all" href={localePath(locale, 'publication')}>{t.seeAll}</a>
+  </div>
+  {t.publications.slice(0, 3).map((p) => (
+    <a class="row mini" href={localePath(locale, 'publication')}>
+      <span>
+        <span class="role">{p.title}</span>
+        <span class="org">{p.authors} · {p.year}</span>
+        {p.award && <span class="award-badge">★ {p.award}</span>}
+      </span>
+    </a>
+  ))}
+</section>
+
+<section class="home-sec">
+  <div class="sec-head">
+    <h2>{t.recognitionHeading}</h2>
+  </div>
+  <div class="feat-grid">
+    {t.featured.map((f) => (
+      <article class="feat-card">
+        <div class="feat-kicker">{f.kicker}</div>
+        <h3 class="feat-title">{f.title}</h3>
+        <p class="feat-desc">{f.desc}</p>
+        <a class="work-link" href={f.link} target="_blank" rel="noopener">{f.linkLabel}</a>
+      </article>
+    ))}
+  </div>
 </section>
