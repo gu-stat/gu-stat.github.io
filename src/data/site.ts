@@ -8,7 +8,10 @@ export const SITE = {
   socials: {
     github: 'https://github.com/Gu-Stat',
     linkedin: 'https://www.linkedin.com/in/gustavo-varela-alvarenga',
-    scholar: 'https://scholar.google.com/citations?user=YOUR_ID', // update with your Scholar URL
+    scholar: {
+      en: 'https://scholar.google.com/citations?hl=en&user=-0xpQ54AAAAJ',
+      pt: 'https://scholar.google.com/citations?hl=pt&user=-0xpQ54AAAAJ',
+    },
     email: 'mailto:contact@ogustavo.com',
   },
   cv: {

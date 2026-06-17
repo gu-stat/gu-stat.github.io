@@ -16,7 +16,7 @@ const person = {
     { '@type': 'CollegeOrUniversity', name: 'University of Maryland' },
     { '@type': 'CollegeOrUniversity', name: 'Universidade de Brasília' },
   ],
-  sameAs: [SITE.socials.github, SITE.socials.linkedin, SITE.socials.scholar],
+  sameAs: [SITE.socials.github, SITE.socials.linkedin, SITE.socials.scholar[locale]],
 };
 const profile = { '@context': 'https://schema.org', '@type': 'ProfilePage', mainEntity: { '@type': 'Person', name: SITE.name, url: SITE.url } };
 ---
